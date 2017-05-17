@@ -1,0 +1,36 @@
+<div class="tools__toggle tools__toggle--is-closed ifjs-show-m">
+    <div class="tools__toggle-inner">
+        <button class="tools__toggle-btn" id="toggleTools">
+            <i class="i i--tools-toolsmenu">Tools</i>
+        </button>
+    </div>
+</div>
+<nav class="tools ifjs-hide-m" id="tools" role="navigation" aria-labelledby="tools-label" >
+    <h2 class="hide" id="tools-label">Tools</h2>
+    <ul>
+        <li class="tools__item">
+            <a class="tools__tool" href="/app/plan" onclick="ga('send', 'event', 'Toolbar', 'Click', 'Trip Planner')">
+                <i class="i i--tools-tripplanner">Trip&nbsp;Planner</i>
+            </a>
+        </li>
+        <li class="tools__item">
+            <a class="tools__tool" href="/app/nextride" onclick="ga('send', 'event', 'Toolbar', 'Click', 'Next Ride')">
+                <i class="i i--tools-next-ride">Next Ride</i>
+            </a>
+        </li>
+        <li class="tools__item">
+            <a class="tools__tool" href="<!--#echo var='appServer' -->elbert/RiderAlerts/index.cfm" onclick="ga('send', 'event', 'Toolbar', 'Click', 'Rider Alerts')">
+                <i class="i i--tools-rideralerts">Rider&nbsp;Alerts</i>
+            </a>
+        </li>
+        <li class="tools__item">
+            <form class="tools__tool tools__tool--schedulefinder" autocomplete="off">
+                <i class="i i--tools-schedulefinder">
+                    <label for="scheduleFinderTools" class="hide">Schedule Finder, enter a route number</label>
+                    <input id="scheduleFinderTools" type="text" value="Schedule Finder" onFocus="this.value = this.value=='Schedule Finder'?'':this.value;ga('send', 'event', 'Toolbar', 'Click', 'Schedule Finder')" onBlur="this.value = this.value==''?'Schedule Finder':this.value;" placeholder="Enter a route" name="routeId" autocomplete="off" />
+                    <button type="submit">Go</button>
+                </i>
+            </form>
+        </li>
+    </ul>
+</nav>
