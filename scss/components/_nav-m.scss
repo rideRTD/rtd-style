@@ -1,0 +1,277 @@
+@include respond-to($break-m) {
+    .header__nav-main {
+        display:block;
+        @include clearfix;
+        float:left;
+        width: 100%;
+        padding-left: 115px;
+
+        h2, h3, h4, .header__nav-secondary {
+            display:none
+        }
+        .header__sub-title {
+            display:block;
+        }
+    }
+    .header__nav,
+    .header__nav-menu > ul {
+        @include container;
+    }
+    .header__nav,
+    .header__nav-primary > li {
+        border-right:$global-border-thin solid transparent;
+    }
+    .header__nav-primary {
+        display: block;
+        float:left;
+        @include respond-to ($tweak-m-2) {
+            margin-left: 10px;
+        }
+        @include rem(height, 6);
+        > li {
+            width:auto;
+            float: left;
+            > a {
+                display:block;
+                padding: 2.5em 0.75em 1.875em 0.625em;
+                @include rem(height, 6);
+                font-family: $fontstack-alt;
+                color: $gray-darkest;
+                font-size: 1em;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                @include transition(0.2s);
+                &:hover,
+                &:focus {
+                    background: $white;
+                    color: $gray-darkest;
+                }
+                &.active {
+                    color: $red-dark;
+                    background: $white;
+                    outline: 0;
+                }
+            }
+        }
+    }
+    .header__search-field {
+        border: $global-border-thin solid $gray-medium;
+        border-radius: $global-radius;
+        @include text-regular;
+        color: $gray-darker;
+        @include rem(font-size, 0.875);
+    }
+
+    .header__nav-menu {
+        display:none;
+        position: absolute;
+        @include rem(height, 14);
+        @include rem(top, 6);
+        left: 0;
+        width:100%;
+        &>ul {
+            position:relative;
+            @include rem(height, 14);
+        }
+        &>ul>li {
+            position: relative;
+            top: 25px;
+            border-right: none;
+            float:left;
+            &>a {
+                display:block;
+                width:100%;
+                height: 120px;
+                padding: 0 15px;
+                text-align: center;
+                font-family: $fontstack-alt;
+                color: $gray-darker;
+                @include rem(font-size, 1);
+                *font-size: 12px;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                border-radius: 4px;
+                &:hover,
+                &:focus {
+                    background-color: $gray-lighter;
+                }
+            }
+        }
+        i {
+            display: block;
+            margin: 0 auto 5px auto;
+            height: 83px;
+            width: 100px;
+            max-width: 100%;
+            background-position:center;
+        }
+        .header__sub-title {
+            padding: 0;
+            margin-left: 15px;
+            text-align: left;
+            height:1.6em;
+        }
+        .header__sub-section {
+            float: left;
+            position:relative;
+            padding: 0;
+            top: 10px;
+            margin: 20px 0 0 5px;
+            text-align: left;
+            @include rem(min-height, 7);
+            li {
+                padding: 0;
+                margin: 0 0 0px 15px;
+                height: 20px;
+                text-align: left;
+            }
+            a {
+                @include text-regular;
+                @include rem(font-size, 0.8125);
+                text-decoration: none;
+                color: $blue;
+                white-space: nowrap;
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+            a.link-bold {
+                @include text-bold;
+            }
+        }
+        .header__sub-title,
+        .header__sub-section a.header__sub-title {
+            font-family: $fontstack-alt;
+            @include rem(font-size, 1);
+            color: $gray-darkest;
+            text-transform: uppercase;
+        }
+        .header__sub-section a.header__sub-title {
+            &:hover, &:focus {
+                background:none;
+                text-decoration: underline;
+            }
+        }
+        .header__sub-feature {
+            width: 100%;
+            height: 2.5em;
+            position: absolute;
+            top: inherit;
+            bottom: 0;
+            border-top: 1px solid $gray-medium;
+            background-color: transparent;
+            color: $gray-darkest;
+            @include text-regular;
+            text-transform: none;
+
+            a {
+                height: auto;
+                line-height:2.5em;
+                color: $blue;
+                font-family: inherit;
+                text-transform: none;
+                &:hover, &:focus {
+                    text-decoration: underline;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .header__nav-menu--schedules> ul > li {
+        width: 25%;
+    }
+    .header__nav-menu--services> ul > li {
+        width: 13.5%;
+    }
+    .header__nav-menu--ridertools> ul > li {
+        width: 16%;
+    }
+    .header__nav-menu--fares> ul > li {
+        width: 16%;
+        &.header__sub-section {
+            width: 22%;
+        }
+    }
+    .header__nav-menu--fastracks> ul > li {
+        width: 49%;
+        margin-top: 10px;
+        &:first-child {
+            padding-left: 25px;
+            a {
+                // display: block;
+            }
+        }
+        img {
+            margin: 10px 30px 0 15px;
+        }
+        .header__sub-title {
+            margin-left: 0;
+        }
+        p {
+            font-size: 13px;
+            color: #636363;
+            line-height: 1.5em;
+            margin: 0 5px 0px 0px;
+            text-align: left;
+            width: 94%;
+            a {
+                text-decoration: underline;
+            }
+            & + p {
+                margin: 7px 0 0;
+            }
+        }
+        &.header__sub-section {
+            width: 22%;
+            li {
+                height: 23px;
+                line-height: 23px;
+                margin: 0;
+                a {
+                    display: block;
+                }
+            }
+        }
+        .rtd-service-icon-menu {
+            display: inline-block;
+            color: #fff;
+            border-radius: 3px;
+            font-family: arial;
+            font-weight: 900;
+            padding:0;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 20px;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            padding: 0;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            margin:0 5px 0 0;
+        }
+        .rtd-service-icon-menu-multi {
+            margin-right: 3px;
+        }
+    }
+    .header__alt-links {
+        display: none;
+    }
+}
+
+@include respond-to($break-m, $tweak-m-1) {
+    .header__nav-menu--fastracks> ul > li {
+        p {
+            width: 97%;
+            margin-bottom: 5px;
+            & + p {
+                margin: 0;
+            }
+        }
+        &.header__sub-section a span{
+            display: none;
+        }
+    }
+}

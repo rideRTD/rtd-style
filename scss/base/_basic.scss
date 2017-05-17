@@ -1,0 +1,116 @@
+html {
+    font-size: 1em;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+ }
+
+html,
+button,
+input,
+select,
+textarea {
+    color: $gray-darkest;
+}
+
+// i element is used for icons, so we're removing the default italics
+i {
+    font-style: normal;
+}
+// b element is used for non-semantic styling hooks, so remove default font weight
+b {
+    font-weight: normal;
+}
+
+ // Remove text-shadow in selection highlight: h5bp.com/i
+ // These selection rule sets have to be separate.
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+ // A better looking default horizontal rule
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: $global-border-thin solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+hr.alt {
+    border-top: $global-border-thin solid $gray-medium;
+}
+
+hr.dashed {
+    border-top: $global-border-thin dashed $gray-medium;
+}
+hr.spaced {
+    @include respond-to($break-m) {
+        margin: 2em 0;
+    }
+}
+
+
+// Remove the gap between images, videos, audio and canvas and the bottom of their containers: h5bp.com/i/440
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+// Allow only vertical resizing of textareas.
+
+textarea {
+    resize: vertical;
+}
+address, .address {
+    font-style: italic;
+}
+blockquote {
+    padding: 0 0 0 1em;
+    margin: 1em 0 1em 1em;
+    border-left: 8px solid $gray-medium;
+    @include text-match;
+}
+code, kbd, pre, samp, var {
+    font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+    font-size: 0.75em;
+}
+code, samp, kbd {
+    padding: 5px 8px 4px 8px;
+    display: inline-block;
+    line-height: 1em;
+    border-radius: $global-radius;
+    font-weight: normal;
+}
+code {
+    background: $gray-light;
+    color: $gray-darker;
+    border: $global-border-thin solid $gray-medium;
+}
+kbd {
+    background: $gray-black;
+    color: $gray-light;
+    white-space: nowrap;
+}
+samp {
+    border: $global-border-thin solid $gray-medium;
+}
+.highlight {
+    background: $bus-yellow;
+}

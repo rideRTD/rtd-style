@@ -1,0 +1,30 @@
+// Mobile First
+    // Mediaqueries are written using min-width, building styles from the smallest viewports to the largerst.
+    // Default (no query) styles affect the smallest viewport, media queries are added to accomodate larger screen size
+
+// Break points
+    //Points in the layout where things change significantly (single column to multicolumn, small menu to big menu)
+
+// Tweak points
+    //Points between major breakpoints where smaller tweaks are made
+
+// These variables are consumed by the 'respond-to' mixin, which (in conjunction with ie.scss) allows us to generate a no-query "desktop" style sheet
+
+    $tweak-d-1: 	20em; 		// 320px
+    $tweak-to-d-2: 	22.49em; 	// 359px
+    $tweak-d-2: 	22.5em; 	// 360px
+
+$break-s: 			30em; 		// 480px
+    $tweak-to-s-1:  35.49em; 	// 567px
+    $tweak-s-1: 	35.5em; 	// 568px
+    $tweak-s-2: 	37.5em; 	// 600px
+
+$break-to-m: 		47.99em;    // 767px
+
+$break-m: 			48em; 		// 768px
+    $tweak-to-m-1:  59.99em; 	// 959px
+    $tweak-m-1: 	60em; 		// 960px
+    $tweak-m-2: 	64em; 		// 1024px
+
+$break-l: 			76.5em; 	// 1224px
+    $tweak-l-1: 	90em; 		// 1440px

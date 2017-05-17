@@ -1,0 +1,94 @@
+@mixin quantity($comparison, $number) {
+  $nth: '';
+
+  @if index( ('greater' 'greater-than' 'more' 'more-than' '>'), $comparison ) {
+    $nth: 'n + #{$number}';
+} @else if index( ('less' 'less-than' 'fewer' 'fewer-than' '<'), $comparison ) {
+    $nth: '-n + #{$number}';
+} @else if index( ('equal' 'equals' 'same' 'is' '=' '=='), $comparison ) {
+    $nth: $number;
+  } @else {
+    @warn "Sorry, that's an invalid $comparison value. Try 'greater', 'less', or 'equal'"
+  }
+
+  &:nth-last-child(#{$nth}):first-child {
+    &,
+    & ~ * {
+      @content;
+    }
+  }
+}
+
+@mixin quantity-percent {
+    @include quantity(equals, 1) {
+        width:100%;
+    }
+    @include quantity(equals, 2) {
+        width:50%;
+    }
+    @include quantity(equals, 3) {
+        width:33%;
+    }
+    @include quantity(equals, 4) {
+        width:25%;
+    }
+    @include quantity(equals, 5) {
+        width:20%;
+    }
+    @include quantity(equals, 6) {
+        width:16%;
+    }
+}
+
+@mixin responsive-quantity {
+    width:100%;
+    @include quantity(equals, 1) {
+        width:100%;
+    }
+    @include quantity(equals, 2) {
+        @include respond-to($break-m) {
+            float: left;
+            width:50%;
+        }
+    }
+    @include quantity(equals, 3) {
+        @include respond-to($break-m) {
+            float: left;
+            width:33%;
+        }
+    }
+    @include quantity(equals, 4) {
+        @include respond-to ($tweak-s-2) {
+            float: left;
+            width: 50%;
+        }
+        @include respond-to($tweak-m-1) {
+            float: left;
+            width: 25%;
+        }
+    }
+    @include quantity(equals, 5) {
+        @include respond-to ($tweak-s-2) {
+            float: left;
+            width: 50%;
+        }
+        @include respond-to($tweak-m-1) {
+            float: left;
+            width: 20%;
+        }
+    }
+    @include quantity(equals, 6) {
+        @include respond-to ($tweak-s-2) {
+            float: left;
+            width: 50%;
+        }
+        @include respond-to($tweak-m-1) {
+            float: left;
+            width:33%;
+        }
+        @include respond-to($tweak-m-2) {
+            float: left;
+            width:16%;
+        }
+    }
+}

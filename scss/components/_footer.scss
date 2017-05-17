@@ -1,0 +1,290 @@
+.footer {
+    width: 100%;
+    color: $white;
+    @include respond-to(0, $break-to-m) {
+        text-align:center;
+    }
+
+    h3 {
+        @include text-regular;
+        text-transform: capitalize;
+        color: $white;
+        @include rem(font-size, 1);
+        border-bottom:0 none;
+        letter-spacing: $global-letter-spacing/2;
+    }
+    a {
+        color: $gray-medium-alt;
+    }
+    ul {
+        padding:0;
+        margin:0;
+        list-style-type: none;
+    }
+    li {
+        @include rem(font-size, .75);
+        @include rem(line-height, 1.4)
+    }
+}
+.footer__container {
+    @include container(padded);
+    @include clearfix;
+}
+.footer__primary {
+    background-color: $gray-darkest;
+    padding: 1em 0;
+    @include respond-to($break-m) {
+        padding: 2em 0;
+    }
+}
+.footer__secondary {
+    background-color: $gray-black;
+}
+.footer__nav {
+    float:left;
+    width: 75%;
+    @include clearfix;
+    > div {
+        width:48%;
+        float:left;
+        @include respond-to($tweak-m-2) {
+            width:25%;
+        }
+    }
+    h3 {
+        width: 80%;
+    }
+    display: none;
+    @include respond-to($break-m) {
+        display:block;
+    }
+    .rtd-phone-number {
+        @include text-bold;
+        @include rem(font-size, 1.375);
+        @include rem(line-height, 2);
+        letter-spacing: $global-letter-spacing;
+    }
+    .customer-link a {
+        color: $white;
+    }
+}
+
+.footer__nav--business-center,
+.footer__nav--inside-rtd {
+    margin-top: 1.3em;
+    @include respond-to($tweak-m-2) {
+        margin-top: 0;
+    }
+}
+
+.footer__contact {
+    width: 100%;
+    @include clearfix;
+    @include respond-to($break-m) {
+        float: left;
+        width: 20%;
+        padding-left:1em;
+        border-left: 1px dashed $gray-darker;
+    }
+}
+
+.footer__address {
+    margin: 0 0 0.5em;
+    font-style:normal;
+    @include rem(font-size, .75);
+    color: $gray-medium-alt;
+    strong {
+        font-weight: normal;
+    }
+    span {
+        margin-top: 10px;
+        display:none;
+        font-style: italic;
+        @include respond-to($break-m) {
+            display: block;
+            margin-top: 10px;
+        }
+    }
+}
+
+.footer__icon {
+    display: block;
+    height:25px;
+    width: 25px;
+    background-size: 25px;
+    @include respond-to($tweak-m-2) {
+        width: 35px;
+        height: 35px;
+        background-size: 35px;
+    }
+}
+
+.footer__icon--logo {
+    opacity: 0.6;
+    width: 80px;
+    height: 40px;
+    background-size: 80px 40px;
+    margin: 0 auto;
+    @include respond-to($break-m) {
+        margin: 0;
+    }
+    @include respond-to(0, $break-to-m) {
+        opacity: 1;
+    }
+}
+.footer__social-media {
+    ul {
+        margin-top: 1em;
+    }
+    li {
+        display: inline-block;
+        *display: inline;
+    }
+    a  {
+        display: block;
+        margin-right: 0.5em;
+        opacity: 0.6;
+        @include transition();
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+    }
+}
+
+.footer__secondary {
+    @include clearfix;
+    padding: 1em 0;
+}
+
+.footer__sitelinks {
+    padding-top: 1em;
+    li {
+        display:inline-block;
+        padding: 0 .5em;
+    }
+    li:last-child {
+        border-right: 0;
+    }
+}
+.footer__copywrite {
+    line-height: 2em;
+    white-space: nowrap;
+    padding-top: 1em;
+    @include rem(font-size, .75);
+    color: $gray-medium-alt;
+    @include respond-to($break-m) {
+        padding-top: 0;
+    }
+}
+
+@include respond-to($break-m) {
+    .footer__buttons,
+    .footer__accessibility,
+    .footer__translate,
+    .footer__sitelinks,
+    .footer__copywrite {
+        float:left;
+        min-height: 1px; // prevent float from collapsing if empty
+        padding:0;
+        margin:0;
+    }
+    .footer__buttons {
+        width:36%;
+    }
+    .footer__sitelinks,
+    .footer__copywrite {
+        width:31%;
+    }
+}
+
+.footer__buttons {
+    @include clearfix;
+    .footer__accessibility,
+    .footer__translate {
+        display: inline-block;
+    }
+    .footer__accessibility {
+        margin-right: .5em;
+    }
+    .btn--accessibility {
+        border-radius: $global-radius;
+        border: 1px solid $gray-darkest;
+        i {
+            background-color: $gray-darkest;
+            display: block;
+            border-radius: $global-radius 0 0 $global-radius;
+            width: 24px;
+            height: 22px;
+            float: left;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        span{
+            @include text-regular;
+            padding: 0.3em 0.8em;
+            line-height: 22px;
+        }
+    }
+}
+
+.footer .goog-te-gadget-simple {
+    background-color: transparent;
+    border: 0 none;
+    @include rem(font-size, .75);
+    > span {
+        display:block;
+        width:100%;
+    }
+    .goog-te-menu-value {
+        color: $gray-medium-alt;
+    }
+}
+
+.footer .goog-te-menu-value {
+    display:block;
+    width:100%;
+    padding: 4px 5px 3px 10px;
+    margin:0;
+    text-align:left;
+    a:hover {
+        text-decoration:none;
+    }
+    span {
+        display: inline;
+        color: $gray-medium-alt;
+    }
+}
+
+.goog-te-gadget-icon {
+    display:none;
+}
+
+iframe.goog-te-menu-frame {
+    box-shadow: none;
+}
+
+#load-translate {
+    padding: 0.3em 0.8em;
+    border-radius: $global-radius;
+    border: 1px solid $gray-darkest;
+}
+/* Fix for IE8 Layout not receiving any $tweak-m-2 styles */
+
+.lt-ie9 .footer {
+    .footer__nav > div {
+        width:25%;
+    }
+    .footer__nav--business-center,
+    .footer__nav--inside-rtd {
+        margin-top: 0;
+    }
+    .footer__icon {
+        width: 35px;
+        height: 35px;
+    }
+    .footer__icon--logo {
+        width: 80px;
+        height: 40px;
+    }
+}
