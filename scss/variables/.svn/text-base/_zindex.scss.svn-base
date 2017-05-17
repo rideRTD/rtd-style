@@ -1,8 +1,0 @@
-
-
-$zindex-stickyHeader:      10;
-$zindex-dropdown:          20;
-$zindex-tooltip:           30;
-$zindex-modal:             40;
-$zindex-autocomplete:      50;
-$zindex-datepicker:        60;

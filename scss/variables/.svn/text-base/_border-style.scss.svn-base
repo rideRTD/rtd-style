@@ -1,8 +1,0 @@
-$global-radius: 4px;
-$global-border-thick: 2px;
-$global-border-thin: 1px;
-$global-thickness: $global-border-thin;
-$global-border-left: 8px;
-@mixin primary-border-style {
-    border: $global-border-thin solid $gray-medium;
-}

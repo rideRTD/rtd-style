@@ -1,2 +1,0 @@
-// When using content--flex with a margin (content--flex-margin)
-$flex-margin: 1.5em;
