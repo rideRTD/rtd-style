@@ -1,0 +1,39 @@
+$media-queries: true !default;
+
+@import "base/fontface";
+
+// Variables used in project
+@import "variables/layout";
+@import "variables/mediaquery";
+@import "variables/colors";
+@import "variables/typography";
+@import "variables/zindex";
+@import "variables/border-style";
+
+// Mixins used in project
+@import "mixins/rems";
+@import "mixins/respondto";
+@import "mixins/quantity";
+@import "mixins/animations";
+@import "mixins/container";
+@import "mixins/clearfix";
+@import "mixins/btn-reset";
+@import "mixins/text";
+@import "mixins/heading";
+
+// Set default static values and define fonts
+@import "base/normalize";
+@import "base/basic";
+
+// Component styles
+@import "component/header";
+.header__nav {
+    @include container;
+}
+
+@import "component/nav-s";
+@import "component/nav-m";
+@import "component/trigger";
+@import "component/tools";
+@import "component/footer";
+@import "base/helper";
