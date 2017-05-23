@@ -48,6 +48,15 @@ $error-light: #faf2f2;
 $disabled-dark: $gray-dark;
 $disabled-light: $gray-lighter;
 
+$alerts: (
+  //background-color, border-color, color
+  success:($success-light, #c1e2b3, $success-dark),
+  info:($info-light, #b0daec, $info-dark),
+  warning:($warning-light, #f6c2b1, $warning-dark),
+  error:($error-light, #e5bbbb, $error-dark),
+  disabled:($disabled-light, #cecece, $disabled-dark)
+);
+
 
 // Service Colors
 $bus-blue: #0076ce; //#008FBF; updated 12/30/15
@@ -74,32 +83,32 @@ $lr-blue: #0075be;
 $lr-teal: #009daa;
 $lr-gold: #f6b221;
 
-$bus-local: $bus-blue;
-$bus-limited: $bus-purple;
-$bus-boulder: $bus-teal;
-$bus-express: $bus-red;
-$bus-regional: $bus-green;
-$bus-skyride: $bus-darkblue;
-$bus-cnr: $bus-chartreuse;
-$bus-art: $bus-yellow;
-$bus-mall-art: $bus-violet;
-$bus-mall: $bus-violet;
-$bus-metro: $bus-turquoise;
-$bus-flatiron: #1e4286;
-$bus-flatiron-alt: #f5a81c;
+$service: (
+  bus-local: $bus-blue,
+  bus-limited: $bus-purple,
+  bus-boulder: $bus-teal,
+  bus-express: $bus-red,
+  bus-regional: $bus-green,
+  bus-skyride: $bus-darkblue,
+  bus-cnr: $bus-chartreuse,
+  bus-mall: $bus-yellow,
+  bus-metro: $bus-turquoise,
+  bus-flatiron: #1e4286,
+  bus-flatiron-alt: #f5a81c,
 
-$a-line: $lr-sky-blue;
-$b-line: $lr-kelly-green;
-$c-line: $lr-orange;
-$d-line: $lr-green;
-$e-line: $lr-plum;
-$f-line: $lr-red;
-$g-line: $lr-gold;
-$h-line: $lr-blue;
-$l-line: $lr-yellow;
-$n-line: $lr-purple;
-$r-line: $lr-lime;
-$w-line: $lr-teal;
+  a-line: $lr-sky-blue,
+  b-line: $lr-kelly-green,
+  c-line: $lr-orange,
+  d-line: $lr-green,
+  e-line: $lr-plum,
+  f-line: $lr-red,
+  g-line: $lr-gold,
+  h-line: $lr-blue,
+  l-line: $lr-yellow,
+  n-line: $lr-purple,
+  r-line: $lr-lime,
+  w-line: $lr-teal
+);
 
 
 $broncos: #FB4F14;
