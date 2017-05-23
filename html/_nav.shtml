@@ -6,8 +6,8 @@
             <li><a tabindex="-1" href="/app/schedules">Schedules</a></li>
             <li><a tabindex="-1" href="/app/plan">Trip Planner</a></li>
             <li><a tabindex="-1" href="/app/alerts">Rider Alerts</a></li>
-            <li><a tabindex="-1" href="/accessaride">Access a Ride</a></li>
-            <li><a tabindex="-1" href="/accessibility">Accessibility at RTD</a></li>
+            <li><a tabindex="-1" href="/services/access-a-ride">Access a Ride</a></li>
+            <li><a tabindex="-1" href="/services/accessibility">Accessibility at RTD</a></li>
             <li><a tabindex="-1" href="/fares/discount">Discount Fares and Special Discount Card</a></li>
             <li><a tabindex="-1" href="/contact">Contact Us</a></li>
             <li><a tabindex="-1" href="http://rtd.iqm2.com/">Board Meeting Resources</a></li>
@@ -31,13 +31,13 @@
                 <i><!-- tools icon --></i>
                 <b>tools</b>
             </button>
-            <a href="sitemap" class="btn header__nojs-navlink ifjs-hide-s">Visit Site Map for navigation options</a>
+            <a href="/sitemap" class="btn header__nojs-navlink ifjs-hide-s">Visit Site Map for navigation options</a>
         </div>
 
         <div class="header__nav-main" id="navMain">
             <ul class="header__nav-primary">
                 <li>
-                    <a class="header__nav-btn js-menu-btn" href="Schedules">Schedules</a>
+                    <a class="header__nav-btn js-menu-btn" href="/app/schedules">Schedules</a>
                     <div class="header__nav-menu header__nav-menu--schedules js-menu-level" id="subnav-schedules">
                         <ul>
                             <li><a href="/app/schedules"><i class="i i--nav-schedule"></i>All Schedules</a></li>
@@ -48,44 +48,44 @@
                     </div>
                 </li>
                 <li>
-                    <a class="header__nav-btn js-menu-btn" href="Services" >Services</a>
+                    <a class="header__nav-btn js-menu-btn" href="/services" >Services</a>
                     <div class="header__nav-menu header__nav-menu--services js-menu-level" id="subnav-services">
                         <ul>
                             <li class="header__alt-links"><a href="/services">All Services</a></li>
                             <li><a href="/services/bus"><i class="i i--nav-bus"></i>Bus</a></li>
-                            <li><a href="/services/lightrail"><i class="i i--nav-rail"></i>Rail</a></li>
+                            <li><a href="/services/rail"><i class="i i--nav-rail"></i>Rail</a></li>
                             <li><a href="/services/airport"><i class="i i--nav-skyride"></i>Airport</a></li>
                             <li><a href="/app/facilities"><i class="i i--nav-parknride"></i>Park-n-Ride</a></li>
                             <li><a href="/services/accessibility"><i class="i i--nav-accessibility"></i>Accessibility</a></li>
                             <li class="header__sub-section">
-                                <a class="header__sub-title js-menu-btn" href="/services/Services">More Services</a>
-                                <ul class="js-menu-level"  id="subnav-services-moreservices">
-                                    <li><a href="/services/accessaride">Access-a-Ride</a></li>
-                                    <li><a href="/services/callnride">Call-n-Ride</a></li>
+                                <a class="header__sub-title js-menu-btn" href="/services">More Services</a>
+                                <ul class="js-menu-level" id="subnav-services-moreservices">
+                                    <li><a href="/services/access-a-ride">Access-a-Ride</a></li>
+                                    <li><a href="/services/call-n-ride">Call-n-Ride</a></li>
                                     <li><a href="/services/flatiron-flyer">Flatiron Flyer</a></li>
                                     <li><a href="/services/free-mallride">Free MallRide</a></li>
                                     <li><a href="/services/free-metroride">Free MetroRide</a></li>
-                                    <li><a href="/services/seniorride">SeniorRide</a></li>
+                                    <li><a href="/services/senior-ride">SeniorRide</a></li>
                                     <li><a href="/services/airport">SkyRide</a></li>
                                 </ul>
                             </li>
                             <li class="header__sub-section">
                                 <a class="header__sub-title js-menu-btn" href="/services/sportsrides">SportsRides</a>
                                 <ul class="js-menu-level"  id="subnav-services-sportsrides">
-                                    <li><a href="/services/BroncosRide">BroncosRide</a></li>
-                                    <li><a href="/services/BuffRide">BuffRide</a></li>
-                                    <li><a href="/services/CUvsCSU">CU vs CSU</a></li>
-                                    <li><a href="/services/RaceCure">Race for the Cure</a></li>
-                                    <li><a href="/services/RockiesRide">RockiesRide</a></li>
-                                    <li><a href="/services/RunRide">BolderBOULDER</a></li>
-                                    <li><a href="/services/skiNRide">Ski-n-Ride</a></li>
+                                    <li><a href="/services/broncos-ride">BroncosRide</a></li>
+                                    <li><a href="/services/buff-ride">BuffRide</a></li>
+                                    <li><a href="/services/cu-vs-csu">CU vs CSU</a></li>
+                                    <li><a href="/services/race-for-the-cure">Race for the Cure</a></li>
+                                    <li><a href="/services/rockies-ride">RockiesRide</a></li>
+                                    <li><a href="/services/boulder-boulder">BolderBOULDER</a></li>
+                                    <li><a href="/services/ski-n-ride">Ski-n-Ride</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <a class="header__nav-btn js-menu-btn" href="RiderInfo">Rider Info</a>
+                    <a class="header__nav-btn js-menu-btn" href="/info">Rider Info</a>
                     <div class="header__nav-menu header__nav-menu--ridertools js-menu-level" id="subnav-riderinfo">
                         <ul>
                             <li class="header__alt-links"><a href="/info">All Rider Info</a></li>
@@ -113,16 +113,16 @@
                     <a class="header__nav-btn js-menu-btn" href="/fares">Fares &amp; Passes</a>
                     <div class="header__nav-menu header__nav-menu--fares js-menu-level" id="subnav-fares">
                         <ul>
-                            <li class="header__alt-links"><a href="FaresPasses">See All Fares &amp; Passes</a></li>
+                            <li class="header__alt-links"><a href="/fares">See All Fares &amp; Passes</a></li>
                             <li><a href="/fares"><i class="i i--nav-fares"></i>Fares</a></li>
                             <li><a href="/fares/discount"><i class="i i--nav-discounts"></i>Discounts</a></li>
                             <li><a href="http://store.rtdpasses.com/"><i class="i i--nav-purchase"></i>Purchase</a></li>
                             <li class="header__sub-section">
-                                <a class="header__sub-title js-menu-btn" href="Fares">Passes &amp; Ticket Books</a>
+                                <a class="header__sub-title js-menu-btn" href="/fares">Passes &amp; Ticket Books</a>
                                 <ul class="js-menu-level" id="subnav-fares-passes">
                                     <li><a href="/fares/day-pass">Day Pass</a></li>
                                     <li><a href="/fares/monthly-pass">Monthly Pass <!--&amp; ValuPass--></a></li>
-                                    <li><a href="/fares/ticketbook">Ticket Books</a></li>
+                                    <li><a href="/fares/ticket-book">Ticket Books</a></li>
                                     <li><a href="/fares/sales-outlets">Sales Outlets</a></li>
                                 </ul>
                             </li>
@@ -143,25 +143,25 @@
                     <div class="header__nav-menu header__nav-menu--fastracks js-menu-level" id="subnav-fastracks">
                         <ul>
                             <li>
-                                <a class="header__sub-title" href="Fastracks">Connecting More Communities</a>
-                                <p>FasTracks is a multi-billion dollar voter-approved transit expansion plan that is bringing you more transportation options than ever before. In 2016, we redefined the Boulder-Denver commute on the <a href="/flatiron-flyer">Flatiron Flyer</a>, launched the <a href="/a-line">University of Colorado A Line</a> servicing DIA and expanded commuter rail north of downtown on the <a href="/b-line">B Line</a> to Westminster. We look forward to rolling out new rail service to all parts of the Denver metro area in 2017. <a class="link-bold block p--top-sm" href="/fastracks#fastracks-map"> View the FasTracks system map</a></p>
+                                <a class="header__sub-title" href="/fastracks">Connecting More Communities</a>
+                                <p>FasTracks is a multi-billion dollar voter-approved transit expansion plan that is bringing you more transportation options than ever before. In 2016, we redefined the Boulder-Denver commute on the <a href="/projects/flatiron-flyer">Flatiron Flyer</a>, launched the <a href="/projects/a-line">University of Colorado A Line</a> servicing DIA and expanded commuter rail north of downtown on the <a href="/projects/b-line">B Line</a> to Westminster. We look forward to rolling out new rail service to all parts of the Denver metro area in 2017. <a class="link-bold block p--top-sm" href="/fastracks#fastracks-map"> View the FasTracks system map</a></p>
                             </li>
                             <li class="header__alt-links"><a href="/fastracks">FasTracks program</a></li>
                             <li class="header__alt-links"><a href="/fastracks#fastracks-map">See FasTracks map</a></li>
                             <li class="header__sub-section">
-                                <a class="header__sub-title js-menu-btn" href="Fastracks">New service arriving 2017</a>
+                                <a class="header__sub-title js-menu-btn" href="/fastracks">New service arriving 2017</a>
                                 <ul class="js-menu-level" id="subnav-new-services">
-                                    <li><a href="/g-line"><i class="rtd-service-icon-menu service-g-line">G</i> Line to Wheat Ridge</a></li>
-                                    <li><a href="/r-line"><i class="rtd-service-icon-menu service-r-line">R</i> Line to Aurora<span> - now open!</span></a></li>
+                                    <li><a href="/projects/g-line"><i class="rtd-service-icon-menu service-g-line">G</i> Line to Wheat Ridge</a></li>
+                                    <li><a href="/projects/r-line"><i class="rtd-service-icon-menu service-r-line">R</i> Line to Aurora<span> - now open!</span></a></li>
                                 </ul>
                                 <p class="p--top mobile__no-padding"><a class="link-bold no-margin" href="/fastracks#completed-projects">See completed projects</a></p>
                             </li>
                             <li class="header__sub-section">
                                 <a class="header__sub-title js-menu-btn" href="/fastracks#future-projects">Future service</a>
                                 <ul class="js-menu-level" id="subnav-future-services">
-                                    <li><a href="/n-line"><i class="rtd-service-icon-menu service-n-line">N</i>  Line to Thornton</a></li>
-                                    <li><a href="/e-f-line-extension"><i class="rtd-service-icon-menu rtd-service-icon-menu-multi service-e-line">E</i><i class="rtd-service-icon rtd-service-icon-menu rtd-service-icon-menu-multi service-f-line">F</i><i class="rtd-service-icon rtd-service-icon-menu service-r-line">R</i> Southeast Rail Line Ext<span>ension</span></a></li>
-                                    <li><a href="/c-d-line-extension"><i class="rtd-service-icon-menu rtd-service-icon-menu-multi service-c-line">C</i><i class="rtd-service-icon rtd-service-icon-menu service-d-line">D</i> Southwest Rail Line Ext<span>ension</span></a></li>
+                                    <li><a href="/projects/n-line"><i class="rtd-service-icon-menu service-n-line">N</i>  Line to Thornton</a></li>
+                                    <li><a href="/projects/e-f-line-extension"><i class="rtd-service-icon-menu rtd-service-icon-menu-multi service-e-line">E</i><i class="rtd-service-icon rtd-service-icon-menu rtd-service-icon-menu-multi service-f-line">F</i><i class="rtd-service-icon rtd-service-icon-menu service-r-line">R</i> Southeast Rail Line Ext<span>ension</span></a></li>
+                                    <li><a href="/projects/c-d-line-extension"><i class="rtd-service-icon-menu rtd-service-icon-menu-multi service-c-line">C</i><i class="rtd-service-icon rtd-service-icon-menu service-d-line">D</i> Southwest Rail Line Ext<span>ension</span></a></li>
                                     <li><a href="/l-line"><i class="rtd-service-icon-menu service-l-line">L</i> Central Rail Ext<span>ension</span></a></li>
                                 </ul>
                             </li>
@@ -229,11 +229,11 @@
                             <li><a href="/about">About Us</a></li>
                             <li><a href="/about/board">Board of Directors</a></li>
                             <li><a href="/about/general-manager">General Manager</a></li>
-                            <li><a href="/about/projects">Projects</a></li>
+                            <li><a href="/projects">Projects</a></li>
                             <li><a href="/about/media">Media Center</a></li>
                             <li><a href="/about/sustainability">Sustainability</a></li>
                             <li><a href="/about/reports">Reports and Policies</a></li>
-                            <li><a href="about/operator-of-the-month">Operator of the Month</a></li>
+                            <li><a href="/about/operator-of-the-month">Operator of the Month</a></li>
                         </ul>
                     </div>
                 </li>
