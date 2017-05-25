@@ -1,0 +1,118 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant($color, $background, $border) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+
+    &:hover,
+    &:focus {
+        background-color: darken($background, 4%);
+        border-color: darken($border, 4%);
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        border-bottom-width: $global-border-thin;
+        background-color: darken($background, 8%);
+        border-color: darken($border, 12%);
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            background-color: $background;
+            border-color: $border;
+        }
+    }
+}
+
+@mixin button-group-vertical {
+    > .btn,
+    > .btn-group,
+    > .btn-group > .btn {
+        display: block;
+        float: none;
+        width: 100%;
+        max-width: 100%;
+    }
+    .btn {
+        border-bottom-width: $global-border-thin;
+    }
+    .btn--outline {
+        border-bottom-width: $global-border-thick;
+    }
+    .btn--compact {
+        border-bottom-width: $global-border-thin;
+    }
+    // Clear floats so dropdown menus can be properly placed
+    > .btn-group {
+        @include clearfix;
+        > .btn {
+            float: none;
+        }
+    }
+
+    > .btn + .btn,
+    > .btn + .btn-group,
+    > .btn-group + .btn,
+    > .btn-group + .btn-group,
+    input + label.btn + input + label.btn {
+        margin-top: -1px;
+        margin-left: 0;
+    }
+
+    > .btn--outline + .btn--outline,
+    > .btn--outline + .btn-group,
+    > .btn-group + .btn--outline {
+        margin-top: -2px;
+    }
+
+    > .btn--outline.btn--compact + .btn--outline.btn--compact,
+    > .btn--outline.btn--compact + .btn-group,
+    > .btn-group + .btn--outline.btn--compact {
+        margin-top: -1px;
+    }
+
+    .btn,
+    label.btn  {
+        &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+        }
+        &:first-child:not(:last-child) {
+            border-top-right-radius: $global-radius;
+            border-bottom-left-radius:0;
+            border-bottom-right-radius:0;
+            &:not(.dropdown-toggle) {
+                border-top-right-radius: $global-radius;
+            }
+        }
+        &:last-child:not(:first-child) {
+            border-bottom-left-radius: $global-radius;
+            border-top-left-radius:0;
+            border-top-right-radius:0;
+        }
+    }
+
+    > .btn-group:not(:first-child):not(:last-child) > .btn {
+        border-radius: 0;
+    }
+
+    > .btn-group:first-child:not(:last-child) {
+        > .btn:last-child,
+        > .dropdown-toggle {
+            border-bottom-radius:0;
+        }
+    }
+
+    > .btn-group:last-child:not(:first-child) > .btn:first-child {
+        border-top-radius:0;
+    }
+}

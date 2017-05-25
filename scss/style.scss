@@ -17,9 +17,10 @@ $media-queries: true !default;
 @import "mixins/animations";
 @import "mixins/container";
 @import "mixins/clearfix";
-@import "mixins/btn-reset";
 @import "mixins/text";
 @import "mixins/heading";
+@import "mixins/btn-reset";
+@import "mixins/button";
 
 // Set default static values and define fonts
 @import "base/normalize";
@@ -32,4 +33,6 @@ $media-queries: true !default;
 @import "components/trigger";
 @import "components/tools";
 @import "components/footer";
+@import "component/buttons";
+@import "component/button-groups";
 @import "base/helper";
