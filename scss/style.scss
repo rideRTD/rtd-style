@@ -26,11 +26,7 @@ $media-queries: true !default;
 @import "base/basic";
 
 // Component styles
-/*@import "components/header";
-.header__nav {
-    @include container;
-}*/
-
+@import "components/header";
 @import "components/nav-s";
 @import "components/nav-m";
 @import "components/trigger";

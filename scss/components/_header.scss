@@ -23,6 +23,7 @@
 }
 
 .header__nav{
+    @include container;
     @include respond-to($break-m) {
         height: 6em;
         position: relative;
