@@ -234,7 +234,8 @@
         }
     };
 
-    // add to global namespace
+    // create the 'rtd' global if it doesn't exist yet
+    window.rtd = window.rtd || {};
     window.rtd.DropMenu = DropMenu;
 
 })(window);

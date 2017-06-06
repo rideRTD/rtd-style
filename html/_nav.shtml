@@ -116,12 +116,13 @@
                             <li class="header__alt-links"><a href="/fares">See All Fares &amp; Passes</a></li>
                             <li><a href="/fares"><i class="i i--nav-fares"></i>Fares</a></li>
                             <li><a href="/fares/discount"><i class="i i--nav-discounts"></i>Discounts</a></li>
+                            <li><a href="/fares/myride"><i class="i i--nav-discounts"></i>MyRide</a></li>
                             <li><a href="http://store.rtdpasses.com/"><i class="i i--nav-purchase"></i>Purchase</a></li>
                             <li class="header__sub-section">
                                 <a class="header__sub-title js-menu-btn" href="/fares">Passes &amp; Ticket Books</a>
                                 <ul class="js-menu-level" id="subnav-fares-passes">
                                     <li><a href="/fares/day-pass">Day Pass</a></li>
-                                    <li><a href="/fares/monthly-pass">Monthly Pass <!--&amp; ValuPass--></a></li>
+                                    <li><a href="/fares/monthly-pass">Monthly Pass</a></li>
                                     <li><a href="/fares/ticket-book">Ticket Books</a></li>
                                     <li><a href="/fares/sales-outlets">Sales Outlets</a></li>
                                 </ul>

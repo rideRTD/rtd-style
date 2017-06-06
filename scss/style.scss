@@ -17,23 +17,22 @@ $media-queries: true !default;
 @import "mixins/animations";
 @import "mixins/container";
 @import "mixins/clearfix";
-@import "mixins/btn-reset";
 @import "mixins/text";
 @import "mixins/heading";
+@import "mixins/btn-reset";
+@import "mixins/button";
 
 // Set default static values and define fonts
 @import "base/normalize";
 @import "base/basic";
 
 // Component styles
-/*@import "components/header";
-.header__nav {
-    @include container;
-}*/
-
+@import "components/header";
 @import "components/nav-s";
 @import "components/nav-m";
 @import "components/trigger";
 @import "components/tools";
 @import "components/footer";
+@import "components/buttons";
+@import "components/button-groups";
 @import "base/helper";
