@@ -69,6 +69,8 @@ $bus-darkblue: #57c1e9; //#003DA7; updated 12/30/15
 $bus-chartreuse: #98cb4f;
 $bus-turquoise: #00a19b;
 $bus-yellow: #ffff00;
+$bus-lt-purple: #675DC6;
+
 
 $lr-orange: #f79239;
 $lr-yellow: #ffcd00;
@@ -91,7 +93,7 @@ $service: (
   bus-regional: $bus-green,
   bus-skyride: $bus-darkblue,
   bus-cnr: $bus-chartreuse,
-  bus-mall: $bus-yellow,
+  bus-mall: $bus-lt-purple,
   bus-metro: $bus-turquoise,
   bus-flatiron: #1e4286,
   bus-flatiron-alt: #f5a81c,
