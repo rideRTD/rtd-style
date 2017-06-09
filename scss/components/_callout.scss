@@ -1,0 +1,190 @@
+.callout {
+    position: relative;
+    background-color: $gray-medium;
+    color: $blue-darker;
+    &--compact {
+        .callout__text {
+            position: relative;
+            margin: 0 1em;
+            font-size: .75em;
+            padding-bottom: 0;
+            @include respond-to($break-s) {
+                font-size: .75em;
+                line-height: 1.2em;
+            }
+            @include respond-to($break-m) {
+                white-space: nowrap;
+            }
+            @include respond-to($tweak-m-2) {
+                top:-1px;
+            }
+        }
+    }
+}
+.callout__inner {
+    @include container(padded);
+    padding: 0.75em 0;
+    text-align: center;
+}
+
+.callout--expandable {
+    .callout__inner {
+        padding: 0;
+    }
+    .js-expander{
+        padding: .5em 0;
+    }
+    .js-expandable {
+        padding-bottom: 1em;
+    }
+}
+
+.callout__inner--list {
+    text-align: left;
+    padding-bottom: 0;
+
+    & + & {
+        padding-top: 0;
+        padding-bottom: .75em;
+    }
+    .content__section + .content__section {
+        margin-top: .5em;
+    }
+}
+.callout--emergency {
+    background-color: $red-dark;
+    color: $white;
+}
+.callout__heading span {
+    @include text-default;
+    font-size: .875em;
+}
+h2.callout__heading {
+    letter-spacing: $global-letter-spacing/2;
+}
+.callout__heading,
+.callout__heading button {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: inherit;
+    border: 0;
+    font-size: .75em;
+    @include respond-to($break-s) {
+        font-size: 1em;
+    }
+
+    .callout__inner--list & {
+        margin-bottom: .5em;
+    }
+}
+.callout__heading button {
+    @include btn-reset;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    &:hover,
+    &:focus,
+    &:hover i,
+    &:focus i {
+        outline: none;
+        text-decoration: underline;
+    }
+    .i {
+        display: inline-block;
+        line-height: 2em;
+        padding-left: 40px;
+        background-size: 25px;
+        background-position: left center;
+    }
+
+}
+
+.callout__text {
+    margin: 0 2em;
+    padding-bottom: 0.5em;
+    color: $gray-darkest;
+    font-size: .75em;
+    @include respond-to($break-s) {
+        font-size: .875em;
+    }
+    .callout--emergency & {
+        color: $white;
+    }
+    .callout__inner--list & {
+        margin: 0;
+    }
+    a {
+        @include text-bold;
+        color: $blue-darker;
+        text-decoration: underline;
+    }
+}
+
+.callout__heading,
+.callout__text {
+    display: block;
+
+    @include respond-to($tweak-m-1) {
+        display: inline;
+        .callout--emergency & {
+            display: block;
+        }
+    }
+}
+.callout__link {
+    display: inline;
+    background-color: inherit;
+    color: $blue-darker;
+    text-decoration: underline;
+    font-size: .75em;
+    @include respond-to($break-s) {
+        font-size: .875em;
+    }
+
+    .callout--emergency & {
+        color: $white;
+    }
+    p & {
+        font-size: 1em;
+    }
+}
+.callout__link--btn {
+    white-space: nowrap;
+    padding: 0.375em 1em;
+    border-radius: $global-radius;
+    border: $global-border-thin solid $blue-darker;;
+    @include text-bold;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        outline: 0;
+        text-decoration: underline;
+    }
+    @include respond-to($tweak-m-1) {
+        padding: 0.375em 0.75em;
+    }
+
+    .callout--emergency & {
+        border: $global-border-thin solid $white;
+    }
+
+}
+
+.callout__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    float: right;
+    padding: 0;
+    font-size: 1.75em;
+    line-height: .75em;
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    color: $gray-darkest;
+    cursor: pointer;
+    font-weight: 700;
+    opacity: .6;
+    -webkit-appearance: none;
+}
