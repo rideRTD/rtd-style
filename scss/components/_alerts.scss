@@ -1,0 +1,146 @@
+// Base Alert styles
+// -------------------------
+
+.alert {
+    padding: 1em;
+    margin: 1em 0;
+    border: $global-border-thick solid transparent;
+    border-radius: $global-radius;
+
+    &--compact {
+        padding: .5em 1em;
+    }
+
+    // Provide class for links that match alerts
+    .alert__link {
+        text-decoration: underline;
+    }
+
+    // Improve alignment and spacing of inner content
+    > p,
+    > ul {
+        margin-bottom: 0;
+    }
+    > p + p,
+    > p + ul,
+    > p + ol {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    > ul,
+    > ol {
+      margin-left: 1.25em;
+    }
+    > ul > li {
+        list-style-type: disc;
+    }
+
+    & + form {
+      margin-top: 1em;
+    }
+}
+
+.alert .alert__heading,
+.dialog-popup .alert__heading {
+    @include heading4;
+    text-transform: none;
+    border: 0;
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0;
+}
+.alert--compact {
+    padding: .5em 1em;
+}
+.alert--content {
+    .alert__heading {
+          margin-bottom: .5em;
+    }
+    > p + p,
+    > p + ul,
+    > p + ol {
+        margin: 1em 0 0;
+    }
+}
+.alert.dialog-popup {
+    margin: 0 auto;
+}
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert--dismissible {
+      padding-right: 2em;
+
+      // Close link
+      .alert__close {
+            position: relative;
+            top: 0px;
+            right: -0.5em;
+            color: inherit;
+            float: right;
+            font-size: 1.75em;
+            font-weight: 700;
+            line-height: .75em;
+            color: $gray-darkest;
+            text-shadow: 0 1px 0 $white;
+            filter: alpha(opacity=20);
+            opacity: .4;
+            -webkit-appearance: none;
+            padding: 0;
+            cursor: pointer;
+            background: 0 0;
+            border: 0;
+      }
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+@mixin alert-variant($background, $text-color) {
+    background-color: $background;
+    border-color: darken($background, 15%);
+    color: $text-color;
+    .alert__heading {
+        color: inherit;
+    }
+    .alert__link {
+        color: $text-color;
+        &:hover, &:focus {
+            color: lighten($text-color, 15%);
+        }
+    }
+    .alert__close, .mfp-close {
+        color: $text-color;
+    }
+    .table {
+        background-color: transparent;
+        > tbody,
+        > tfoot {
+            > tr {
+                > th,
+                > td {
+                    border-color: darken($background, 15%);
+                }
+            }
+        }
+    }
+}
+
+.alert--success {
+      @include alert-variant($success-light, $success-dark);
+}
+.alert--info {
+      @include alert-variant($info-light, $info-dark);
+}
+.alert--warning {
+      @include alert-variant($warning-light, $warning-dark);
+}
+.alert--error {
+      @include alert-variant($error-light, $error-dark);
+}
+.alert--disabled {
+      @include alert-variant($disabled-light, $disabled-dark);
+}
