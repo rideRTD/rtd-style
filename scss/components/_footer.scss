@@ -269,22 +269,3 @@ iframe.goog-te-menu-frame {
     border-radius: $global-radius;
     border: 1px solid $gray-darkest;
 }
-/* Fix for IE8 Layout not receiving any $tweak-m-2 styles */
-
-.lt-ie9 .footer {
-    .footer__nav > div {
-        width:25%;
-    }
-    .footer__nav--business-center,
-    .footer__nav--inside-rtd {
-        margin-top: 0;
-    }
-    .footer__icon {
-        width: 35px;
-        height: 35px;
-    }
-    .footer__icon--logo {
-        width: 80px;
-        height: 40px;
-    }
-}

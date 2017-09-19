@@ -1,7 +1,5 @@
 $media-queries: true !default;
 
-@import "base/fontface";
-
 // Variables used in project
 @import "variables/layout";
 @import "variables/mediaquery";
@@ -15,7 +13,6 @@ $media-queries: true !default;
 @import "mixins/respondto";
 @import "mixins/quantity";
 @import "mixins/transition";
-@import "mixins/animations";
 @import "mixins/container";
 @import "mixins/clearfix";
 @import "mixins/text";
@@ -23,20 +20,12 @@ $media-queries: true !default;
 @import "mixins/btn-reset";
 @import "mixins/button";
 
-// Set default static values and define fonts
-@import "base/normalize";
-@import "base/basic";
+@import "base/normalize-critical";
+@import "base/basic-critical";
+@import "base/helper-critical";
 
-// Component styles
 @import "components/header";
-@import "components/nav-s";
-@import "components/nav-m";
+@import "components/nav-critical";
 @import "components/trigger";
-@import "components/tools";
+@import "components/tools-critical";
 @import "components/footer";
-@import "components/buttons";
-@import "components/button-groups";
-@import "components/alerts";
-@import "components/callout";
-@import "components/services";
-@import "base/helper";

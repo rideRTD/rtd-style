@@ -1,43 +1,43 @@
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
-
+/* IE 8/9 removed */
 
 
 //Correct `block` display not defined in IE 8/9.
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-    display: block;
-}
+// article,
+// aside,
+// details,
+// figcaption,
+// figure,
+// footer,
+// header,
+// hgroup,
+// main,
+// nav,
+// section,
+// summary {
+//     display: block;
+// }
 
 //Correct `inline-block` display not defined in IE 8/9.
-audio,
-canvas,
-video {
-    display: inline-block;
-}
+// audio,
+// canvas,
+// video {
+//     display: inline-block;
+// }
 
 //Prevent modern browsers from displaying `audio` without controls.
 //Remove excess height in iOS 5 devices.
-audio:not([controls]) {
-    display: none;
-    height: 0;
-}
+// audio:not([controls]) {
+//     display: none;
+//     height: 0;
+// }
 
 //Address `[hidden]` styling not present in IE 8/9.
 //Hide the `template` element in IE, Safari, and Firefox < 22.
-[hidden],
-template {
-    display: none;
-}
+// [hidden],
+// template {
+//     display: none;
+// }
 
 // 1. Set default font family to sans-serif.
 // 2. Prevent iOS text size adjust after orientation change, without disabling user zoom.
@@ -76,9 +76,9 @@ h1 {
 }
 
 //Address styling not present in IE 8/9, Safari 5, and Chrome.
-abbr[title] {
-    border-bottom: 1px dotted;
-}
+// abbr[title] {
+//     border-bottom: 1px dotted;
+// }
 
 //Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
 b,
@@ -97,10 +97,10 @@ hr {
 }
 
 // Address styling not present in IE 8/9.
-mark {
-    background: #ff0;
-    color: #000;
-}
+// mark {
+//     background: #ff0;
+//     color: #000;
+// }
 
 // Correct font family set oddly in Safari 5 and Chrome.
 code,
@@ -142,22 +142,22 @@ sub {
 }
 
 // Remove border when inside `a` element in IE 8/9.
-img {
-    border: 0;
-}
+// img {
+//     border: 0;
+// }
 
 
 // Correct overflow displayed oddly in IE 9.
-svg:not(:root) {
-    overflow: hidden;
-}
+// svg:not(:root) {
+//     overflow: hidden;
+// }
 
 
 // * Address margin not present in IE 8/9 and Safari 5.
 
-figure {
-    margin: 0;
-}
+// figure {
+//     margin: 0;
+// }
 
 
 // Define consistent border, margin, and padding.

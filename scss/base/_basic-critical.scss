@@ -1,0 +1,52 @@
+html {
+    font-family: $fontstack-regular;
+    font-size: 1em;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: $gray-darkest;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.page, .app {
+    flex: 1 0 auto; // 0 auto is only used to fix IE10+ bug
+}
+
+// i element is used for icons, so we're removing the default italics and repeat background
+i {
+    font-style: normal;
+    background-repeat: no-repeat;
+}
+// b element is used for non-semantic styling hooks, so remove default font weight
+b {
+    font-weight: normal;
+}
+
+strong {
+    @include text-bold;
+}
+
+a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
