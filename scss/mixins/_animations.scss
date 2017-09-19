@@ -1,7 +1,3 @@
-@mixin transition($rate: 0.3s, $prop: all, $style: ease-out) {
-  transition: $prop $rate $style;
-}
-
 @mixin shine {
   position: relative;
   &:after {

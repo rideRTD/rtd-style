@@ -1,0 +1,79 @@
+.service-local {
+    background-color: map-get($service, bus-local); //#008fbf
+}
+.service-limited {
+    background-color: map-get($service, bus-limited); //#c129b9
+}
+.service-boulder {
+    background-color: map-get($service, bus-boulder); //#004e5a
+}
+.service-express {
+    background-color: map-get($service, bus-express); //#f63440
+}
+.service-regional {
+    background-color: map-get($service, bus-regional); //#00833f
+}
+.service-skyride {
+    background-color: map-get($service, bus-skyride); //#003da7
+}
+.service-cnr {
+    background-color: map-get($service, bus-cnr); //#98cb4f
+}
+.service-mall-art {
+    background-color: map-get($service, bus-mall); //#ffff00
+    color: $gray-dark;
+    text-shadow: none;
+}
+.service-art {
+    background-color: map-get($service, bus-art); //#ffff00
+    color: $gray-dark;
+    text-shadow: none;
+}
+.service-mall {
+    background-color: map-get($service, bus-mall); //#ffff00
+}
+.service-metro {
+    background-color: map-get($service, bus-metro); //#00a19b
+}
+.service-flatiron {
+    background-color: map-get($service, bus-flatiron); //#1e4286
+}
+.service-flatiron-alt {
+    background-color: map-get($service, bus-flatiron-alt); //#f5a81c
+}
+.service-a-line {
+    background-color: map-get($service, a-line); //#57c1e9
+}
+.service-b-line {
+    background-color: map-get($service, b-line); //#4d9c2d
+}
+.service-c-line {
+    background-color: map-get($service, c-line); //#f79239
+}
+.service-d-line {
+    background-color: map-get($service, d-line); //#008348
+}
+.service-e-line {
+    background-color: map-get($service, e-line); //#552683
+}
+.service-f-line {
+    background-color: map-get($service, f-line); //#ee3e33
+}
+.service-g-line {
+    background-color: map-get($service, g-line); //#f6b221
+}
+.service-h-line {
+    background-color: map-get($service, h-line); //#0075be
+}
+.service-l-line {
+    background-color: map-get($service, l-line); //#ffcd00
+}
+.service-n-line {
+    background-color: map-get($service, n-line); //#9f26b4
+}
+.service-r-line {
+    background-color: map-get($service, r-line); //#c3d500
+}
+.service-w-line {
+    background-color: map-get($service, w-line); //#009daa
+}
