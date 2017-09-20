@@ -28,7 +28,7 @@ body {
 }
 
 // i element is used for icons, so we're removing the default italics and repeat background
-i {
+i, .i {
     font-style: normal;
     background-repeat: no-repeat;
 }
