@@ -12,7 +12,6 @@
         color: $white;
         @include text-bold;
         border-bottom:$global-border-thin solid $blue-darker;
-        // font-size: 1.125em;
         background-color: $blue;
         text-transform: uppercase;
         letter-spacing: $global-letter-spacing;
@@ -154,7 +153,7 @@
             }
         }
     }
-    .header__nav-menu--fastracks> ul > li {
+    .header__nav-menu--projects> ul > li {
         &:first-child {
             display: none;
         }
@@ -185,9 +184,12 @@
             margin-right: 5px;
         }
     }
+    .header__nav-menu--projects> ul > li:first-child {
+        display: block;
+    }
 }
 @include respond-to(0, $tweak-d-2) {
-    .header__nav-menu--fastracks ul li.header__sub-section ul {
+    .header__nav-menu--projects ul li.header__sub-section ul {
         font-size: 0.875em;
         li a {
             padding-left: 4.3rem;
