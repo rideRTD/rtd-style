@@ -140,30 +140,28 @@
                     </div>
                 </li>
                 <li>
-                    <a class="header__nav-btn js-menu-btn" href="/fastracks">Fastracks</a>
-                    <div class="header__nav-menu header__nav-menu--fastracks js-menu-level" id="subnav-fastracks">
+                    <a class="header__nav-btn js-menu-btn" href="/projects">Projects</a>
+                    <div class="header__nav-menu header__nav-menu--projects js-menu-level" id="subnav-projects">
                         <ul>
-                            <li>
-                                <a class="header__sub-title" href="/fastracks">Connecting More Communities</a>
-                                <p>FasTracks is a multi-billion dollar voter-approved transit expansion plan that is bringing you more transportation options than ever before. In 2016, we redefined the Boulder-Denver commute on the <a href="/projects/flatiron-flyer">Flatiron Flyer</a>, launched the <a href="/projects/a-line">University of Colorado A Line</a> servicing DIA and expanded commuter rail north of downtown on the <a href="/projects/b-line">B Line</a> to Westminster. We look forward to rolling out new rail service to all parts of the Denver metro area in 2017. <a class="link-bold block p--top-sm" href="/fastracks#fastracks-map"> View the FasTracks system map</a></p>
-                            </li>
-                            <li class="header__alt-links"><a href="/fastracks">FasTracks program</a></li>
-                            <li class="header__alt-links"><a href="/fastracks#fastracks-map">See FasTracks map</a></li>
+                            <li><a href="/projects"><i class="i i--nav-projects"></i>All Projects</a></li>
                             <li class="header__sub-section">
-                                <a class="header__sub-title js-menu-btn" href="/fastracks">New service arriving 2017</a>
-                                <ul class="js-menu-level" id="subnav-new-services">
-                                    <li><a href="/projects/g-line"><i class="rtd-service-icon-menu service-g-line">G</i> Line to Wheat Ridge</a></li>
-                                    <li><a href="/projects/r-line"><i class="rtd-service-icon-menu service-r-line">R</i> Line to Aurora<span> - now open!</span></a></li>
+                                <a class="header__sub-title js-menu-btn" href="/projects">Featured Projects</a>
+                                <ul class="js-menu-level" id="subnav-featured-projects">
+                                    <li><a href="/projects/civic-center">Civic Center Revitalization</a></li>
+                                    <li><a href="/projects/east-colfax">East Colfax Transit Improvements</a></li>
+                                    <li><a href="/projects/16th">16th Street Mall Transit-way Analysis</a></li>
+                                    <li><a href="/projects/crmf">Commuter Rail Maintenance Facility</a></li>
                                 </ul>
-                                <p class="p--top mobile__no-padding"><a class="link-bold no-margin" href="/fastracks#completed-projects">See completed projects</a></p>
                             </li>
+                            <li><a href="/projects/fastracks"><i class="i i--nav-fastracks"></i>Fastracks</a></li>
                             <li class="header__sub-section">
-                                <a class="header__sub-title js-menu-btn" href="/fastracks#future-projects">Future service</a>
+                                <a class="header__sub-title js-menu-btn" href="/projects/fastracks#future-projects">Future service</a>
                                 <ul class="js-menu-level" id="subnav-future-services">
+                                    <li><a href="/projects/g-line"><i class="rtd-service-icon-menu service-g-line">G</i>  Line to Wheat Ridge</a></li>
                                     <li><a href="/projects/n-line"><i class="rtd-service-icon-menu service-n-line">N</i>  Line to Thornton</a></li>
                                     <li><a href="/projects/e-f-line-extension"><i class="rtd-service-icon-menu rtd-service-icon-menu-multi service-e-line">E</i><i class="rtd-service-icon rtd-service-icon-menu rtd-service-icon-menu-multi service-f-line">F</i><i class="rtd-service-icon rtd-service-icon-menu service-r-line">R</i> Southeast Rail Line Ext<span>ension</span></a></li>
                                     <li><a href="/projects/c-d-line-extension"><i class="rtd-service-icon-menu rtd-service-icon-menu-multi service-c-line">C</i><i class="rtd-service-icon rtd-service-icon-menu service-d-line">D</i> Southwest Rail Line Ext<span>ension</span></a></li>
-                                    <li><a href="/l-line"><i class="rtd-service-icon-menu service-l-line">L</i> Central Rail Ext<span>ension</span></a></li>
+                                    <li><a href="/projects/l-line"><i class="rtd-service-icon-menu service-l-line">L</i> Central Rail Ext<span>ension</span></a></li>
                                 </ul>
                             </li>
                         </ul>
