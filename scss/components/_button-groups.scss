@@ -267,16 +267,11 @@ input:focus + label.btn {
         }
     }
 
-    input:focus + label.btn {
-        &--primary {
-            // outline: 1px dashed $blue-lighter;
-            background-color: darken($blue, 8%);
-            border-color: darken($blue-darker, 12%);
-        }
-        &--white {
-            border-color: $blue;
-        }
+    label.btn:nth-child(2):not(.dropdown-toggle) {
+        border-top-left-radius: $global-radius;
+        border-bottom-left-radius: $global-radius;
     }
+
     &.btn-group--long {
         @include respond-to (0, $tweak-to-s-1) {
             label.btn:nth-child(2):not(:only-child):not(.dropdown-toggle) {
@@ -286,6 +281,9 @@ input:focus + label.btn {
             label.btn:not(:only-child):not(.dropdown-toggle) + label.btn:not(:only-child):not(.dropdown-toggle) {
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
+            }
+            label.btn:nth-child(2):not(.dropdown-toggle) {
+                border-bottom-left-radius: 0;
             }
         }
         label.btn:not(:only-child):not(:last-child) + label.btn:not(:only-child):not(:last-child) {
