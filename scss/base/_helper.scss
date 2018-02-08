@@ -13,8 +13,14 @@
         visibility: hidden;
     }
 }
+.tablet__removed {
+    @include respond-to($break-to-m, $tweak-m-2) {
+        display: none !important;
+        visibility: hidden;
+    }
+}
 .desktop__removed {
-    @include respond-to($break-to-m) {
+    @include respond-to($tweak-m-2) {
         display: none !important;
         visibility: hidden;
     }
