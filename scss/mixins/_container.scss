@@ -16,11 +16,6 @@
     }
 }
 
-@mixin pie {
-    position: relative;
-    behavior: url(../PIE.htc);
-}
-
 @mixin vertical-align {
   position: relative;
   top: 50%;

@@ -140,3 +140,45 @@ samp {
 .highlight {
     background: $bus-yellow;
 }
+.box--default {
+    background: $gray-lighter;
+    border: $global-border-thin solid $gray-medium;
+    border-radius: $global-radius;
+    padding: 1em;
+    @include respond-to ($break-m) {
+        padding: 1.5em;
+    }
+    a {
+        color: $blue-darker; //Accessibility requirement
+        text-decoration: underline;
+    }
+    a.btn--primary, a.btn--secondary {
+        color: $white;
+    }
+    a.btn--control {
+        color: $gray-darker;
+    }
+    &-compact {
+        padding: .75em;
+        font-size: 0.875rem;
+        @include respond-to ($break-m) {
+            padding: 1em;
+        }
+    }
+}
+.box--white {
+    background: $white;
+    border: $global-border-thin solid $gray-medium;
+    border-radius: $global-radius;
+    padding: 1em;
+    @include respond-to ($break-m) {
+        padding: 1.5em;
+    }
+    &-compact {
+        padding: .75em;
+        font-size: 0.875rem;
+        @include respond-to ($break-m) {
+            padding: 1em;
+        }
+    }
+}
