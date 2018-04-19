@@ -1,0 +1,90 @@
+@mixin badge-note {
+    border-left-width: $global-border-thick;
+    border-left-style: solid;
+    background-color: transparent;
+    border-radius: 0;
+    margin-left:.5em;
+    text-transform: uppercase;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: .4em .7em;
+    font-size: 12px;
+    line-height: 1;
+    color: $white;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: $gray-dark;
+    border-radius: $global-radius;
+    letter-spacing: normal;
+    @include text-bold;
+    &:empty {
+      display: none;
+    }
+    &--success {
+        background-color: $success-dark;
+        &-alt {
+            border-width: $global-border-thin;
+            border-style: solid;
+            @include alert-variant($success-light, $success-dark);
+        }
+        &-note {
+            @include alert-variant($success-light, $success-dark);
+            @include badge-note;
+        }
+    }
+    &--info {
+        background-color: $info-dark;
+        &-alt {
+            border-width: $global-border-thin;
+            border-style: solid;
+            @include alert-variant($info-light, $info-dark);
+        }
+        &-note {
+            @include alert-variant($info-light, $info-dark);
+            @include badge-note;
+        }
+    }
+    &--warning {
+        background-color: $warning-dark;
+        &-alt {
+            border-width: $global-border-thin;
+            border-style: solid;
+            @include alert-variant($warning-light, $warning-dark);
+        }
+        &-note {
+            @include alert-variant($warning-light, $warning-dark);
+            @include badge-note;
+        }
+    }
+    &--error {
+        background-color: $error-dark;
+        &-alt {
+            border-width: $global-border-thin;
+            border-style: solid;
+            @include alert-variant($error-light, $error-dark);
+        }
+        &-note {
+            @include alert-variant($error-light, $error-dark);
+            @include badge-note;
+        }
+    }
+    &+ .badge {
+        margin-left: .5em;
+    }
+}
+
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+a.badge:hover,
+a.badge:focus {
+  color: $white;
+  text-decoration: none;
+  cursor: pointer;
+}
