@@ -94,6 +94,7 @@
         }
         a {
            &:hover, &:focus {
+                color: $white;
                 text-decoration: underline;
                 outline: 0;
             }

@@ -32,6 +32,7 @@
 
 @mixin heading2 {
     @include text-bold;
+    color: $gray-darkest;
     text-transform: uppercase;
     line-height: 1.2em;
     margin-bottom: 0.5em;

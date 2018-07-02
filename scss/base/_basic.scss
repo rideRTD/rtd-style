@@ -37,7 +37,8 @@ b {
     font-weight: normal;
 }
 
-strong {
+strong,
+.strong {
     @include text-bold;
 }
 
