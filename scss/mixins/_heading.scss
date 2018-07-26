@@ -90,6 +90,7 @@
 
 @mixin heading5 {
     @include text-bold;
+    color: $gray-darkest;
     text-transform: uppercase;
     letter-spacing: $global-letter-spacing;
     font-size: 1em;
@@ -98,6 +99,7 @@
 
 @mixin heading6 {
     @include text-bold;
+    color: $gray-darkest;
     font-size: 1em;
     margin-bottom: 0.25em;
     text-transform: none;
