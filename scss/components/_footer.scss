@@ -222,9 +222,16 @@
         margin-right: .5em;
     }
     .btn--accessibility {
+        display: inline-block;
         border-radius: $global-radius;
         border: 1px solid $gray-darkest;
-        i {
+        span{
+            @include text-regular;
+            padding: 0.3em 0.8em;
+            line-height: 22px;
+        }
+        &:before {
+            content: ' ';
             background-color: $gray-darkest;
             display: block;
             border-radius: $global-radius 0 0 $global-radius;
@@ -234,10 +241,10 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-        span{
-            @include text-regular;
-            padding: 0.3em 0.8em;
-            line-height: 22px;
+        &:hover,
+        &:focus {
+            color: inherit;
+            text-decoration: underline;
         }
     }
     .field--name-body p {
