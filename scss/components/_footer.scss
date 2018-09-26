@@ -79,6 +79,7 @@
     }
 }
 
+#block-footercontacts, // Drupal specific
 .footer__contact {
     width: 100%;
     @include clearfix;
@@ -170,6 +171,8 @@
         border-right: 0;
     }
 }
+
+#block-footercopyright, // Drupal specific
 .footer__copywrite {
     line-height: 2em;
     white-space: nowrap;
@@ -179,6 +182,9 @@
     @include respond-to($break-m) {
         padding-top: 0;
     }
+    p {
+        margin-bottom: 0;
+    }
 }
 
 @include respond-to($break-m) {
@@ -186,21 +192,26 @@
     .footer__accessibility,
     .footer__translate,
     .footer__sitelinks,
-    .footer__copywrite {
+    .footer__copywrite,
+    #block-footerbuttons,
+    #block-footercopyright {
         float:left;
         min-height: 1px; // prevent float from collapsing if empty
         padding:0;
         margin:0;
     }
-    .footer__buttons {
+    .footer__buttons,
+    #block-footerbuttons {
         width:36%;
     }
     .footer__sitelinks,
-    .footer__copywrite {
+    .footer__copywrite,
+    #block-footercopyright {
         width:31%;
     }
 }
 
+#block-footerbuttons, // Drupal specific
 .footer__buttons {
     @include clearfix;
     .footer__accessibility,
@@ -229,6 +240,13 @@
             line-height: 22px;
         }
     }
+    .field--name-body p {
+        margin: 0;
+    }
+}
+
+.footer .skiptranslate {
+    display: none;
 }
 
 .footer .goog-te-gadget-simple {
@@ -268,6 +286,7 @@ iframe.goog-te-menu-frame {
 }
 
 #load-translate {
+    margin: 0 0 4px 0;
     padding: 0.3em 0.8em;
     border-radius: $global-radius;
     border: 1px solid $gray-darkest;
