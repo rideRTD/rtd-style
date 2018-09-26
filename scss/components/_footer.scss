@@ -4,7 +4,9 @@
     @include respond-to(0, $break-to-m) {
         text-align:center;
     }
-
+    h2 {
+        color: #fff;
+    }
     h3 {
         @include text-regular;
         text-transform: capitalize;
@@ -141,6 +143,7 @@
         *display: inline;
     }
     a  {
+        color: $white;
         display: block;
         margin-right: 0.5em;
         opacity: 0.6;

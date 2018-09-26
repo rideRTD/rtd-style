@@ -222,10 +222,12 @@
         text-decoration: underline;
     }
     i {
+        font-style: normal;
         padding-left: 0;
         padding-right: 28px;
         background-position: right;
         background-size: 20px;
+        background-repeat: no-repeat;
     }
     @include respond-to ($break-m) {
         display: block;
