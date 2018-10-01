@@ -222,7 +222,6 @@
 
 #block-footercopyright, // Drupal specific
 .footer__copywrite {
-    line-height: 2em;
     white-space: nowrap;
     padding-top: 1em;
     @include rem(font-size, .75);
@@ -232,6 +231,7 @@
     }
     p {
         margin-bottom: 0;
+        line-height: 2em;
     }
 }
 
@@ -342,12 +342,8 @@ iframe.goog-te-menu-frame {
 
 #load-translate {
     @include text-regular;
-    margin: 0 0 4px 0;
+    margin: 0;
     padding: 0.4em 0.8em;
     border-radius: $global-radius;
     border: 1px solid $gray-darkest;
-    @include respond-to(0, $break-to-m) {
-        position: relative;
-        top: 2px;
-    }
 }
