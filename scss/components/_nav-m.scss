@@ -12,15 +12,32 @@
         .header__sub-title {
             display:block;
         }
+        li:not(.header__sub-section) {
+            > a {
+                &:before {
+                    content: ' ';
+                    display: block;
+                    margin: 0 auto rem-calc(5);
+                    height: rem-calc(83);
+                    width: rem-calc(100);
+                    max-width: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
     }
+
     .header__nav,
     .header__nav-menu > ul {
         @include container;
     }
+
     .header__nav,
     .header__nav-primary > li {
         border-right:$global-border-thin solid transparent;
     }
+
     .header__nav-primary {
         display: block;
         float:left;
@@ -47,6 +64,9 @@
                     background: $white;
                     color: $gray-darkest;
                 }
+                &:before {
+                    display: none;
+                }
                 &.active {
                     color: $red-dark;
                     background: $white;
@@ -55,6 +75,7 @@
             }
         }
     }
+    
     .header__search-field {
         border: $global-border-thin solid $gray-medium;
         border-radius: $global-radius;

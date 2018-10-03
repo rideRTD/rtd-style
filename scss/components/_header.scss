@@ -29,7 +29,31 @@
         position: relative;
     }
     ul {
+        margin-left: 0;
         list-style-type: none;
+    }
+    ul.menu-level-2 li a:before {
+        content: none;
+    }
+}
+
+.header__nav-primary,
+.header__nav-secondary {
+    margin-left: 0;
+    margin-bottom: 0;
+    ul {
+        margin-bottom: 0;
+    }
+
+    .header__nav-btn {
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+    }
+
+    ul {
+        margin: 0;
     }
 }
 
@@ -66,10 +90,16 @@
             display:block;
             background-position:center bottom;
             background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 1;
+            color: transparent;
             @include transition();
             &:hover,
             &:focus {
                 opacity: 0.7;
+            }
+            &:before {
+                content: none;
             }
         }
     }

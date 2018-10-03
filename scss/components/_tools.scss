@@ -1,4 +1,5 @@
-.tools {
+.tools,
+.menu--rtd-tools {
     display:none;
     height:auto;
     position: relative;
@@ -16,6 +17,7 @@
     }
     ul {
         @include container;
+        margin-bottom: 0;
     }
     i {
         display:inline-block;
@@ -47,7 +49,19 @@
     @include transition($prop:background-color);;
     &:focus,
     &:hover {
+        color: $white;
+        text-decoration: none;
         background-color: $blue-lighter;
+    }
+    &:before {
+        content: ' ';
+        @include square(rem-calc(30));
+        display: inline-block;
+        margin-right: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+        margin-top: -4px;
     }
     @include respond-to($break-s) {
         @include rem(padding-left, 1.5);

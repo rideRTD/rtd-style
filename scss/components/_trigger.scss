@@ -22,13 +22,14 @@
     text-decoration:none;
     text-align:center;
     border:none;
+    border-radius: 0;
     background:none;
     @include transition(0.2s);;
     &:hover, &:focus, &:active {
         color: $white;
         background: $blue;
     }
-    b {
+    b, strong {
         width: 100%;
         text-align: center;
         padding-top: 10px;

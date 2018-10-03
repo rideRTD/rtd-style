@@ -77,3 +77,120 @@
 .service-w-line {
     background-color: map-get($service, w-line); //#009daa
 }
+
+.nav-lettering {
+    .char1 {
+        @include header-menu-service-icons();
+    }
+
+    &.nav-a-line {
+        .char1 {
+            @extend .service-a-line;
+        }
+    }
+
+    &.nav-b-line {
+        .char1 {
+            @extend .service-b-line;
+        }
+    }
+
+    &.nav-c-line {
+        .char1 {
+            @extend .service-c-line;
+        }
+    }
+
+    &.nav-d-line {
+        .char1 {
+            @extend .service-d-line;
+        }
+    }
+
+    &.nav-e-line {
+        .char1 {
+            @extend .service-e-line;
+        }
+    }
+
+    &.nav-f-line {
+        .char1 {
+            @extend .service-f-line;
+        }
+    }
+
+    &.nav-g-line {
+        .char1 {
+            @extend .service-g-line;
+        }
+    }
+
+    &.nav-h-line {
+        .char1 {
+            @extend .service-h-line;
+        }
+    }
+
+    &.nav-l-line {
+        .char1 {
+            @extend .service-l-line;
+        }
+    }
+
+    &.nav-n-line {
+        .char1 {
+            @extend .service-n-line;
+        }
+    }
+
+    &.nav-r-line {
+        .char1 {
+            @extend .service-r-line;
+        }
+    }
+
+    &.nav-w-line {
+        .char1 {
+            @extend .service-w-line;
+        }
+    }
+
+    &.nav-cd-line {
+        .char1 {
+            margin-right: 5px;
+            @include respond-to($break-m) {
+                margin-right: 3px;
+            }
+            @extend .service-c-line;
+        }
+
+        .char2 {
+            @include header-menu-service-icons();
+            @extend .service-d-line;
+        }
+    }
+
+    &.nav-efr-line {
+        .char1 {
+            margin-right: 5px;
+            @include respond-to($break-m) {
+                margin-right: 3px;
+            }
+            @extend .service-e-line;
+        }
+
+        .char2 {
+            @include header-menu-service-icons();
+            margin-right: 5px;
+            @include respond-to($break-m) {
+                margin-right: 3px;
+            }
+            @extend .service-f-line;
+        }
+
+        .char3 {
+            @include header-menu-service-icons();
+            @extend .service-r-line;
+        }
+    }
+}

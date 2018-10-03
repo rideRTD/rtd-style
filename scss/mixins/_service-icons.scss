@@ -1,0 +1,30 @@
+@mixin header-menu-service-icons() {
+    position: relative;
+    display: inline-block;
+    left: -10px;
+    color: $white;
+    border-radius: 3px;
+    font-family: arial;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 24px;
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+    padding: 0;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    margin: 0;
+    border: 2px solid $white;
+    @include respond-to($break-m) {
+        position: inherit;
+        left: auto;
+        line-height: 20px;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        margin: 0 5px 0 0;
+        border: 0 none;
+    }
+}
