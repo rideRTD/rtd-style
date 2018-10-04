@@ -78,10 +78,12 @@
         left: 0;
         width:100%;
         &>ul {
+            display: flex;
             position:relative;
             @include rem(height, 14);
         }
         &>ul>li {
+            flex: 1;
             position: relative;
             top: 25px;
             border-right: none;
