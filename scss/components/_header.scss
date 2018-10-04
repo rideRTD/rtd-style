@@ -29,7 +29,8 @@
         position: relative;
     }
     ul {
-        margin-left: 0;
+        margin: 0;
+        padding: 0;
         list-style-type: none;
     }
     ul.menu-level-2 li a:before {
@@ -43,6 +44,7 @@
     margin-bottom: 0;
     ul {
         margin: 0;
+        padding: 0;
     }
 }
 
