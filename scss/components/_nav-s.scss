@@ -72,6 +72,7 @@
             text-transform: capitalize;
         }
         .header__nav-btn {
+            margin: 0;
             @include rem(height, 2.5);
             @include rem(line-height, 2.4);
             @include rem(padding-left, 3);

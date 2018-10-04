@@ -1,3 +1,10 @@
+@mixin service-colors-icons() {
+  @each $name, $color in $service {
+    &-#{$name} {
+      background-color: $color;
+    }
+  }
+}
 @mixin header-menu-service-icons() {
     position: relative;
     display: inline-block;

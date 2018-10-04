@@ -42,17 +42,6 @@
     margin-left: 0;
     margin-bottom: 0;
     ul {
-        margin-bottom: 0;
-    }
-
-    .header__nav-btn {
-        &:hover,
-        &:focus {
-            color: $white;
-        }
-    }
-
-    ul {
         margin: 0;
     }
 }
