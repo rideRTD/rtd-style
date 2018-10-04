@@ -12,16 +12,6 @@
         .header__sub-title {
             display:block;
         }
-        li:not(.header__sub-section) > a:before {
-            content: ' ';
-            display: block;
-            margin: 0 auto rem-calc(5);
-            height: rem-calc(83);
-            width: rem-calc(100);
-            max-width: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
     }
 
     .header__nav,
@@ -115,6 +105,16 @@
                     background-color: $gray-lighter;
                 }
             }
+        }
+        li:not(.header__sub-section) > a:before {
+            content: ' ';
+            display: block;
+            margin: 0 auto rem-calc(5);
+            height: rem-calc(83);
+            width: rem-calc(100);
+            max-width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         i {
             display: block;
