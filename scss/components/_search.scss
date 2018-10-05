@@ -25,52 +25,54 @@
         float:right;
         margin-right: 34px;
     }
-}
-.form-item-search,
-.header__search-field {
-    width: 70%;
-    margin: 0;
-    display: inline-block;
 
-    input {
-      height: 40px;
-      margin: 0;
-    }
-    @include rem(padding-left, 1);
-    @include respond-to($break-m) {
-      width: 100%;
-      padding-left: 8px;
+    .form-item-search,
+    .header__search-field {
+        width: 70%;
+        margin: 0;
+        display: inline-block;
 
         input {
-          height: 30px;
-          margin-bottom: 0;
+          height: 40px;
+          margin: 0;
+        }
+        @include rem(padding-left, 1);
+        @include respond-to($break-m) {
+          width: 100%;
+          padding-left: 8px;
+
+            input {
+              height: 30px;
+              margin-bottom: 0;
+            }
+        }
+        @include respond-to(0, $break-to-m) {
+          border: 0 none;
+          border-radius: $global-radius;
         }
     }
-    @include respond-to(0, $break-to-m) {
-      border: 0 none;
-      border-radius: $global-radius;
-    }
-}
-.form-submit,
-.header__search-btn {
-    width: 44px;
-    height: 38px;
-    padding:0;
-    border:none;
-    color: transparent;
-    text-indent: 200%;
-    white-space: nowrap;
-    overflow: hidden;
-    position:relative;
-    top:0;
-    right:54px;
-    background: url('../images/svg/header-search.svg') transparent no-repeat;
-    background-color: rgba(0,0,0,0);
-    background-position:center;
-    @include respond-to($break-m) {
-        position:absolute;
-        height: 28px;
+
+    .form-submit,
+    .header__search-btn {
+        width: 44px;
+        height: 38px;
+        padding:0;
+        border:none;
+        color: transparent;
+        text-indent: 200%;
+        white-space: nowrap;
+        overflow: hidden;
+        position:relative;
         top:0;
-        right:0;
+        right:54px;
+        background: url('../images/svg/header-search.svg') transparent no-repeat;
+        background-color: rgba(0,0,0,0);
+        background-position:center;
+        @include respond-to($break-m) {
+            position:absolute;
+            height: 28px;
+            top:0;
+            right:0;
+        }
     }
 }
