@@ -56,7 +56,8 @@
     .header__search-btn {
         width: 44px;
         height: 38px;
-        padding:0;
+        margin: 0;
+        padding: 0;
         border:none;
         color: transparent;
         text-indent: 200%;
@@ -68,6 +69,14 @@
         background: url('../images/svg/header-search.svg') transparent no-repeat;
         background-color: rgba(0,0,0,0);
         background-position:center;
+        &:active,
+        &:hover,
+        &:focus {
+            color: transparent;
+            background: url('../images/svg/header-search.svg') transparent no-repeat;
+            background-color: rgba(0,0,0,0);
+            background-position:center;
+        }
         @include respond-to($break-m) {
             position:absolute;
             height: 28px;
