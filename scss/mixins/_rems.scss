@@ -1,4 +1,3 @@
-
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }
@@ -10,22 +9,22 @@
 
   @for $i from 1 through $max {
     $value: strip-unit(nth($values, $i));
-    $pxValues: #{$pxValues + $value*16}px;
+    $pxValues: #{$pxValues + $value * 16}px;
 
     @if $i < $max {
-      $pxValues: #{$pxValues + " "};
+      $pxValues: #{$pxValues + ' '};
     }
-  } 
+  }
 
   @for $i from 1 through $max {
     $value: strip-unit(nth($values, $i));
     $remValues: #{$remValues + $value}rem;
 
     @if $i < $max {
-      $remValues: #{$remValues + " "};
+      $remValues: #{$remValues + ' '};
     }
-  } 
-  
-  #{$property}: $pxValues; 
-  #{$property}: $remValues; 
+  }
+
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
 }

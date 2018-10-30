@@ -1,87 +1,87 @@
 .header__search {
-    label {
-      position: absolute !important;
-      clip: rect(1px, 1px, 1px, 1px);
-      overflow: hidden;
-      height: 1px;
-      width: 1px;
-      word-wrap: normal;
+  label {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    word-wrap: normal;
+  }
+  @include respond-to(0, $break-to-m) {
+    @include rem(padding, 1, 0, 1, 2);
+  }
+  @include respond-to($break-m) {
+    margin: 34px 0 0 10px;
+    float: left;
+    position: relative;
+    top: 0;
+    right: 0;
+    max-width: 20%;
+  }
+  @include respond-to($tweak-m-1) {
+    margin-left: 25px;
+  }
+  @include respond-to($break-m, $tweak-to-m-1) {
+    float: right;
+    margin-right: 34px;
+  }
+
+  .form-item-search,
+  .header__search-field {
+    width: 70%;
+    margin: 0;
+    display: inline-block;
+
+    input {
+      height: 40px;
+      margin: 0;
+    }
+    @include rem(padding-left, 1);
+    @include respond-to($break-m) {
+      width: 100%;
+      padding-left: 8px;
+
+      input {
+        height: 30px;
+        margin-bottom: 0;
+      }
     }
     @include respond-to(0, $break-to-m) {
-        @include rem(padding, 1, 0, 1, 2);
+      border: 0 none;
+      border-radius: $global-radius;
+    }
+  }
+
+  .form-submit,
+  .header__search-btn {
+    width: 44px;
+    height: 38px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: transparent;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    right: 54px;
+    background: url('../images/svg/header-search.svg') transparent no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center;
+    &:active,
+    &:hover,
+    &:focus {
+      color: transparent;
+      background: url('../images/svg/header-search.svg') transparent no-repeat;
+      background-color: rgba(0, 0, 0, 0);
+      background-position: center;
     }
     @include respond-to($break-m) {
-        margin: 34px 0 0 10px;
-        float:left;
-        position: relative;
-        top:0;
-        right:0;
-        max-width: 20%;
+      position: absolute;
+      height: 28px;
+      top: 0;
+      right: 0;
     }
-    @include respond-to ($tweak-m-1) {
-        margin-left: 25px;
-    }
-    @include respond-to($break-m, $tweak-to-m-1) {
-        float:right;
-        margin-right: 34px;
-    }
-
-    .form-item-search,
-    .header__search-field {
-        width: 70%;
-        margin: 0;
-        display: inline-block;
-
-        input {
-          height: 40px;
-          margin: 0;
-        }
-        @include rem(padding-left, 1);
-        @include respond-to($break-m) {
-          width: 100%;
-          padding-left: 8px;
-
-            input {
-              height: 30px;
-              margin-bottom: 0;
-            }
-        }
-        @include respond-to(0, $break-to-m) {
-          border: 0 none;
-          border-radius: $global-radius;
-        }
-    }
-
-    .form-submit,
-    .header__search-btn {
-        width: 44px;
-        height: 38px;
-        margin: 0;
-        padding: 0;
-        border:none;
-        color: transparent;
-        text-indent: 200%;
-        white-space: nowrap;
-        overflow: hidden;
-        position:relative;
-        top:0;
-        right:54px;
-        background: url('../images/svg/header-search.svg') transparent no-repeat;
-        background-color: rgba(0,0,0,0);
-        background-position:center;
-        &:active,
-        &:hover,
-        &:focus {
-            color: transparent;
-            background: url('../images/svg/header-search.svg') transparent no-repeat;
-            background-color: rgba(0,0,0,0);
-            background-position:center;
-        }
-        @include respond-to($break-m) {
-            position:absolute;
-            height: 28px;
-            top:0;
-            right:0;
-        }
-    }
+  }
 }

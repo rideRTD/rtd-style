@@ -1,77 +1,77 @@
 .tools {
-    display:none;
-    height:auto;
-    position: relative;
-    background: $blue;
-    text-transform: uppercase;
-    letter-spacing: $global-letter-spacing;
-    @include text-bold;
-    @include rem(font-size, 1);
-    @include respond-to($break-m) {
-        width:100%;
-        @include rem(height, 4);
-        @include text-regular;
-        @include rem(font-size, 0.9);
+  display: none;
+  height: auto;
+  position: relative;
+  background: $blue;
+  text-transform: uppercase;
+  letter-spacing: $global-letter-spacing;
+  @include text-bold;
+  @include rem(font-size, 1);
+  @include respond-to($break-m) {
+    width: 100%;
+    @include rem(height, 4);
+    @include text-regular;
+    @include rem(font-size, 0.9);
+  }
+  ul {
+    @include container;
+  }
+  i {
+    display: inline-block;
+    white-space: nowrap;
+    @include respond-to(0, $break-to-m) {
+      width: 100%;
     }
-    ul {
-        @include container;
-    }
-    i {
-        display:inline-block;
-        white-space: nowrap;
-        @include respond-to(0, $break-to-m) {
-            width:100%;
-        }
-    }
+  }
 }
 
 .tools__toggle {
-    display: none; // doesn't exist until break-m
-    width: 100%;
-    background-color: $blue;
-    position: relative;
-    padding-top: 10px;
-    .no-js & {
-        display: none;
-    }
-    @include respond-to($break-m) {
-        display: block;
-    }
+  display: none; // doesn't exist until break-m
+  width: 100%;
+  background-color: $blue;
+  position: relative;
+  padding-top: 10px;
+  .no-js & {
+    display: none;
+  }
+  @include respond-to($break-m) {
+    display: block;
+  }
 }
 .tools__toggle-inner {
-    width: 90%;
-    max-width: 64em;
-    margin: 0 auto;
-    position: relative;
+  width: 90%;
+  max-width: 64em;
+  margin: 0 auto;
+  position: relative;
 }
 .tools__toggle-btn {
-    display: none;
-    position: absolute;
-    right: 3em;
-    top: 0;
-    z-index: 2;
-    padding: 0.125em 1.25em 0.375em 1.25em;
-    letter-spacing: $global-letter-spacing;
-    background: $blue;
-    font-family: $proximabold-stack;
-    text-transform: uppercase;
-    border-color: transparent;
-    border-radius: 0;
-    border-bottom-left-radius: $global-radius;
-    border-bottom-right-radius: $global-radius;
-    color: $white;
-    &:hover,
-    &:focus {
-        outline: 0;
-        text-decoration: underline;
-    }
-    i {
-        padding-left: 0;
-        padding-right: 28px;
-        background-position: right;
-        background-size: 20px;
-    }
-    @include respond-to ($break-m) {
-        display: block;
-    }
+  display: none;
+  position: absolute;
+  right: 3em;
+  top: 0;
+  z-index: 2;
+  padding: 0.125em 1.25em 0.375em 1.25em;
+  letter-spacing: $global-letter-spacing;
+  background: $blue;
+  font-family: $proximabold-stack;
+  text-transform: uppercase;
+  border-color: transparent;
+  border-radius: 0;
+  border-bottom-left-radius: $global-radius;
+  border-bottom-right-radius: $global-radius;
+  color: $white;
+  &:hover,
+  &:focus {
+    outline: 0;
+    text-decoration: underline;
+  }
+  i {
+    padding-left: 0;
+    padding-right: 28px;
+    background-position: right;
+    background-size: 20px;
+  }
+  @include respond-to($break-m) {
+    display: block;
+  }
 }

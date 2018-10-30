@@ -1,107 +1,107 @@
 @mixin heading1 {
-    @include text-bold;
-    color: $gray-darkest;
-    text-transform: uppercase;
-    line-height: 1em;
-    font-size: 2em;
-    letter-spacing: $global-letter-spacing;
-    padding-bottom: 0.25em;
-    @include respond-to($break-s) {
-        font-size: 2.25em;
-        padding-bottom: 0.09090909em;
-    }
-    @include respond-to($break-m) {
-        font-size: 2.75em;
-    }
+  @include text-bold;
+  color: $gray-darkest;
+  text-transform: uppercase;
+  line-height: 1em;
+  font-size: 2em;
+  letter-spacing: $global-letter-spacing;
+  padding-bottom: 0.25em;
+  @include respond-to($break-s) {
+    font-size: 2.25em;
+    padding-bottom: 0.09090909em;
+  }
+  @include respond-to($break-m) {
+    font-size: 2.75em;
+  }
 }
 
 @mixin heading1-alt {
-    @include text-bold;
-    color: $gray-darkest;
-    text-transform: uppercase;
-    line-height: 1.2em;
-    margin-bottom: 0.5em;
-    border-bottom: 0 none;
-    font-size: 1.75em;
-    letter-spacing: $global-letter-spacing;
-    padding-bottom: 0em;
-    @include respond-to($break-s) {
-        font-size: 2em;
-    }
+  @include text-bold;
+  color: $gray-darkest;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+  border-bottom: 0 none;
+  font-size: 1.75em;
+  letter-spacing: $global-letter-spacing;
+  padding-bottom: 0em;
+  @include respond-to($break-s) {
+    font-size: 2em;
+  }
 }
 
 @mixin heading2 {
-    @include text-bold;
-    color: $gray-darkest;
-    text-transform: uppercase;
-    line-height: 1.2em;
-    margin-bottom: 0.5em;
-    padding-bottom: 0.2em;
-    border-bottom: $global-border-thin solid $gray-medium;
-    font-size: 1.5em;
-    letter-spacing: $global-letter-spacing;
-    @include respond-to($break-s) {
-        font-size: 1.75em;
-    }
+  @include text-bold;
+  color: $gray-darkest;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.2em;
+  border-bottom: $global-border-thin solid $gray-medium;
+  font-size: 1.5em;
+  letter-spacing: $global-letter-spacing;
+  @include respond-to($break-s) {
+    font-size: 1.75em;
+  }
 }
 
 @mixin heading2-alt {
-    padding-bottom: 0em;
-    border-bottom: 0 none;
-    margin-bottom: 0.25em;
-    color: $gray-darker;
+  padding-bottom: 0em;
+  border-bottom: 0 none;
+  margin-bottom: 0.25em;
+  color: $gray-darker;
 }
 
 @mixin heading3 {
-    @include text-bold;
-    color: $gray-darker;
-    margin: 0.25em 0;
-    font-size: 1.375em;
-    border-bottom: 0 none;
+  @include text-bold;
+  color: $gray-darker;
+  margin: 0.25em 0;
+  font-size: 1.375em;
+  border-bottom: 0 none;
 }
 
 @mixin heading3-alt {
-    color: $gray-darkest;
-    @include rem(font-size, 1.125);
-    text-transform: uppercase;
-    letter-spacing: $global-letter-spacing;
-    margin-bottom: 0.8em;
-    padding-bottom: 0.4em;
-    border-bottom: $global-border-thick solid $gray-medium;
-    display: inline-block;
+  color: $gray-darkest;
+  @include rem(font-size, 1.125);
+  text-transform: uppercase;
+  letter-spacing: $global-letter-spacing;
+  margin-bottom: 0.8em;
+  padding-bottom: 0.4em;
+  border-bottom: $global-border-thick solid $gray-medium;
+  display: inline-block;
 }
 
 @mixin heading4 {
-    @include text-bold;
-    color: $gray-darker;
-    font-size: 1.25em;
-    border-bottom: 0 none;
-    margin: 0;
+  @include text-bold;
+  color: $gray-darker;
+  font-size: 1.25em;
+  border-bottom: 0 none;
+  margin: 0;
 }
 
 @mixin heading4-alt {
-    @include text-bold;
-    color: $gray-darker;
-    font-size: 1.125em;
-    line-height: 1.4em;
-    border-bottom: 0 none;
-    margin: 0;
+  @include text-bold;
+  color: $gray-darker;
+  font-size: 1.125em;
+  line-height: 1.4em;
+  border-bottom: 0 none;
+  margin: 0;
 }
 
 @mixin heading5 {
-    @include text-bold;
-    color: $gray-darkest;
-    text-transform: uppercase;
-    letter-spacing: $global-letter-spacing;
-    font-size: 1em;
-    margin-bottom: 0.25em;
+  @include text-bold;
+  color: $gray-darkest;
+  text-transform: uppercase;
+  letter-spacing: $global-letter-spacing;
+  font-size: 1em;
+  margin-bottom: 0.25em;
 }
 
 @mixin heading6 {
-    @include text-bold;
-    color: $gray-darkest;
-    font-size: 1em;
-    margin-bottom: 0.25em;
-    text-transform: none;
-    letter-spacing: normal;
+  @include text-bold;
+  color: $gray-darkest;
+  font-size: 1em;
+  margin-bottom: 0.25em;
+  text-transform: none;
+  letter-spacing: normal;
 }

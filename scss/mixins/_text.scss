@@ -1,71 +1,78 @@
 // This is where we declare extends for general site copy
 
 @mixin text-default {
-    font-family: $fontstack-default;
-    font-weight: normal;
-    font-style: normal;
+  font-family: $fontstack-default;
+  font-weight: normal;
+  font-style: normal;
 }
 @mixin text-default--bold {
-    font-family: $fontstack-default;
-    font-weight: bold;
-    font-style: normal;
+  font-family: $fontstack-default;
+  font-weight: bold;
+  font-style: normal;
 }
 
 @mixin text-regular {
-    font-family: $fontstack-regular;
-    font-weight: normal;
-    font-style: normal;
+  font-family: $fontstack-regular;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @mixin text-base {
-    @include text-regular;
-    color: $gray-darkest;
+  @include text-regular;
+  color: $gray-darkest;
 }
 
 @mixin text-bold {
-    font-family: $fontstack-bold;
-    font-weight: bold;
-    font-style: normal;
+  font-family: $fontstack-bold;
+  font-weight: bold;
+  font-style: normal;
 }
 
 @mixin text-alt {
-    font-family: $fontstack-alt;
-    font-weight: bold;
-    font-style: normal;
+  font-family: $fontstack-alt;
+  font-weight: bold;
+  font-style: normal;
 }
 
 @mixin text-sub {
-    @include text-regular;
-    line-height: 1.25em;
-    font-size: 0.75em;
+  @include text-regular;
+  line-height: 1.25em;
+  font-size: 0.75em;
 }
 
 @mixin text-link {
-    color: $blue;
-    text-decoration: none;
-    &:hover, &:focus {
-        text-decoration: underline;
-    }
+  color: $blue;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 @mixin text-body {
-    line-height: 1.5em;
-    margin: 1.5em 0 0 0;
-    font-size: 0.875em;
-    @include respond-to($break-s) {
-        font-size: 1em;
-    }
-    &:first-child, &:first-of-type {
-        margin-top: 0;
-    }
+  line-height: 1.5em;
+  margin: 1.5em 0 0 0;
+  font-size: 0.875em;
+  @include respond-to($break-s) {
+    font-size: 1em;
+  }
+  &:first-child,
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 
 @mixin text-match {
-    font-size: 0.875em;
-    @include respond-to($break-s) {
-        font-size: 1em;
-    }
-    p,li,blockquote,dd, a, strong {
-        font-size: 1em;
-    }
+  font-size: 0.875em;
+  @include respond-to($break-s) {
+    font-size: 1em;
+  }
+  p,
+  li,
+  blockquote,
+  dd,
+  a,
+  strong {
+    font-size: 1em;
+  }
 }

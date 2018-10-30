@@ -1,349 +1,348 @@
 .footer {
-    width: 100%;
+  width: 100%;
+  color: $white;
+  @include respond-to(0, $break-to-m) {
+    text-align: center;
+  }
+  h2 {
+    color: #fff;
+  }
+  h3 {
+    @include text-regular;
+    text-transform: capitalize;
     color: $white;
-    @include respond-to(0, $break-to-m) {
-        text-align:center;
-    }
-    h2 {
-        color: #fff;
-    }
-    h3 {
-        @include text-regular;
-        text-transform: capitalize;
-        color: $white;
-        @include rem(font-size, 1);
-        border-bottom:0 none;
-        letter-spacing: $global-letter-spacing/2;
-    }
-    a {
-        color: $gray-medium-alt;
-    }
-    ul {
-        padding:0;
-        margin:0;
-        list-style-type: none;
-    }
-    li {
-        @include rem(font-size, .75);
-        @include rem(line-height, 1.4)
-    }
+    @include rem(font-size, 1);
+    border-bottom: 0 none;
+    letter-spacing: $global-letter-spacing/2;
+  }
+  a {
+    color: $gray-medium-alt;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  li {
+    @include rem(font-size, 0.75);
+    @include rem(line-height, 1.4);
+  }
 }
 .footer__container {
-    @include container(padded);
-    @include clearfix;
+  @include container(padded);
+  @include clearfix;
 }
 .footer__primary {
-    background-color: $gray-darkest;
-    padding: 1em 0;
-    @include respond-to($break-m) {
-        padding: 2em 0;
-    }
+  background-color: $gray-darkest;
+  padding: 1em 0;
+  @include respond-to($break-m) {
+    padding: 2em 0;
+  }
 }
 .footer__secondary {
-    background-color: $gray-black;
+  @include clearfix;
+  background-color: $gray-black;
+  padding: 1em 0;
 }
 .footer__nav,
 .menu--footer .menu--footer {
-    float:left;
-    width: 75%;
-    @include clearfix;
-    .menu-level-0 {
-        > li {
-            width:48%;
-            float:left;
-            @include respond-to($tweak-m-2) {
-                width:25%;
-            }
-            > a, > span {
-                color: $white;
-                font-size: 1rem;
-                letter-spacing: .04rem;
-                margin: .25em 0;
-                &:hover,
-                &:focus {
-                    color: $white;
-                }
-            }
-        }
-    }
-    h3 {
-        width: 80%;
-    }
-    display: none;
-    @include respond-to($break-m) {
-        display:block;
-    }
-    > a {
-        &:hover {
-            text-decoration: none;
-            cursor: default;
-        }
-    }
-    a {
+  float: left;
+  width: 75%;
+  @include clearfix;
+  .menu-level-0 {
+    > li {
+      width: 48%;
+      float: left;
+      @include respond-to($tweak-m-2) {
+        width: 25%;
+      }
+      > a,
+      > span {
+        color: $white;
+        font-size: 1rem;
+        letter-spacing: 0.04rem;
+        margin: 0.25em 0;
         &:hover,
         &:focus {
-            color: $gray-medium-alt;
+          color: $white;
         }
-        &.rtd-phone-number, &.customer-link {
-            color: $white;
-        }
-        &.rtd-phone-number.main {
-            @include text-bold;
-            @include rem(font-size, 1.375);
-            @include rem(line-height, 2);
-            letter-spacing: $global-letter-spacing;
-        }
+      }
     }
+  }
+  h3 {
+    width: 80%;
+  }
+  display: none;
+  @include respond-to($break-m) {
+    display: block;
+  }
+  > a {
+    &:hover {
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+  a {
+    &:hover,
+    &:focus {
+      color: $gray-medium-alt;
+    }
+    &.rtd-phone-number,
+    &.customer-link {
+      color: $white;
+    }
+    &.rtd-phone-number.main {
+      @include text-bold;
+      @include rem(font-size, 1.375);
+      @include rem(line-height, 2);
+      letter-spacing: $global-letter-spacing;
+    }
+  }
 }
 
 .footer__nav--business-center,
 .footer__nav--inside-rtd {
-    margin-top: 1.3em;
-    @include respond-to($tweak-m-2) {
-        margin-top: 0;
-    }
+  margin-top: 1.3em;
+  @include respond-to($tweak-m-2) {
+    margin-top: 0;
+  }
 }
 
 #block-footercontacts, // Drupal specific
 .footer__contact {
-    width: 100%;
-    @include clearfix;
-    @include respond-to($break-m) {
-        float: left;
-        width: 20%;
-        // padding-left:1em;
-        // border-left: 1px dashed $gray-darker;
-    }
+  width: 100%;
+  @include clearfix;
+  @include respond-to($break-m) {
+    float: left;
+    width: 20%;
+    // padding-left:1em;
+    // border-left: 1px dashed $gray-darker;
+  }
 }
 
 .footer__address {
-    margin: 0 0 0.5em;
-    font-style:normal;
-    @include rem(font-size, .75);
-    color: $gray-medium-alt;
-    strong {
-        font-weight: normal;
+  margin: 0 0 0.5em;
+  font-style: normal;
+  @include rem(font-size, 0.75);
+  color: $gray-medium-alt;
+  strong {
+    font-weight: normal;
+  }
+  span {
+    margin-top: 10px;
+    display: none;
+    font-style: italic;
+    @include respond-to($break-m) {
+      display: block;
+      margin-top: 10px;
     }
-    span {
-        margin-top: 10px;
-        display:none;
-        font-style: italic;
-        @include respond-to($break-m) {
-            display: block;
-            margin-top: 10px;
-        }
-    }
+  }
 }
 
 .footer__icon {
-    display: block;
-    height:25px;
-    width: 25px;
-    background-size: 25px;
-    @include respond-to($tweak-m-2) {
-        width: 35px;
-        height: 35px;
-        background-size: 35px;
-    }
+  display: block;
+  height: 25px;
+  width: 25px;
+  background-size: 25px;
+  @include respond-to($tweak-m-2) {
+    width: 35px;
+    height: 35px;
+    background-size: 35px;
+  }
 }
 
 .footer__icon--logo {
-    opacity: 0.6;
-    width: 80px;
-    height: 40px;
-    background-size: 80px 40px;
-    margin: 0 auto;
-    @include respond-to($break-m) {
-        margin: 0;
-    }
-    @include respond-to(0, $break-to-m) {
-        opacity: 1;
-    }
+  opacity: 0.6;
+  width: 80px;
+  height: 40px;
+  background-size: 80px 40px;
+  margin: 0 auto;
+  @include respond-to($break-m) {
+    margin: 0;
+  }
+  @include respond-to(0, $break-to-m) {
+    opacity: 1;
+  }
 }
 .footer__social-media {
+  display: inline-block;
+  ul {
+    margin-top: 1em;
+  }
+  li {
     display: inline-block;
-    ul {
-        margin-top: 1em;
+    *display: inline;
+  }
+  a {
+    color: $white;
+    display: block;
+    margin-right: 0.5em;
+    opacity: 0.6;
+    @include transition();
+    &:hover,
+    &:focus {
+      opacity: 1;
     }
-    li {
-        display: inline-block;
-        *display: inline;
+  }
+  .menu-item {
+    a {
+      font: 0/0 a;
+      &:before {
+        content: ' ';
+        @extend .footer__icon;
+      }
     }
-    a  {
-        color: $white;
-        display: block;
-        margin-right: 0.5em;
-        opacity: 0.6;
-        @include transition();
-        &:hover,
-        &:focus {
-            opacity: 1;
-        }
+  }
+  .menu-level-0 {
+    margin-top: 0.6rem;
+    > li {
+      margin-right: 0.5em;
     }
-    .menu-item {
-        a {
-            font: 0/0 a;
-            &:before {
-                content: ' ';
-                @extend .footer__icon;
-            }
-        }
-    }
-    .menu-level-0 {
-        margin-top: .6rem;
-        > li {
-            margin-right: .5em;
-        }
-    }
-}
-
-.footer__secondary {
-    @include clearfix;
-    padding: 1em 0;
+  }
 }
 
 .footer__sitelinks,
 .menu--footer-site-links {
-    text-transform: lowercase;
-    li {
-        display:inline-block;
-        padding: 0 .5em;
+  text-transform: lowercase;
+  li {
+    display: inline-block;
+    padding: 0 0.5em;
+  }
+  li:last-child {
+    border-right: 0;
+  }
+  a {
+    &:hover,
+    &:focus {
+      color: $gray-medium-alt;
     }
-    li:last-child {
-        border-right: 0;
-    }
-    a {
-        &:hover,
-        &:focus {
-            color: $gray-medium-alt;
-        }
-    }
+  }
 }
 
 #block-footercopyright, // Drupal specific
 .footer__copywrite {
-    white-space: nowrap;
-    padding-top: 1em;
-    @include rem(font-size, .75);
-    color: $gray-medium-alt;
-    @include respond-to($break-m) {
-        padding-top: 0;
-    }
-    p {
-        margin-bottom: 0;
-        line-height: 2em;
-    }
+  white-space: nowrap;
+  padding-top: 1em;
+  @include rem(font-size, 0.75);
+  color: $gray-medium-alt;
+  @include respond-to($break-m) {
+    padding-top: 0;
+  }
+  p {
+    margin-bottom: 0;
+    line-height: 2em;
+  }
 }
 
 @include respond-to($break-m) {
-    .footer__buttons,
-    .footer__accessibility,
-    .footer__translate,
-    .footer__sitelinks,
-    .footer__copywrite,
-    #block-footerbuttons,
-    #block-footercopyright {
-        float:left;
-        min-height: 1px; // prevent float from collapsing if empty
-        padding:0;
-        margin:0;
-    }
-    .footer__buttons,
-    #block-footerbuttons {
-        width:36%;
-    }
-    .footer__sitelinks,
-    .footer__copywrite,
-    #block-footercopyright {
-        width:31%;
-    }
+  .footer__buttons,
+  .footer__accessibility,
+  .footer__translate,
+  .footer__sitelinks,
+  .footer__copywrite,
+  #block-footerbuttons,
+  #block-footercopyright {
+    float: left;
+    min-height: 1px; // prevent float from collapsing if empty
+    padding: 0;
+    margin: 0;
+  }
+  .footer__buttons,
+  #block-footerbuttons {
+    width: 36%;
+  }
+  .footer__sitelinks,
+  .footer__copywrite,
+  #block-footercopyright {
+    width: 31%;
+  }
 }
 
 #block-footerbuttons, // Drupal specific
 .footer__buttons {
-    @include clearfix;
-    .footer__accessibility,
-    .footer__translate {
-        display: inline-block;
+  @include clearfix;
+  .footer__accessibility,
+  .footer__translate {
+    display: inline-block;
+  }
+  .footer__accessibility {
+    margin-right: 0.5em;
+  }
+  .btn--accessibility {
+    display: inline-block;
+    border-radius: $global-radius;
+    border: 1px solid $gray-darkest;
+    span {
+      @include text-regular;
+      padding: 0.3em 0.8em;
+      line-height: 22px;
     }
-    .footer__accessibility {
-        margin-right: .5em;
+    &:before {
+      content: ' ';
+      background-color: $gray-darkest;
+      display: block;
+      border-radius: $global-radius 0 0 $global-radius;
+      width: 24px;
+      height: 22px;
+      float: left;
+      background-position: center;
+      background-repeat: no-repeat;
     }
-    .btn--accessibility {
-        display: inline-block;
-        border-radius: $global-radius;
-        border: 1px solid $gray-darkest;
-        span {
-            @include text-regular;
-            padding: 0.3em 0.8em;
-            line-height: 22px;
-        }
-        &:before {
-            content: ' ';
-            background-color: $gray-darkest;
-            display: block;
-            border-radius: $global-radius 0 0 $global-radius;
-            width: 24px;
-            height: 22px;
-            float: left;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        &:hover,
-        &:focus {
-            color: inherit;
-            text-decoration: underline;
-        }
+    &:hover,
+    &:focus {
+      color: inherit;
+      text-decoration: underline;
     }
-    .field--name-body p {
-        margin: 0;
-    }
+  }
+  .field--name-body p {
+    margin: 0;
+  }
 }
 
 .footer .skiptranslate {
-    display: none;
+  display: none;
 }
 
 .footer .goog-te-gadget-simple {
-    background-color: transparent;
-    border: 0 none;
-    @include rem(font-size, .75);
-    > span {
-        display:block;
-        width:100%;
-    }
-    .goog-te-menu-value {
-        color: $gray-medium-alt;
-    }
+  background-color: transparent;
+  border: 0 none;
+  @include rem(font-size, 0.75);
+  > span {
+    display: block;
+    width: 100%;
+  }
+  .goog-te-menu-value {
+    color: $gray-medium-alt;
+  }
 }
 
 .footer .goog-te-menu-value {
-    display:block;
-    width:100%;
-    padding: 4px 5px 3px 10px;
-    margin:0;
-    text-align:left;
-    a:hover {
-        text-decoration:none;
-    }
-    span {
-        display: inline;
-        color: $gray-medium-alt;
-    }
+  display: block;
+  width: 100%;
+  padding: 4px 5px 3px 10px;
+  margin: 0;
+  text-align: left;
+  a:hover {
+    text-decoration: none;
+  }
+  span {
+    display: inline;
+    color: $gray-medium-alt;
+  }
 }
 
 .goog-te-gadget-icon {
-    display:none;
+  display: none;
 }
 
 iframe.goog-te-menu-frame {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 #load-translate {
-    @include text-regular;
-    margin: 0;
-    padding: 0.4em 0.8em;
-    border-radius: $global-radius;
-    border: 1px solid $gray-darkest;
+  @include text-regular;
+  margin: 0;
+  padding: 0.4em 0.8em;
+  border-radius: $global-radius;
+  border: 1px solid $gray-darkest;
 }

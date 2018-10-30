@@ -17,7 +17,6 @@
   .content--colorblock + .content--colorblock &:after {
     background: darken($gray-lighter, 5%);
   }
-
 }
 
 @keyframes animateshine {
@@ -26,7 +25,7 @@
     width: 0;
   }
   50% {
-    opacity: .85;
+    opacity: 0.85;
   }
   100% {
     opacity: 0;
@@ -51,19 +50,23 @@
 // Animate Circle Border
 @keyframes circle-border {
   0% {
-    box-shadow: 40px -40px 0 5px $white, -40px -40px 0 5px $white, -40px 40px 0 5px $white, 40px 40px 0 5px $white, 0 0 0 5px $white;
+    box-shadow: 40px -40px 0 5px $white, -40px -40px 0 5px $white,
+      -40px 40px 0 5px $white, 40px 40px 0 5px $white, 0 0 0 5px $white;
   }
   25% {
-    box-shadow: 0 -90px 0 5px $white, -40px -40px 0 5px $white, -40px 40px 0 5px $white, 40px 40px 0 5px $white, 0 0 0 5px $blue;
+    box-shadow: 0 -90px 0 5px $white, -40px -40px 0 5px $white,
+      -40px 40px 0 5px $white, 40px 40px 0 5px $white, 0 0 0 5px $blue;
   }
   50% {
-    box-shadow: 0 -90px 0 5px $white, -90px 0px 0 5px $white, -40px 40px 0 5px $white, 40px 40px 0 5px $white, 0 0 0 5px $blue;
+    box-shadow: 0 -90px 0 5px $white, -90px 0px 0 5px $white,
+      -40px 40px 0 5px $white, 40px 40px 0 5px $white, 0 0 0 5px $blue;
   }
   75% {
-    box-shadow: 0 -90px 0 5px $white, -90px 0px 0 5px $white, 0px 90px 0 5px $white, 40px 40px 0 5px $white, 0 0 0 5px $blue;
+    box-shadow: 0 -90px 0 5px $white, -90px 0px 0 5px $white,
+      0px 90px 0 5px $white, 40px 40px 0 5px $white, 0 0 0 5px $blue;
   }
   100% {
-    box-shadow: 0 -90px 0 5px $white, -90px 0px 0 5px $white, 0px 90px 0 5px $white, 90px 40px 0 5px $white, 0 0 0 5px $blue;
+    box-shadow: 0 -90px 0 5px $white, -90px 0px 0 5px $white,
+      0px 90px 0 5px $white, 90px 40px 0 5px $white, 0 0 0 5px $blue;
   }
 }
-

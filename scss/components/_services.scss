@@ -1,196 +1,196 @@
 .service-local {
-    background-color: map-get($service, bus-local); //#008fbf
+  background-color: map-get($service, bus-local); //#008fbf
 }
 .service-limited {
-    background-color: map-get($service, bus-limited); //#c129b9
+  background-color: map-get($service, bus-limited); //#c129b9
 }
 .service-boulder {
-    background-color: map-get($service, bus-boulder); //#004e5a
+  background-color: map-get($service, bus-boulder); //#004e5a
 }
 .service-express {
-    background-color: map-get($service, bus-express); //#f63440
+  background-color: map-get($service, bus-express); //#f63440
 }
 .service-regional {
-    background-color: map-get($service, bus-regional); //#00833f
+  background-color: map-get($service, bus-regional); //#00833f
 }
 .service-skyride {
-    background-color: map-get($service, bus-skyride); //#003da7
+  background-color: map-get($service, bus-skyride); //#003da7
 }
 .service-cnr {
-    background-color: map-get($service, bus-cnr); //#98cb4f
+  background-color: map-get($service, bus-cnr); //#98cb4f
 }
 .service-mall-art {
-    background-color: map-get($service, bus-mall); //#ffff00
-    color: $gray-dark;
-    text-shadow: none;
+  background-color: map-get($service, bus-mall); //#ffff00
+  color: $gray-dark;
+  text-shadow: none;
 }
 .service-art {
-    background-color: map-get($service, bus-art); //#ffff00
-    color: $gray-dark;
-    text-shadow: none;
+  background-color: map-get($service, bus-art); //#ffff00
+  color: $gray-dark;
+  text-shadow: none;
 }
 .service-mall {
-    background-color: map-get($service, bus-mall); //#ffff00
+  background-color: map-get($service, bus-mall); //#ffff00
 }
 .service-metro {
-    background-color: map-get($service, bus-metro); //#00a19b
+  background-color: map-get($service, bus-metro); //#00a19b
 }
 .service-flatiron {
-    background-color: map-get($service, bus-flatiron); //#1e4286
+  background-color: map-get($service, bus-flatiron); //#1e4286
 }
 .service-flatiron-alt {
-    background-color: map-get($service, bus-flatiron-alt); //#f5a81c
+  background-color: map-get($service, bus-flatiron-alt); //#f5a81c
 }
 .service-a-line {
-    background-color: map-get($service, a-line); //#57c1e9
+  background-color: map-get($service, a-line); //#57c1e9
 }
 .service-b-line {
-    background-color: map-get($service, b-line); //#4d9c2d
+  background-color: map-get($service, b-line); //#4d9c2d
 }
 .service-c-line {
-    background-color: map-get($service, c-line); //#f79239
+  background-color: map-get($service, c-line); //#f79239
 }
 .service-d-line {
-    background-color: map-get($service, d-line); //#008348
+  background-color: map-get($service, d-line); //#008348
 }
 .service-e-line {
-    background-color: map-get($service, e-line); //#552683
+  background-color: map-get($service, e-line); //#552683
 }
 .service-f-line {
-    background-color: map-get($service, f-line); //#ee3e33
+  background-color: map-get($service, f-line); //#ee3e33
 }
 .service-g-line {
-    background-color: map-get($service, g-line); //#f6b221
+  background-color: map-get($service, g-line); //#f6b221
 }
 .service-h-line {
-    background-color: map-get($service, h-line); //#0075be
+  background-color: map-get($service, h-line); //#0075be
 }
 .service-l-line {
-    background-color: map-get($service, l-line); //#ffcd00
+  background-color: map-get($service, l-line); //#ffcd00
 }
 .service-n-line {
-    background-color: map-get($service, n-line); //#9f26b4
+  background-color: map-get($service, n-line); //#9f26b4
 }
 .service-r-line {
-    background-color: map-get($service, r-line); //#c3d500
+  background-color: map-get($service, r-line); //#c3d500
 }
 .service-w-line {
-    background-color: map-get($service, w-line); //#009daa
+  background-color: map-get($service, w-line); //#009daa
 }
 
 .nav-lettering {
+  .char1 {
+    @include header-menu-service-icons();
+  }
+
+  &.nav-a-line {
     .char1 {
-        @include header-menu-service-icons();
+      @extend .service-a-line;
+    }
+  }
+
+  &.nav-b-line {
+    .char1 {
+      @extend .service-b-line;
+    }
+  }
+
+  &.nav-c-line {
+    .char1 {
+      @extend .service-c-line;
+    }
+  }
+
+  &.nav-d-line {
+    .char1 {
+      @extend .service-d-line;
+    }
+  }
+
+  &.nav-e-line {
+    .char1 {
+      @extend .service-e-line;
+    }
+  }
+
+  &.nav-f-line {
+    .char1 {
+      @extend .service-f-line;
+    }
+  }
+
+  &.nav-g-line {
+    .char1 {
+      @extend .service-g-line;
+    }
+  }
+
+  &.nav-h-line {
+    .char1 {
+      @extend .service-h-line;
+    }
+  }
+
+  &.nav-l-line {
+    .char1 {
+      @extend .service-l-line;
+    }
+  }
+
+  &.nav-n-line {
+    .char1 {
+      @extend .service-n-line;
+    }
+  }
+
+  &.nav-r-line {
+    .char1 {
+      @extend .service-r-line;
+    }
+  }
+
+  &.nav-w-line {
+    .char1 {
+      @extend .service-w-line;
+    }
+  }
+
+  &.nav-cd-line {
+    .char1 {
+      margin-right: 5px;
+      @include respond-to($break-m) {
+        margin-right: 3px;
+      }
+      @extend .service-c-line;
     }
 
-    &.nav-a-line {
-        .char1 {
-            @extend .service-a-line;
-        }
+    .char2 {
+      @include header-menu-service-icons();
+      @extend .service-d-line;
+    }
+  }
+
+  &.nav-efr-line {
+    .char1 {
+      margin-right: 5px;
+      @include respond-to($break-m) {
+        margin-right: 3px;
+      }
+      @extend .service-e-line;
     }
 
-    &.nav-b-line {
-        .char1 {
-            @extend .service-b-line;
-        }
+    .char2 {
+      @include header-menu-service-icons();
+      margin-right: 5px;
+      @include respond-to($break-m) {
+        margin-right: 3px;
+      }
+      @extend .service-f-line;
     }
 
-    &.nav-c-line {
-        .char1 {
-            @extend .service-c-line;
-        }
+    .char3 {
+      @include header-menu-service-icons();
+      @extend .service-r-line;
     }
-
-    &.nav-d-line {
-        .char1 {
-            @extend .service-d-line;
-        }
-    }
-
-    &.nav-e-line {
-        .char1 {
-            @extend .service-e-line;
-        }
-    }
-
-    &.nav-f-line {
-        .char1 {
-            @extend .service-f-line;
-        }
-    }
-
-    &.nav-g-line {
-        .char1 {
-            @extend .service-g-line;
-        }
-    }
-
-    &.nav-h-line {
-        .char1 {
-            @extend .service-h-line;
-        }
-    }
-
-    &.nav-l-line {
-        .char1 {
-            @extend .service-l-line;
-        }
-    }
-
-    &.nav-n-line {
-        .char1 {
-            @extend .service-n-line;
-        }
-    }
-
-    &.nav-r-line {
-        .char1 {
-            @extend .service-r-line;
-        }
-    }
-
-    &.nav-w-line {
-        .char1 {
-            @extend .service-w-line;
-        }
-    }
-
-    &.nav-cd-line {
-        .char1 {
-            margin-right: 5px;
-            @include respond-to($break-m) {
-                margin-right: 3px;
-            }
-            @extend .service-c-line;
-        }
-
-        .char2 {
-            @include header-menu-service-icons();
-            @extend .service-d-line;
-        }
-    }
-
-    &.nav-efr-line {
-        .char1 {
-            margin-right: 5px;
-            @include respond-to($break-m) {
-                margin-right: 3px;
-            }
-            @extend .service-e-line;
-        }
-
-        .char2 {
-            @include header-menu-service-icons();
-            margin-right: 5px;
-            @include respond-to($break-m) {
-                margin-right: 3px;
-            }
-            @extend .service-f-line;
-        }
-
-        .char3 {
-            @include header-menu-service-icons();
-            @extend .service-r-line;
-        }
-    }
+  }
 }

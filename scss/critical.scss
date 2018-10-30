@@ -1,32 +1,32 @@
 $media-queries: true !default;
 
 // Variables used in project
-@import "variables/layout";
-@import "variables/mediaquery";
-@import "variables/colors";
-@import "variables/typography";
-@import "variables/zindex";
-@import "variables/border-style";
+@import 'variables/layout';
+@import 'variables/mediaquery';
+@import 'variables/colors';
+@import 'variables/typography';
+@import 'variables/zindex';
+@import 'variables/border-style';
 
 // Mixins used in project
-@import "mixins/rems";
-@import "mixins/respondto";
-@import "mixins/quantity";
-@import "mixins/transition";
-@import "mixins/container";
-@import "mixins/clearfix";
-@import "mixins/text";
-@import "mixins/heading";
-@import "mixins/btn-reset";
-@import "mixins/button";
-@import "mixins/service-icons";
+@import 'mixins/rems';
+@import 'mixins/respondto';
+@import 'mixins/quantity';
+@import 'mixins/transition';
+@import 'mixins/container';
+@import 'mixins/clearfix';
+@import 'mixins/text';
+@import 'mixins/heading';
+@import 'mixins/btn-reset';
+@import 'mixins/button';
+@import 'mixins/service-icons';
 
-@import "base/normalize-critical";
-@import "base/basic-critical";
-@import "base/helper-critical";
+@import 'base/normalize-critical';
+@import 'base/basic-critical';
+@import 'base/helper-critical';
 
-@import "components/header";
-@import "components/nav-critical";
-@import "components/trigger";
-@import "components/tools-critical";
-@import "components/footer";
+@import 'components/header';
+@import 'components/nav-critical';
+@import 'components/trigger';
+@import 'components/tools-critical';
+@import 'components/footer';

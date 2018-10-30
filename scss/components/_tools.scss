@@ -1,252 +1,252 @@
 .tools,
 .menu--rtd-tools {
-    display:none;
-    height:auto;
-    position: relative;
-    background: $blue;
-    text-transform: uppercase;
-    letter-spacing: $global-letter-spacing;
-    @include text-bold;
-    @include rem(font-size, 1);
-    @include respond-to($break-m) {
-        width:100%;
-        @include rem(height, 4);
-        @include text-regular;
-        @include rem(font-size, 0.9);
+  display: none;
+  height: auto;
+  position: relative;
+  background: $blue;
+  text-transform: uppercase;
+  letter-spacing: $global-letter-spacing;
+  @include text-bold;
+  @include rem(font-size, 1);
+  @include respond-to($break-m) {
+    width: 100%;
+    @include rem(height, 4);
+    @include text-regular;
+    @include rem(font-size, 0.9);
+  }
+  ul {
+    @include container;
+    margin-bottom: 0;
+  }
+  i {
+    display: inline-block;
+    white-space: nowrap;
+    @include respond-to(0, $break-to-m) {
+      width: 100%;
     }
-    ul {
-        @include container;
-        margin-bottom: 0;
-    }
-    i {
-        display:inline-block;
-        white-space: nowrap;
-        @include respond-to(0, $break-to-m) {
-            width:100%;
-        }
-    }
+  }
 }
 .tools__item {
-    display:block;
-    width:100%;
-    border-bottom: 1px solid $blue-darker;
-    @include respond-to($break-m) {
-        width:20%;
-        @include rem(min-width, 12);
-        float:left;
-        border-bottom: 0;
-    }
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid $blue-darker;
+  @include respond-to($break-m) {
+    width: 20%;
+    @include rem(min-width, 12);
+    float: left;
+    border-bottom: 0;
+  }
 }
 .tools__tool {
-    position: relative;
-    display:block;
-    @include rem(height, 4);
-    @include rem(line-height, 4);
-    @include rem(padding-left, 1);
+  position: relative;
+  display: block;
+  @include rem(height, 4);
+  @include rem(line-height, 4);
+  @include rem(padding-left, 1);
+  color: $white;
+  text-decoration: none;
+  @include transition($prop: background-color);
+  &:focus,
+  &:hover {
     color: $white;
-    text-decoration:none;
-    @include transition($prop:background-color);;
-    &:focus,
-    &:hover {
-        color: $white;
-        text-decoration: none;
-        background-color: $blue-lighter;
+    text-decoration: none;
+    background-color: $blue-lighter;
+  }
+  &:before {
+    content: ' ';
+    @include square(rem-calc(30));
+    display: inline-block;
+    margin-right: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-top: -4px;
+  }
+  @include respond-to($break-s) {
+    @include rem(padding-left, 1.5);
+  }
+  @include respond-to($break-m) {
+    padding-left: 0;
+    text-align: center;
+  }
+  i {
+    background-position: left 48%;
+    background-size: 30px;
+    padding-left: 40px;
+    @include respond-to(0, $break-to-m) {
+      background-size: 36px;
+      padding-left: 64px;
     }
-    &:before {
-        content: ' ';
-        @include square(rem-calc(30));
-        display: inline-block;
-        margin-right: 10px;
-        background-position: center;
-        background-repeat: no-repeat;
-        vertical-align: middle;
-        margin-top: -4px;
-    }
-    @include respond-to($break-s) {
-        @include rem(padding-left, 1.5);
-    }
-    @include respond-to($break-m) {
-        padding-left:0;
-        text-align:center;
-    }
-    i {
-        background-position: left 48%;
-        background-size: 30px;
-        padding-left: 40px;
-        @include respond-to(0, $break-to-m) {
-            background-size: 36px;
-            padding-left: 64px;
-        }
-    }
+  }
 }
 
 .tools__tool--schedulefinder {
-    @include transition($prop:background-color);;
+  @include transition($prop: background-color);
+  @include respond-to($break-m) {
+    &:hover,
+    &:hover input {
+      background-color: $blue-lighter;
+    }
+  }
+  input,
+  button {
+    @include rem(height, 2);
+    @include rem(margin-top, 1);
+  }
+  input[type='text'] {
+    background: $white;
+    color: $gray-darker;
+    border: 0;
+    border-radius: $global-radius;
+    @include text-regular;
+    font-size: 1em;
+    @include transition($prop: background-color);
     @include respond-to($break-m) {
-        &:hover, &:hover input {
-            background-color: $blue-lighter;
-        }
+      background-color: rgba(0, 0, 0, 0);
+      color: $white;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: $global-letter-spacing;
+      box-shadow: none;
+      &:focus {
+        outline: none;
+      }
     }
-    input, button {
-        @include rem(height, 2);
-        @include rem(margin-top, 1);
-    }
-    input[type="text"] {
-        background: $white;
-        color: $gray-darker;
-        border:0;
-        border-radius: $global-radius;
-        @include text-regular;
-        font-size: 1em;
-        @include transition($prop:background-color);;
-        @include respond-to($break-m) {
-            background-color: rgba(0,0,0,0);
-            color: $white;
-            text-align: left;
-            text-transform: uppercase;
-            letter-spacing: $global-letter-spacing;
-            box-shadow: none;
-            &:focus {
-                outline:none;
-                & + button {
+  }
+  input,
+  .twitter-typeahead {
+    width: 60%;
+    padding-left: 0.5em;
+    @include rem(max-width, 14);
 
-                }
-            }
-        }
+    @include respond-to($break-m) {
+      @include rem(height, 4);
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      min-width: 10em;
     }
-    input, .twitter-typeahead {
-        width: 60%;
-        padding-left:0.5em;
-        @include rem(max-width, 14);
-
-        @include respond-to($break-m) {
-            @include rem(height, 4);
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            min-width:10em;
-        }
+  }
+  .twitter-typeahead input {
+    width: 100%;
+  }
+  // Hide the X on IE10
+  input[type='text']::-ms-clear {
+    display: none;
+  }
+  .tt-dropdown-menu {
+    @include text-bold;
+    font-weight: bold;
+    @include rem(min-width, 12);
+    background: $blue-lighter;
+    @include respond-to($break-m) {
+      margin-left: -3em;
     }
-    .twitter-typeahead input {
-        width: 100%;
+  }
+  .tt-suggestion {
+    line-height: 1em;
+    text-align: left;
+    a {
+      display: block;
+      color: $white;
+      width: 100%;
+      padding: 0.75em 1em;
+      text-transform: none;
     }
-    // Hide the X on IE10
-    input[type=text]::-ms-clear {
-        display:none;
+  }
+  .tt-cursor {
+    background-color: $blue;
+    color: $white;
+  }
+  ::-webkit-input-placeholder {
+    color: $gray-medium;
+    text-transform: lowercase;
+  }
+  ::-moz-placeholder {
+    color: $gray-medium;
+    text-transform: lowercase;
+  }
+  :-ms-input-placeholder {
+    color: $gray-medium;
+    text-transform: lowercase;
+  }
+  button {
+    width: 15%;
+    @include rem(min-width, 4);
+    @include rem(max-width, 5.5);
+    text-align: center;
+    @include rem(margin-left, 0.5);
+    background: $red;
+    color: $white;
+    border: none;
+    border-radius: $global-radius;
+    @include respond-to($break-m) {
+      display: none;
+      position: relative;
+      top: -47px;
+      right: -10px;
+      background-color: $blue-lighter;
+      color: $white;
+      &::after {
+        content: ':';
+      }
     }
-    .tt-dropdown-menu {
-        @include text-bold;
-        font-weight: bold;
-        @include rem(min-width, 12);
-        background: $blue-lighter;
-        @include respond-to($break-m) {
-            margin-left: -3em;
-        }
-    }
-    .tt-suggestion{
-        line-height: 1em;
-        text-align: left;
-        a {
-            display: block;
-            color: $white;
-            width: 100%;
-            padding: .75em 1em;
-            text-transform: none;
-        }
-    }
-    .tt-cursor {
-        background-color: $blue;
-        color: $white;
-    }
-    ::-webkit-input-placeholder{
-        color: $gray-medium;
-        text-transform: lowercase;
-    }
-    ::-moz-placeholder{
-        color: $gray-medium;
-        text-transform: lowercase;
-    }
-    :-ms-input-placeholder {
-        color: $gray-medium;
-        text-transform: lowercase;
-    }
-    button {
-        width: 15%;
-        @include rem(min-width, 4);
-        @include rem(max-width, 5.5);
-        text-align:center;
-        @include rem(margin-left, 0.5);
-        background: $red;
-        color: $white;
-        border:none;
-        border-radius: $global-radius;
-        @include respond-to($break-m) {
-            display:none;
-            position: relative;
-            top: -47px;
-            right:-10px;
-            background-color: $blue-lighter;
-            color: $white;
-            &::after {
-                content:':';
-            }
-        }
-    }
+  }
 }
 
 .tools__toggle {
-    display: none; // doesn't exist until break-m
-    width: 100%;
-    background-color: $blue;
-    position: relative;
-    padding-top: 10px;
-    .no-js & {
-        display: none;
-    }
-    @include respond-to($break-m) {
-        display: block;
-    }
+  display: none; // doesn't exist until break-m
+  width: 100%;
+  background-color: $blue;
+  position: relative;
+  padding-top: 10px;
+  .no-js & {
+    display: none;
+  }
+  @include respond-to($break-m) {
+    display: block;
+  }
 }
 .tools__toggle-inner {
-    width: 90%;
-    max-width: 64em;
-    margin: 0 auto;
-    position: relative;
+  width: 90%;
+  max-width: 64em;
+  margin: 0 auto;
+  position: relative;
 }
 .tools__toggle-btn {
-    display: none;
-    position: absolute;
-    right: 3em;
-    top: 0;
-    z-index: 2;
-    padding: 0.125em 1.25em 0.375em 1.25em;
-    letter-spacing: $global-letter-spacing;
-    background: $blue;
-    font-family: $proximabold-stack;
-    text-transform: uppercase;
-    border-color: transparent;
-    border-radius: 0;
-    border-bottom-left-radius: $global-radius;
-    border-bottom-right-radius: $global-radius;
-    color: $white;
-    &:hover,
-    &:focus {
-        outline: 0;
-        text-decoration: underline;
-    }
-    i {
-        font-style: normal;
-        padding-left: 0;
-        padding-right: 28px;
-        background-position: right;
-        background-size: 20px;
-        background-repeat: no-repeat;
-    }
-    @include respond-to ($break-m) {
-        display: block;
-    }
+  display: none;
+  position: absolute;
+  right: 3em;
+  top: 0;
+  z-index: 2;
+  padding: 0.125em 1.25em 0.375em 1.25em;
+  letter-spacing: $global-letter-spacing;
+  background: $blue;
+  font-family: $proximabold-stack;
+  text-transform: uppercase;
+  border-color: transparent;
+  border-radius: 0;
+  border-bottom-left-radius: $global-radius;
+  border-bottom-right-radius: $global-radius;
+  color: $white;
+  &:hover,
+  &:focus {
+    outline: 0;
+    text-decoration: underline;
+  }
+  i {
+    font-style: normal;
+    padding-left: 0;
+    padding-right: 28px;
+    background-position: right;
+    background-size: 20px;
+    background-repeat: no-repeat;
+  }
+  @include respond-to($break-m) {
+    display: block;
+  }
 }
 /* Fix for IE8  */
-.lt-ie9 .tools__tool--schedulefinder input[type="text"]  {
-    top: 25px;
+.lt-ie9 .tools__tool--schedulefinder input[type='text'] {
+  top: 25px;
 }

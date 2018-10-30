@@ -1,209 +1,213 @@
 .header__trigger--menu,
 .header__trigger--tools {
-    @include rem(height, 4);
-    @include rem(width, 4);
+  @include rem(height, 4);
+  @include rem(width, 4);
 
-    @include respond-to($break-s) {
-        @include rem(height, 6);
-        @include rem(width, 7);
-
-    }
-    position: relative;
+  @include respond-to($break-s) {
+    @include rem(height, 6);
+    @include rem(width, 7);
+  }
+  position: relative;
+  display: block;
+  cursor: pointer;
+  float: right;
+  padding: 0;
+  outline: none;
+  color: $blue;
+  font-size: 1em;
+  @include text-bold;
+  text-transform: uppercase;
+  letter-spacing: $global-letter-spacing/2;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+  background: none;
+  @include transition(0.2s);
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    background: $blue;
+  }
+  b,
+  strong {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
     display: block;
-    cursor: pointer;
-    float: right;
-    padding: 0;
-    outline:none;
-    color: $blue;
-    font-size: 1em;
-    @include text-bold;
-    text-transform:uppercase;
-    letter-spacing: $global-letter-spacing/2;
-    text-decoration:none;
-    text-align:center;
-    border:none;
-    border-radius: 0;
-    background:none;
-    @include transition(0.2s);;
-    &:hover, &:focus, &:active {
-        color: $white;
-        background: $blue;
-    }
-    b, strong {
-        width: 100%;
-        text-align: center;
-        padding-top: 10px;
-        display: block;
-        position: absolute;
-        font-weight: 400;
-        bottom: 2px;
-        @include respond-to($break-s) {
-            bottom: 7px;
-        }
-    }
+    position: absolute;
+    font-weight: 400;
+    bottom: 2px;
     @include respond-to($break-s) {
-        font-size: 1.25em;
+      bottom: 7px;
     }
-    @include respond-to($break-m) {
-        display: none;
-    }
+  }
+  @include respond-to($break-s) {
+    font-size: 1.25em;
+  }
+  @include respond-to($break-m) {
+    display: none;
+  }
 }
 .header__trigger--menu {
+  &:before {
+    content: '';
+    height: 26px;
+    width: 4px;
+    position: absolute;
+    background: $gray-light;
+    top: 8px;
+    left: 18px;
+    z-index: 1;
+    @include transition(0.2s);
+    @include respond-to($break-s) {
+      height: 32px;
+      top: 23px;
+      left: 38px;
+    }
+  }
+  &:hover:before,
+  &:focus:before {
+    background: $blue;
+  }
+  i,
+  i:before,
+  i:after {
+    cursor: pointer;
+    height: 6px;
+    width: 45px;
+    background: $blue;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 400ms ease-in-out;
+    @include respond-to($break-s) {
+      height: 8px;
+      width: 56px;
+    }
+  }
+  i {
+    top: 18px;
+    left: 10px;
+    @include respond-to($break-s) {
+      top: 35px;
+      left: 28px;
+    }
+  }
+  i:before {
+    top: -10px;
+    @include respond-to($break-s) {
+      top: -12px;
+    }
+  }
+  i:after {
+    bottom: -10px;
+    @include respond-to($break-s) {
+      bottom: -12px;
+    }
+  }
+  &:hover i:before,
+  &:hover i,
+  &:hover i:after,
+  &:focus i:before,
+  &:focus i,
+  &:focus i:after {
+    background: $white;
+  }
+  &.header__trigger--is-active {
+    background: $blue;
     &:before {
-        content: '';
-        height: 26px;
-        width: 4px;
-        position: absolute;
-        background: $gray-light;
-        top: 8px;
-        left: 18px;
-        z-index: 1;
-        @include transition(0.2s);;
-        @include respond-to($break-s) {
-            height: 32px;
-            top: 23px;
-            left: 38px;
-        }
+      width: 0px;
     }
-    &:hover:before,
-    &:focus:before {
-        background: $blue;
+    i {
+      background-color: transparent;
     }
-    i,
     i:before,
     i:after {
-        cursor: pointer;
-        height: 6px;
-        width: 45px;
-        background: $blue;
-        position: absolute;
-        display: block;
-        content: '';
-        transition: all 400ms ease-in-out;
-        @include respond-to($break-s) {
-            height: 8px;
-            width: 56px;
-        }
-    }
-    i {
-        top: 18px;
-        left: 10px;
-        @include respond-to($break-s) {
-            top: 35px;
-            left: 28px;
-        }
+      top: 10px;
+      bottom: 0;
+      background: $white;
     }
     i:before {
-        top: -10px;
-        @include respond-to($break-s) {
-            top: -12px;
-        }
+      transform: rotate(45deg);
     }
     i:after {
-        bottom:-10px;
-        @include respond-to($break-s) {
-            bottom: -12px;
-        }
+      transform: rotate(-45deg);
     }
-    &:hover i:before,
-    &:hover i,
-    &:hover i:after,
-    &:focus i:before,
-    &:focus i,
-    &:focus i:after {
-        background: $white;
+    b {
+      display: none;
     }
-    &.header__trigger--is-active {
-        background: $blue;
-        &:before {
-            width:0px;
-        }
-        i {
-            background-color: transparent;
-        }
-        i:before,
-        i:after {
-            top: 10px; bottom:0;background:$white;
-        }
-        i:before{
-            transform: rotate(45deg);
-        }
-        i:after{
-            transform: rotate(-45deg);
-        }
-        b {
-            display:none;
-        }
-    }
+  }
 }
 .header__trigger--tools {
-    i {
-        position: absolute;
-        top: 0.25em;
-        left: 1.125em;
-        @include respond-to($break-s) {
-            top: 1.05em;
-            left: 2.1em;
-        }
+  i {
+    position: absolute;
+    top: 0.25em;
+    left: 1.125em;
+    @include respond-to($break-s) {
+      top: 1.05em;
+      left: 2.1em;
     }
+  }
+  i:before {
+    content: '';
+    font-size: 6px;
+    display: block;
+    position: absolute;
+    margin: 0 auto;
+    background: $blue;
+    height: 5em;
+    width: 5em;
+    border-radius: 50% 50% 0% 50%;
+    transform: rotate(45deg);
+    top: 0;
+    left: 0;
+    transition: all 400ms ease-in-out;
+  }
+  i:after {
+    content: '';
+    font-size: 6px;
+    width: 20px;
+    height: 20px;
+    background: $blue;
+    display: block;
+    border-radius: 50%;
+    border: 5px solid $gray-light;
+    position: relative;
+    top: 4px;
+    left: 5px;
+    transition: all 400ms ease-in-out;
+  }
+  &:hover,
+  &:focus,
+  &.header__trigger--is-active {
     i:before {
-        content:'';
-        font-size: 6px;
-        display:block;
-        position: absolute;
-        margin:0 auto;
-        background: $blue;
-        height:5em;
-        width:5em;
-        border-radius: 50% 50% 0% 50%;
-        transform: rotate(45deg);
-        top: 0;
-        left: 0;
-        transition: all 400ms ease-in-out;
+      background: $white;
     }
     i:after {
-        content:'';
-        font-size:6px;
-        width: 20px;
-        height: 20px;
-        background: $blue;
-        display:block;
-        border-radius: 50%;
-        border: 5px solid $gray-light;
-        position:relative;
-        top: 4px;
-        left: 5px;
-        transition: all 400ms ease-in-out;
+      background: $white;
+      border: 5px solid $blue;
     }
-    &:hover,
-    &:focus,
-    &.header__trigger--is-active {
-        i:before {
-            background: $white;
-        }
-        i:after {
-            background: $white;
-            border: 5px solid $blue;
-        }
+  }
+  &.header__trigger--is-active {
+    background: $blue;
+    i:before {
+      transform: rotate(405deg);
     }
-    &.header__trigger--is-active {
-        background: $blue;
-        i:before {
-            transform: rotate(405deg);
-        }
-        i:after {
-            background: $white;
-            border: none;
-            content: '\2014';
-            color: $blue;
-            font-size: 22px;
-            line-height:24px;
-            font-weight: 800;
-            font-style: normal;
-            text-align: center;
-        }
-        b {
-            color: $white;
-        }
+    i:after {
+      background: $white;
+      border: none;
+      content: '\2014';
+      color: $blue;
+      font-size: 22px;
+      line-height: 24px;
+      font-weight: 800;
+      font-style: normal;
+      text-align: center;
     }
+    b {
+      color: $white;
+    }
+  }
 }

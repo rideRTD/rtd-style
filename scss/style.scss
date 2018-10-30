@@ -1,48 +1,47 @@
 $media-queries: true !default;
 
-@import "base/fontface";
+@import 'base/fontface';
 
 // Variables used in project
-@import "variables/layout";
-@import "variables/mediaquery";
-@import "variables/colors";
-@import "variables/typography";
-@import "variables/zindex";
-@import "variables/border-style";
+@import 'variables/layout';
+@import 'variables/mediaquery';
+@import 'variables/colors';
+@import 'variables/typography';
+@import 'variables/zindex';
+@import 'variables/border-style';
 
 // Mixins used in project
-@import "mixins/rems";
-@import "mixins/respondto";
-@import "mixins/quantity";
-@import "mixins/transition";
-@import "mixins/animations";
-@import "mixins/container";
-@import "mixins/clearfix";
-@import "mixins/text";
-@import "mixins/heading";
-@import "mixins/btn-reset";
-@import "mixins/button";
-@import "mixins/service-icons";
+@import 'mixins/rems';
+@import 'mixins/respondto';
+@import 'mixins/quantity';
+@import 'mixins/transition';
+@import 'mixins/animations';
+@import 'mixins/container';
+@import 'mixins/clearfix';
+@import 'mixins/text';
+@import 'mixins/heading';
+@import 'mixins/btn-reset';
+@import 'mixins/button';
+@import 'mixins/service-icons';
 
 // Set default static values and define fonts
-@import "base/normalize";
-@import "base/basic";
+@import 'base/normalize';
+@import 'base/basic';
 
 // Component styles
-@import "components/header";
-@import "components/nav-s";
-@import "components/nav-m";
-@import "components/trigger";
-@import "components/tools";
-@import "components/footer";
-@import "components/buttons";
-@import "components/button-groups";
-@import "components/alerts";
-@import "components/badge";
-@import "components/alerts";
-@import "components/callout";
-@import "components/notice";
-@import "components/services";
-@import "components/search";
-@import "base/grid";
-@import "base/helper";
+@import 'components/header';
+@import 'components/nav-s';
+@import 'components/nav-m';
+@import 'components/trigger';
+@import 'components/tools';
+@import 'components/footer';
+@import 'components/buttons';
+@import 'components/button-groups';
+@import 'components/alerts';
+@import 'components/badge';
+@import 'components/callout';
+@import 'components/notice';
+@import 'components/services';
+@import 'components/search';
+@import 'base/grid';
+@import 'base/helper';

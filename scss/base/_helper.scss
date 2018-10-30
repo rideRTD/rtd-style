@@ -1,144 +1,140 @@
-
 //  Helper classes
 
 // Hide from both screenreaders and browsers: h5bp.com/u
 
 .removed {
-    display: none !important;
-    visibility: hidden;
+  display: none !important;
+  visibility: hidden;
 }
 .mobile__removed {
-    @include respond-to(0, $break-to-m) {
-        display: none !important;
-        visibility: hidden;
-    }
-}
-.tablet__removed {
-    @include respond-to($break-to-m, $tweak-m-2) {
-        display: none !important;
-        visibility: hidden;
-    }
-}
-.desktop__removed {
-    @include respond-to($tweak-m-2) {
-        display: none !important;
-        visibility: hidden;
-    }
-}
-.removed {
+  @include respond-to(0, $break-to-m) {
     display: none !important;
     visibility: hidden;
+  }
+}
+.tablet__removed {
+  @include respond-to($break-to-m, $tweak-m-2) {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+.desktop__removed {
+  @include respond-to($tweak-m-2) {
+    display: none !important;
+    visibility: hidden;
+  }
 }
 
- // Hide only visually, but have it available for screenreaders: h5bp.com/v
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
 
 .hide {
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px) !important;  /* for Internet Explorer */
-    clip: rect(1px, 1px, 1px, 1px) !important;
-    height: 1px !important;
-    width: 1px !important;
-    border: 0 !important;
-    margin: -1px !important;
-    padding: 0 !important;
-    overflow: hidden !important;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px) !important; /* for Internet Explorer */
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  width: 1px !important;
+  border: 0 !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
 }
 
-.mobile__hide, .mobile-hide {
-    @include respond-to(0, $break-to-m) {
-        border: 0;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-    }
+.mobile__hide,
+.mobile-hide {
+  @include respond-to(0, $break-to-m) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
 }
 
 // Extends the .hide class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
 
 .hide.focusable:active,
 .hide.focusable:focus {
-    clip: auto !important;
-    height: auto !important;
-    margin: 0 !important;
-    overflow: visible !important;
-    //position: static !important;
-    width: auto !important;
-    z-index: 1000;
+  clip: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  //position: static !important;
+  width: auto !important;
+  z-index: 1000;
 }
-
 
 // Hide visually and from screenreaders, but maintain layout
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 // Simple SVG fallback for older browsers
 
 .svg-alt {
-    display: none;
+  display: none;
 }
 .no-svg .svg-alt {
-    display: block;
+  display: block;
 }
 
 // Wrapper element to make iframe Embedded videos responsive
 
 .embedded-video,
 .embedded-16x9 {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
-    height: 0;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
 }
 .embedded-video iframe,
 .embedded-16x9 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .embedded-4x3 {
-    position: relative;
-    padding-bottom: 75%; /* 4:3 */
-    padding-top: 25px;
-    height: 0;
+  position: relative;
+  padding-bottom: 75%; /* 4:3 */
+  padding-top: 25px;
+  height: 0;
 }
 .embedded-4x3 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 // Simple text modifier classes
 .font-larger {
-    font-size: 1.125em;
+  font-size: 1.125em;
 }
 .font-smaller {
-    font-size: 0.875em;
+  font-size: 0.875em;
 }
 .font-adjust {
-    @include text-match;
+  @include text-match;
 }
-.uppercase,.caps {
-    text-transform: uppercase;
-    letter-spacing: $global-letter-spacing/2;
+.uppercase,
+.caps {
+  text-transform: uppercase;
+  letter-spacing: $global-letter-spacing/2;
 }
 .t--left {
-    text-align: left;
+  text-align: left;
 }
 .t--right {
-    text-align: right;
+  text-align: right;
 }
 .t--center {
-    text-align: center;
+  text-align: center;
 }
 
 // Simple layout modifier classes
@@ -146,260 +142,286 @@
 .no-margin,
 .m--none,
 .list--padded li.m--none,
-.content__section+.content__section.m--none,
-p+.btn.m--none, p+.button.m--none {
-    margin:0 !important;
+.content__section + .content__section.m--none,
+p + .btn.m--none,
+p + .button.m--none {
+  margin: 0 !important;
 }
 .no-padding,
 .p--none,
 .p--none.content__block,
-.content__block .content__block+.content__block.p--none,
-.table>tbody>tr>td.no-padding {
-    padding:0 !important;
+.content__block .content__block + .content__block.p--none,
+.table > tbody > tr > td.no-padding {
+  padding: 0 !important;
 }
 .no-margin--top,
 .m--top-none {
-    margin-top:0 !important;
+  margin-top: 0 !important;
 }
 .no-padding--top,
 .p--top-none {
-    padding-top:0 !important;
+  padding-top: 0 !important;
 }
-.no-margin--bottom{
-    margin-bottom: 0 !important;
+.no-margin--bottom {
+  margin-bottom: 0 !important;
 }
-.no-padding--bottom{
-    padding-bottom: 0 !important;
+.no-padding--bottom {
+  padding-bottom: 0 !important;
 }
 .m--top {
-    margin-top: 1em !important;
-    &-sm {
-        margin-top: .5em;
-    }
+  margin-top: 1em !important;
+  &-sm {
+    margin-top: 0.5em;
+  }
 }
 .m--left {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 .m--right {
-    margin-right: 1em;
+  margin-right: 1em;
 }
 .m--bottom {
-    margin-bottom: 1em;
-    &-sm {
-        margin-bottom: .5em;
-    }
+  margin-bottom: 1em;
+  &-sm {
+    margin-bottom: 0.5em;
+  }
 }
 .m--both {
-    margin-top: 1em;
-    margin-bottom: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .m--all {
-    margin: 1em;
+  margin: 1em;
 }
 .p--top {
-    padding-top: 1em;
-    &-sm {
-        padding-top: .5em;
-    }
+  padding-top: 1em;
+  &-sm {
+    padding-top: 0.5em;
+  }
 }
 .p--left {
-    padding-left: 1em;
+  padding-left: 1em;
 }
 .p--right {
-    padding-right: 1em;
+  padding-right: 1em;
 }
 .p--bottom {
-    padding-bottom: 1em;
-    &-sm {
-        padding-bottom: .5em;
-    }
+  padding-bottom: 1em;
+  &-sm {
+    padding-bottom: 0.5em;
+  }
 }
 .p--both {
-    padding-top: 1em;
-    padding-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .p--all {
-    padding: 1em;
+  padding: 1em;
 }
-.spacer-top, .content__section+.content__section.spacer-top, ul.spacertop {
-    margin-top: 3em;
+.spacer-top,
+.content__section + .content__section.spacer-top,
+ul.spacertop {
+  margin-top: 3em;
 }
 .spacer-bottom {
-    margin-bottom: 3em;
+  margin-bottom: 3em;
 }
 .spacer-both {
-    margin-top: 3em;
-    margin-bottom: 3em;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 .spacer-top-pad {
-    padding-top: 3em;
+  padding-top: 3em;
 }
 .spacer-bottom-pad {
-    padding-bottom: 3em;
+  padding-bottom: 3em;
 }
 .spacer-both-pad {
-    padding-top: 3em;
-    padding-bottom: 3em;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 .spacer-all-pad {
-    padding: 3em;
+  padding: 3em;
 }
 .push-top {
-    margin-top: 3em;
-    @include respond-to($break-m) {
-        margin-top: 8em;
-    }
+  margin-top: 3em;
+  @include respond-to($break-m) {
+    margin-top: 8em;
+  }
 }
 .push-bottom {
-    margin-bottom: 3em;
-    @include respond-to($break-m) {
-        margin-bottom: 8em;
-    }
+  margin-bottom: 3em;
+  @include respond-to($break-m) {
+    margin-bottom: 8em;
+  }
 }
 .push-both {
-    margin-top: 3em;
-    margin-bottom: 3em;
-    @include respond-to($break-m) {
-        margin-top: 8em;
-        margin-bottom: 8em;
-    }
+  margin-top: 3em;
+  margin-bottom: 3em;
+  @include respond-to($break-m) {
+    margin-top: 8em;
+    margin-bottom: 8em;
+  }
 }
 .pad-top {
-    padding-top: 3em;
-    @include respond-to($break-m) {
-        padding-top: 8em;
-    }
+  padding-top: 3em;
+  @include respond-to($break-m) {
+    padding-top: 8em;
+  }
 }
 .pad-bottom {
-    padding-bottom: 3em;
-    @include respond-to($break-m) {
-        padding-bottom: 8em;
-    }
+  padding-bottom: 3em;
+  @include respond-to($break-m) {
+    padding-bottom: 8em;
+  }
 }
-.pad-both, .page>.content:last-child.pad-both {
-    padding-top: 3em;
-    padding-bottom: 3em;
-    @include respond-to($break-m) {
-        padding-top: 8em;
-        padding-bottom: 8em;
-    }
+.pad-both,
+.page > .content:last-child.pad-both {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  @include respond-to($break-m) {
+    padding-top: 8em;
+    padding-bottom: 8em;
+  }
 }
-
 
 @include respond-to(0, $break-to-m) {
-    .mobile__no-margin, .no-mobile-margin {
-        margin:0 !important;
-    }
-    .mobile__no-padding, .no-mobile-padding {
-        padding:0 !important;
-    }
-    .mobile__no-margin--top {
-        margin-top:0 !important;
-    }
-    .mobile__m--top {
-        margin-top: 1em;
-    }
-    .mobile__m--left {
-        margin-left: 1em;
-    }
-    .mobile__m--right {
-        margin-right: 1em;
-    }
-    .mobile__m--bottom {
-        margin-bottom: 1em;
-    }
-    .mobile__m--both {
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-    .mobile__p--top, .breadcrumbs+.content:first-of-type>.content__block:first-of-type .content__block.mobile__p--top {
-        padding-top: 1em;
-    }
-    .mobile__p--bottom {
-        padding-bottom: 1em;
-    }
-    .mobile__p--both {
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-    .mobile__no-sides {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-    .mobile__font-larger {
-        font-size: 1.125em;
-    }
-    .mobile__font-smaller {
-        font-size: 0.875em;
-    }
-    .mobile__no-border {
-        border: 0 none !important;
-    }
-    .mobile__t--center {
-        text-align: center;
-    }
+  .mobile__no-margin,
+  .no-mobile-margin {
+    margin: 0 !important;
+  }
+  .mobile__no-padding,
+  .no-mobile-padding {
+    padding: 0 !important;
+  }
+  .mobile__no-margin--top {
+    margin-top: 0 !important;
+  }
+  .mobile__m--top {
+    margin-top: 1em;
+  }
+  .mobile__m--left {
+    margin-left: 1em;
+  }
+  .mobile__m--right {
+    margin-right: 1em;
+  }
+  .mobile__m--bottom {
+    margin-bottom: 1em;
+  }
+  .mobile__m--both {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .mobile__p--top,
+  .breadcrumbs
+    + .content:first-of-type
+    > .content__block:first-of-type
+    .content__block.mobile__p--top {
+    padding-top: 1em;
+  }
+  .mobile__p--bottom {
+    padding-bottom: 1em;
+  }
+  .mobile__p--both {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .mobile__no-sides {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .mobile__font-larger {
+    font-size: 1.125em;
+  }
+  .mobile__font-smaller {
+    font-size: 0.875em;
+  }
+  .mobile__no-border {
+    border: 0 none !important;
+  }
+  .mobile__t--center {
+    text-align: center;
+  }
 }
 
 .block {
-    display: block;
+  display: block;
 }
 .block--full {
-    display: block;
-    width:100%;
+  display: block;
+  width: 100%;
 }
 .mobile-block {
-    @include respond-to(0, $break-s) {
-        display: block;
-    }
+  @include respond-to(0, $break-s) {
+    display: block;
+  }
 }
 .inline-block {
-    display: inline-block;
+  display: inline-block;
 }
 .inline {
-    display: inline;
+  display: inline;
 }
 .block-indent {
-    margin-left: 1em;
-    @include respond-to($break-m) {
-        margin-left: 3em;
-    }
+  margin-left: 1em;
+  @include respond-to($break-m) {
+    margin-left: 3em;
+  }
 }
 // In order for this to work the container must have a fixed height and transform-style: preserve-3d;
 .v-align {
-    @include vertical-align;
+  @include vertical-align;
 }
 .v-align-alt {
-    @include vertical-align-absolute;
+  @include vertical-align-absolute;
 }
 
 .f--right {
-    @include respond-to($break-m) {
-        float: right;
-    }
+  @include respond-to($break-m) {
+    float: right;
+  }
 }
 .f--left {
-    @include respond-to($break-m) {
-        float: left;
-    }
+  @include respond-to($break-m) {
+    float: left;
+  }
 }
 .clear-left {
-    clear: left;
+  clear: left;
 }
 .clear-right {
-    clear: right;
+  clear: right;
 }
 .clearfix {
-    @include clearfix;
+  @include clearfix;
 }
 .universal-text {
+  @include text-default;
+  * {
     @include text-default;
-    * {
-        @include text-default;
-    }
-    h1, .h1, h1 *, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
-    strong, .list--links a, .list--service-lines a, .list--links i, .list--service-lines i, a.link-bold  {
-        @include text-default--bold;
-    }
+  }
+  h1,
+  .h1,
+  h1 *,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
+  strong,
+  .list--links a,
+  .list--service-lines a,
+  .list--links i,
+  .list--service-lines i,
+  a.link-bold {
+    @include text-default--bold;
+  }
 }

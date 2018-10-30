@@ -5,185 +5,178 @@
 // Make the div behave like a button
 .btn-group,
 .btn-group-vertical {
-    @include clearfix;
+  @include clearfix;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; // match .btn alignment given font-size hack above
+  margin-bottom: 1em;
+  .btn {
     position: relative;
-    display: inline-block;
-    vertical-align: middle; // match .btn alignment given font-size hack above
-    margin-bottom: 1em;
-    .btn {
-        position: relative;
-        float: left;
-        // Bring the "active" button to the front
-        &:hover,
-        &:focus,
-        &:active,
-        &.active {
-            z-index: 2;
-        }
-        &:focus {
-            // Remove focus outline when dropdown JS adds it after closing the menu
-            //outline: 0;
-        }
+    float: left;
+    // Bring the "active" button to the front
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      z-index: 2;
     }
+  }
 }
 
 .btn-group .btn {
-    @include respond-to (0, $break-s) {
-        font-size: 0.875em;
-    }
+  @include respond-to(0, $break-s) {
+    font-size: 0.875em;
+  }
 }
 
 // Prevent double borders when buttons are next to each other
 .btn-group .btn + .btn,
 .btn-group label.btn + input + label.btn {
-    margin-left: -1px;
+  margin-left: -1px;
 }
 .btn-group .btn--outline + .btn--outline,
 .btn-group label.btn--outline + input + label.btn--outline {
-    margin-left: -2px;
+  margin-left: -2px;
 }
 .btn-group .btn--outline.btn--compact + .btn--outline.btn--compact,
-.btn-group label.btn--outline.btn--compact + input + label.btn--outline.btn--compact {
-    margin-left: -1px;
+.btn-group
+  label.btn--outline.btn--compact
+  + input
+  + label.btn--outline.btn--compact {
+  margin-left: -1px;
 }
-
-input:focus + label.btn {
-    // outline: 1px dashed $blue-lighter;
-}
-
 
 // Optional: Group multiple button groups together for a toolbar
 .btn-toolbar {
-    margin-left: -5px; // Offset the first child's margin
-    margin-bottom: 1em;
-    @include clearfix;
+  margin-left: -5px; // Offset the first child's margin
+  margin-bottom: 1em;
+  @include clearfix;
 
-    .btn-group,
-    .input-group {
-        float: left;
-    }
-    > .btn,
-    > .btn-group,
-    > .input-group {
-        margin-left: 5px;
-    }
+  .btn-group,
+  .input-group {
+    float: left;
+  }
+  > .btn,
+  > .btn-group,
+  > .input-group {
+    margin-left: 5px;
+  }
 }
 
-.btn-group .btn:not(:first-child):not(.dropdown-toggle):not(label):not(:last-child) {
-    border-radius: 0;
+.btn-group
+  .btn:not(:first-child):not(.dropdown-toggle):not(label):not(:last-child) {
+  border-radius: 0;
 }
 
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
 .btn-group .btn:first-child,
 .btn-group > label.btn {
-    margin-left: 0;
-    &:not(:last-child):not(.dropdown-toggle) {
-        border-top-right-radius:0;
-        border-bottom-right-radius:0;
-    }
+  margin-left: 0;
+  &:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
 .btn-group .btn:last-child:not(:first-child),
 .btn-group .dropdown-toggle:not(:first-child),
 .btn-group label.btn:not(:nth-child(2)):not(:first-child) {
-    border-top-left-radius:0;
-    border-bottom-left-radius:0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 // On active and open, don't show outline
 .btn-group .dropdown-toggle:active,
 .btn-group.open .dropdown-toggle {
-    outline: 0;
-    text-decoration: underline;
+  outline: 0;
+  text-decoration: underline;
 }
 
 // Responsive button group with full width layout for mobile (no wrapping)
 .btn-group--full {
-    @include respond-to (0, $tweak-to-s-1) {
-        display: block;
-        > *  {
-            @include quantity-percent;
-            min-height: 44px;
-            line-height: 44px;
-            padding: 0;
-        }
+  @include respond-to(0, $tweak-to-s-1) {
+    display: block;
+    > * {
+      @include quantity-percent;
+      min-height: 44px;
+      line-height: 44px;
+      padding: 0;
     }
+  }
 }
 .btn-group--pair {
-    @include respond-to (0, $tweak-to-s-1) {
-        display: block;
-        .btn {
-            width: 50%;
-            min-height: 44px;
-            line-height: 44px;
-            padding: 0;
-        }
+  @include respond-to(0, $tweak-to-s-1) {
+    display: block;
+    .btn {
+      width: 50%;
+      min-height: 44px;
+      line-height: 44px;
+      padding: 0;
     }
+  }
 }
 
 // Button group with full width layout for all devices
 .btn-group--fullwidth {
-    @include clearfix;
-    display: block;
-    > .btn {
-        @include quantity-percent;
-    }
+  @include clearfix;
+  display: block;
+  > .btn {
+    @include quantity-percent;
+  }
 }
 
 .btn-group--centered {
-    @include clearfix;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  @include clearfix;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Responsive button group with smaller font for mobile to avoid wrapping
 .btn-group--small {
-    @include respond-to (0, $tweak-to-s-1) {
-        //font-size: 0.875em;
-        .btn {
-            min-height: 44px;
-            line-height: 44px;
-            padding-top: 0;
-            padding-bottom: 0;
-        }
+  @include respond-to(0, $tweak-to-s-1) {
+    //font-size: 0.875em;
+    .btn {
+      min-height: 44px;
+      line-height: 44px;
+      padding-top: 0;
+      padding-bottom: 0;
     }
+  }
 }
 
 // Responsive button group with conversion from horizontal into vertical for mobile
 .btn-group--long {
-        @include respond-to (0, $tweak-to-s-1) {
-            @include button-group-vertical;
-            display: block;
-            .btn {
-                min-height: 44px;
-                line-height: 44px;
-                padding: 0;
-            }
-        }
+  @include respond-to(0, $tweak-to-s-1) {
+    @include button-group-vertical;
+    display: block;
+    .btn {
+      min-height: 44px;
+      line-height: 44px;
+      padding: 0;
+    }
+  }
 }
 
 // Responsive button group with conversion from horizontal into vertical for mid sized devices
 .btn-group--midlong {
-        @include respond-to ($break-m, $tweak-to-m-1) {
-            @include button-group-vertical;
-            display: block;
-            .btn {
-                min-height: 44px;
-                line-height: 44px;
-                padding: 0;
-            }
-        }
+  @include respond-to($break-m, $tweak-to-m-1) {
+    @include button-group-vertical;
+    display: block;
+    .btn {
+      min-height: 44px;
+      line-height: 44px;
+      padding: 0;
+    }
+  }
 }
-
 
 // Vertical button groups
 // ----------------------
 
 .btn-group-vertical {
-    @include button-group-vertical;
+  @include button-group-vertical;
 }
-
 
 // Checkbox and radio options
 //
@@ -194,101 +187,100 @@ input:focus + label.btn {
 //
 // See https://github.com/twbs/bootstrap/pull/12794 for more.
 
-[data-toggle="buttons"] > .btn > input[type="radio"],
-[data-toggle="buttons"] > .btn > input[type="checkbox"] {
+[data-toggle='buttons'] > .btn > input[type='radio'],
+[data-toggle='buttons'] > .btn > input[type='checkbox'] {
   position: absolute;
   z-index: -1;
-  opacity:0;
+  opacity: 0;
 }
 
 .btn-group--toggle {
-    .btn {
-        text-align: left;
-        position: relative;
-        padding-left: 35px;
-        &:before {
-            content: '';
-            position: absolute;
-            width: 14px;
-            height: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 10px;
-            border-radius: 50%;
-        }
-        &.active {
-
-        }
-        &--primary {
-            &:before {
-                background-color: $white;
-                border: 1px solid $blue-darker;
-            }
-            &:after {
-                background-color: $blue-lighter;
-            }
-        }
-        &--white {
-            &:before {
-                background-color: $white;
-                border: 1px solid $gray-medium-alt;
-            }
-            &:after {
-                background-color: $blue;
-            }
-        }
-        input {
-            position: absolute;
-        }
+  .btn {
+    text-align: left;
+    position: relative;
+    padding-left: 35px;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px;
+      border-radius: 50%;
     }
-    input:checked + label.btn,
-    input:focus + label.btn {
-        &:after{
-            content: '';
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 14px;
-            border-radius: 50%;
-            background-color: $blue-lighter;
-            border: 0 none;
-        }
-        &--primary {
-            &:after {
-                background-color: $blue-lighter;
-            }
-        }
-        &--white {
-            &:after {
-                background-color: $blue;
-            }
-        }
+    &--primary {
+      &:before {
+        background-color: $white;
+        border: 1px solid $blue-darker;
+      }
+      &:after {
+        background-color: $blue-lighter;
+      }
     }
+    &--white {
+      &:before {
+        background-color: $white;
+        border: 1px solid $gray-medium-alt;
+      }
+      &:after {
+        background-color: $blue;
+      }
+    }
+    input {
+      position: absolute;
+    }
+  }
+  input:checked + label.btn,
+  input:focus + label.btn {
+    &:after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 14px;
+      border-radius: 50%;
+      background-color: $blue-lighter;
+      border: 0 none;
+    }
+    &--primary {
+      &:after {
+        background-color: $blue-lighter;
+      }
+    }
+    &--white {
+      &:after {
+        background-color: $blue;
+      }
+    }
+  }
 
-    label.btn:nth-child(2):not(.dropdown-toggle) {
+  label.btn:nth-child(2):not(.dropdown-toggle) {
+    border-top-left-radius: $global-radius;
+    border-bottom-left-radius: $global-radius;
+  }
+
+  &.btn-group--long {
+    @include respond-to(0, $tweak-to-s-1) {
+      label.btn:nth-child(2):not(:only-child):not(.dropdown-toggle) {
         border-top-left-radius: $global-radius;
-        border-bottom-left-radius: $global-radius;
+        border-top-right-radius: $global-radius;
+      }
+      label.btn:not(:only-child):not(.dropdown-toggle)
+        + label.btn:not(:only-child):not(.dropdown-toggle) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+      label.btn:nth-child(2):not(.dropdown-toggle) {
+        border-bottom-left-radius: 0;
+      }
     }
-
-    &.btn-group--long {
-        @include respond-to (0, $tweak-to-s-1) {
-            label.btn:nth-child(2):not(:only-child):not(.dropdown-toggle) {
-                border-top-left-radius: $global-radius;
-                border-top-right-radius: $global-radius;
-            }
-            label.btn:not(:only-child):not(.dropdown-toggle) + label.btn:not(:only-child):not(.dropdown-toggle) {
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-            }
-            label.btn:nth-child(2):not(.dropdown-toggle) {
-                border-bottom-left-radius: 0;
-            }
-        }
-        label.btn:not(:only-child):not(:last-child) + label.btn:not(:only-child):not(:last-child) {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
+    label.btn:not(:only-child):not(:last-child)
+      + label.btn:not(:only-child):not(:last-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
+  }
 }

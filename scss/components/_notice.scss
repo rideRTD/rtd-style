@@ -1,76 +1,77 @@
-.notice  {
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 1em;
-    text-decoration: none;
-    @include text-bold;
-    background-color: $gray-darker;
+.notice {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 1em;
+  text-decoration: none;
+  @include text-bold;
+  background-color: $gray-darker;
+  color: $white;
+  a {
     color: $white;
-    a {
-        color: $white;
-    }
+  }
 }
 .nav-inpage + .notice {
-    margin-top: 1.5em;
-    @include respond-to($break-m) {
-        margin-top: 0;
-    }
+  margin-top: 1.5em;
+  @include respond-to($break-m) {
+    margin-top: 0;
+  }
 }
 .notice__inner {
-    padding: 12px 0px;
-    @include container(padded);
-    text-align: center;
-    @include respond-to($break-m) {
-        text-align: left;
-    }
-    @include clearfix;
+  padding: 12px 0px;
+  @include container(padded);
+  text-align: center;
+  @include respond-to($break-m) {
+    text-align: left;
+  }
+  @include clearfix;
 }
 .notice__text {
-    margin-bottom: .5em;
-    @include respond-to($break-m) {
-        display: inline-block;
-        float: left;
-        margin-bottom: 0;
-    }
+  margin-bottom: 0.5em;
+  @include respond-to($break-m) {
+    display: inline-block;
+    float: left;
+    margin-bottom: 0;
+  }
 }
 .notice__link {
-    @include respond-to($break-m) {
-        display: inline-block;
-        float: right;
-    }
-    &, &.btn {
-        margin: 0;
-    }
+  @include respond-to($break-m) {
+    display: inline-block;
+    float: right;
+  }
+  &,
+  &.btn {
+    margin: 0;
+  }
 }
 .notice--info {
-    background-color: $info-dark;
-    a {
-        color: $info-light;
-    }
+  background-color: $info-dark;
+  a {
+    color: $info-light;
+  }
 }
 .notice--error {
-    background-color: $error-dark;
-    a {
-        color: $error-light;
-    }
+  background-color: $error-dark;
+  a {
+    color: $error-light;
+  }
 }
 .notice--success {
-    background-color: $success-dark;
-    a {
-        color: $success-light;
-    }
+  background-color: $success-dark;
+  a {
+    color: $success-light;
+  }
 }
 .notice--warning {
-    background-color: $warning-dark;
-    a {
-        color: $warning-light;
-    }
+  background-color: $warning-dark;
+  a {
+    color: $warning-light;
+  }
 }
 
 .notice--fixed-bottom {
-    position: fixed;
-    bottom: 0;
-    margin-bottom: 0;
-    z-index: 1;
-    opacity: 0.95;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  z-index: 1;
+  opacity: 0.95;
 }

@@ -1,118 +1,118 @@
 .btn {
-    display: inline-block;
-    margin-bottom: 0; // For input.btn
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    background-image: none;
-    line-height: 1em;
-    border: $global-border-thin solid transparent;
-    border-radius: $global-radius;
-    white-space: nowrap;
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  line-height: 1em;
+  border: $global-border-thin solid transparent;
+  border-radius: $global-radius;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 1em;
+  @include text-bold;
+  padding: 0.75em 1em;
+
+  &:hover,
+  &:focus {
     text-decoration: none;
-    font-size: 1em;
-    @include text-bold;
-    padding: .75em 1em;
+  }
 
-    &:hover,
-    &:focus {
-        text-decoration: none;
-    }
+  &:active,
+  &.active {
+    outline: 0;
+    text-decoration: underline;
+  }
 
-    &:active,
-    &.active {
-        outline: 0;
-        text-decoration: underline;
-    }
-
-    &.disabled,
-    &[disabled],
-    fieldset[disabled] & {
-        cursor: not-allowed;
-        pointer-events: none; // Future-proof disabling of clicks
-        opacity: .65;
-        box-shadow: none;
-    }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    opacity: 0.65;
+    box-shadow: none;
+  }
 }
 
 p + .btn {
-    margin-top: 1.5em;
+  margin-top: 1.5em;
 }
 
 .btn--large {
-    font-size: 1.1em;
-    padding: .75em 1em;
+  font-size: 1.1em;
+  padding: 0.75em 1em;
 }
 .btn--small {
-    font-size: 0.875em;
-    padding: .5em .75em;
+  font-size: 0.875em;
+  padding: 0.5em 0.75em;
 }
 .hero__sub a.btn--small {
-    font-size: 0.875rem;
+  font-size: 0.875rem;
 }
 .btn--mobile-block {
-    @include respond-to(0, $break-s) {
-        display: block;
-        width: 100%;
-        & + .btn--mobile-block {
-            margin-top: .5em;
-        }
+  @include respond-to(0, $break-s) {
+    display: block;
+    width: 100%;
+    & + .btn--mobile-block {
+      margin-top: 0.5em;
     }
+  }
 }
 .btn--mobile-small {
-    @include respond-to (0,$break-m) {
-        font-size: 0.875em;
-        white-space: initial;
-        line-height: 1.5em;
-        text-align: left;
-        padding: .75em;
-    }
-}
-.btn--wrap {
+  @include respond-to(0, $break-m) {
+    font-size: 0.875em;
     white-space: initial;
     line-height: 1.5em;
     text-align: left;
-    padding: .75em;
+    padding: 0.75em;
+  }
+}
+.btn--wrap {
+  white-space: initial;
+  line-height: 1.5em;
+  text-align: left;
+  padding: 0.75em;
 }
 .btn--compact {
-    font-size: 0.875em;
-    padding: .4em .5em;
-    @include text-regular;
+  font-size: 0.875em;
+  padding: 0.4em 0.5em;
+  @include text-regular;
 }
 .btn-text {
-    @include btn-reset();
-    color: $blue;
-    &:focus,
-    &:hover {
-        text-decoration: underline;
-    }
+  @include btn-reset();
+  color: $blue;
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .btn--text-bold,
 .btn-text--bold {
-    @include text-bold;
+  @include text-bold;
 }
 .btn--text-regular {
-    @include text-regular;
+  @include text-regular;
 }
 .btn--underline {
-    text-decoration: underline;
-    &:hover {
-        text-decoration: none;
-    }
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
 }
 .btn--badge {
-    padding: .4em .7em;
-    line-height: 1;
-    font-size: 12px;
+  padding: 0.4em 0.7em;
+  line-height: 1;
+  font-size: 12px;
 }
 .btn-footer {
-    @include btn-reset();
-    color: $gray-medium-alt;
-    font-size: .75em;
-    &:focus,
-    &:hover {
-        text-decoration: underline;
-    }
+  @include btn-reset();
+  color: $gray-medium-alt;
+  font-size: 0.75em;
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 // Buttons
@@ -127,7 +127,7 @@ p + .btn {
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-      background-color: $blue-darkest;
+    background-color: $blue-darkest;
   }
 }
 .btn--secondary {
@@ -145,29 +145,29 @@ p + .btn {
   border-color: $gray-medium;
   &:hover,
   &:focus {
-      background-color: $gray-lighter-alt;
+    background-color: $gray-lighter-alt;
   }
   &:focus {
-      outline: 1px dashed $blue-lighter;
+    outline: 1px dashed $blue-lighter;
   }
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-      border-bottom-width: $global-border-thin;
-      background-color: $white;
-      border-color: $gray-medium;
+    border-bottom-width: $global-border-thin;
+    background-color: $white;
+    border-color: $gray-medium;
   }
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
-      &,
-      &:hover,
-      &:focus,
-      &:active,
-      &.active {
-          background-color: darken($white, 4%);
-          border-color: darken($white, 4%);
-      }
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: darken($white, 4%);
+      border-color: darken($white, 4%);
+    }
   }
 }
 
@@ -175,143 +175,145 @@ p + .btn {
 .btn--primary.btn--outline,
 .btn--secondary.btn--outline,
 .btn--control.btn--outline,
-.btn--invert.btn--outline
- {
+.btn--invert.btn--outline {
   background-color: transparent;
-  border-width:$global-border-thick;
+  border-width: $global-border-thick;
 }
 .btn--compact,
 .btn--primary.btn--compact,
 .btn--secondary.btn--compact,
-.btn--control.btn--compact
- {
-  border-width:$global-border-thin;
+.btn--control.btn--compact {
+  border-width: $global-border-thin;
 }
 .btn--primary.btn--outline,
 .hero__sub a.btn--primary.btn--outline {
   color: $blue;
-  border-color:$blue;
+  border-color: $blue;
 }
 .btn--primary.btn--outline:hover,
 .hero__sub a.btn--primary.btn--outline:hover {
   color: $blue-darker;
-  border-color:$blue-darker;
+  border-color: $blue-darker;
 }
 .btn--secondary.btn--outline,
 .hero__sub a.btn--secondary.btn--outline {
   color: $gray-darker;
-  border-color:$gray-darker;
+  border-color: $gray-darker;
 }
 .btn--secondary.btn--outline:hover,
 .hero__sub a.btn--secondary.btn--outline:hover {
   color: $gray-black;
-  border-color:$gray-black;
+  border-color: $gray-black;
 }
 .btn--control.btn--outline {
   color: $gray-dark;
-  border-color:$gray-dark;
+  border-color: $gray-dark;
 }
 .btn--control.btn--outline:hover {
   color: $gray-darker;
-  border-color:$gray-darker;
+  border-color: $gray-darker;
 }
 
 .btn--loading {
   padding-right: 50px;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJydGQtbG9hZGluZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIzMHB4IiBoZWlnaHQ9IjMwcHgiIHZpZXdCb3g9IjAgMCA1MCA1MCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTAgNTA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTQzLjkzNSwyNS4xNDVjMC0xMC4zMTgtOC4zNjQtMTguNjgzLTE4LjY4My0xOC42ODNjLTEwLjMxOCwwLTE4LjY4Myw4LjM2NS0xOC42ODMsMTguNjgzaDQuMDY4YzAtOC4wNzEsNi41NDMtMTQuNjE1LDE0LjYxNS0xNC42MTVjOC4wNzIsMCwxNC42MTUsNi41NDMsMTQuNjE1LDE0LjYxNUg0My45MzV6IiB0cmFuc2Zvcm09InJvdGF0ZSgxNjkuNDM1IDI1IDI1KSI+CjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZVR5cGU9InhtbCIgYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIGZyb209IjAgMjUgMjUiIHRvPSIzNjAgMjUgMjUiIGR1cj0iMC42cyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZVRyYW5zZm9ybT4KPC9wYXRoPgo8L3N2Zz4=");
-  background-position:  center right 10px;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJydGQtbG9hZGluZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIzMHB4IiBoZWlnaHQ9IjMwcHgiIHZpZXdCb3g9IjAgMCA1MCA1MCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTAgNTA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTQzLjkzNSwyNS4xNDVjMC0xMC4zMTgtOC4zNjQtMTguNjgzLTE4LjY4My0xOC42ODNjLTEwLjMxOCwwLTE4LjY4Myw4LjM2NS0xOC42ODMsMTguNjgzaDQuMDY4YzAtOC4wNzEsNi41NDMtMTQuNjE1LDE0LjYxNS0xNC42MTVjOC4wNzIsMCwxNC42MTUsNi41NDMsMTQuNjE1LDE0LjYxNUg0My45MzV6IiB0cmFuc2Zvcm09InJvdGF0ZSgxNjkuNDM1IDI1IDI1KSI+CjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZVR5cGU9InhtbCIgYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIGZyb209IjAgMjUgMjUiIHRvPSIzNjAgMjUgMjUiIGR1cj0iMC42cyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZVRyYW5zZm9ybT4KPC9wYXRoPgo8L3N2Zz4=');
+  background-position: center right 10px;
   background-repeat: no-repeat;
 }
 .btn--block {
-    display: block;
+  display: block;
 }
 .btn--mid-block {
-    @include respond-to ($break-m, $tweak-to-m-1) {
-        display: block !important;
-        & + .btn--mid-block {
-            margin-top: .5em;
-        }
+  @include respond-to($break-m, $tweak-to-m-1) {
+    display: block !important;
+    & + .btn--mid-block {
+      margin-top: 0.5em;
     }
+  }
 }
 .btn--full {
-    width:100%;
+  width: 100%;
 }
 .btn-float--left {
-    display: block;
-    margin-bottom: 1em;
-    @include respond-to ($break-m) {
-        float: left;
-        margin-left: 1em;
-    }
+  display: block;
+  margin-bottom: 1em;
+  @include respond-to($break-m) {
+    float: left;
+    margin-left: 1em;
+  }
 }
 .btn-float--right {
-    display: block;
-    margin-bottom: 1em;
-    @include respond-to ($break-m) {
-        float: right;
-        margin-left: 1em;
-    }
+  display: block;
+  margin-bottom: 1em;
+  @include respond-to($break-m) {
+    float: right;
+    margin-left: 1em;
+  }
 }
 
 .btn--twitter {
-    @include clearfix;
-    text-align: left;
-    padding: 0;
-    span {
-        display: block;
-        float: left;
-        line-height: 55px;
-        margin: 0 1.5em;
-    }
-    i {
-        display: block;
-        float: left;
-        height: 55px;
-        width: 55px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: #54abed;
-        border-radius: $global-radius 0 0 $global-radius;
-        border-right: 1px solid $blue-darker;
-    }
+  @include clearfix;
+  text-align: left;
+  padding: 0;
+  span {
+    display: block;
+    float: left;
+    line-height: 55px;
+    margin: 0 1.5em;
+  }
+  i {
+    display: block;
+    float: left;
+    height: 55px;
+    width: 55px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #54abed;
+    border-radius: $global-radius 0 0 $global-radius;
+    border-right: 1px solid $blue-darker;
+  }
 }
 
 .back-to-top {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    background-color: $blue;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 40px;
-    height: 40px;
-    border-radius: $global-radius;
-    z-index: 1;
-    cursor: pointer;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .3s 0s, visibility 0s .3s;
-    &.btt-is-visible, &.btt-fade-out, &:hover {
-        transition: opacity .3s 0s, visibility 0s 0s;
-    }
-    &.btt-is-visible { /* the button becomes visible */
-        visibility: visible;
-        opacity: 1;
-    }
-    &.btt-fade-out { /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-        opacity: .5;
-    }
-    &:hover {
-        opacity: 1;
-    }
-    @include respond-to ($break-m) {
-        width: 44px;
-        height: 44px;
-    }
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  background-color: $blue;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  border-radius: $global-radius;
+  z-index: 1;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  &.btt-is-visible,
+  &.btt-fade-out,
+  &:hover {
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+  }
+  &.btt-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+  }
+  &.btt-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: 0.5;
+  }
+  &:hover {
+    opacity: 1;
+  }
+  @include respond-to($break-m) {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 // Generic button used for blog and news and alerts
 .button {
-    @extend .btn;
-    @extend .btn--primary;
+  @extend .btn;
+  @extend .btn--primary;
 }
