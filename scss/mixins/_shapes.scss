@@ -1,0 +1,12 @@
+// Required for message styles
+@mixin square($dimensions) {
+  height: $dimensions;
+  width: $dimensions;
+}
+
+// Required for message styles
+@mixin circle($dimensions) {
+  height: $dimensions;
+  width: $dimensions;
+  border-radius: 50%;
+}

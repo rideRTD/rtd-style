@@ -23,6 +23,7 @@ $media-queries: true !default;
 @import 'mixins/btn-reset';
 @import 'mixins/button';
 @import 'mixins/service-icons';
+@import 'mixins/shapes';
 
 // Set default static values and define fonts
 @import 'base/normalize';
