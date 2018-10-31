@@ -21,20 +21,15 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(jpg|png|gif|svg)$/,
-        loader: 'image-webpack-loader',
-        // Specify enforce: 'pre' to apply the loader
-        // before url-loader/svg-url-loader
-        // and not duplicate it in rules with them
-        enforce: 'pre'
-      },
-      {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
       {
         test: /\.svg$/,
-        use: 'svg-url-loader'
+        use: [
+          'svg-url-loader',
+          'img-loader'
+        ]
       }
     ]
   }
