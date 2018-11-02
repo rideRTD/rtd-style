@@ -93,39 +93,7 @@
 
 // Alternate styles
 //
-// Generate contextual modifier classes for colorizing the alert.
-
-@mixin alert-variant($background, $text-color) {
-  background-color: $background;
-  border-color: darken($background, 15%);
-  color: $text-color;
-  .alert__heading {
-    color: inherit;
-  }
-  .alert__link {
-    color: $text-color;
-    &:hover,
-    &:focus {
-      color: lighten($text-color, 15%);
-    }
-  }
-  .alert__close,
-  .mfp-close {
-    color: $text-color;
-  }
-  .table {
-    background-color: transparent;
-    > tbody,
-    > tfoot {
-      > tr {
-        > th,
-        > td {
-          border-color: darken($background, 15%);
-        }
-      }
-    }
-  }
-}
+// located: scss/mixins/components
 
 .alert--success {
   @include alert-variant($success-light, $success-dark);
