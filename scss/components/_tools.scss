@@ -45,7 +45,7 @@
     @include rem(padding-left, 1);
     color: $white;
     text-decoration:none;
-    @include transition($prop:background-color);;
+    @include transition($prop:background-color);
     &:focus,
     &:hover {
         color: $white;
@@ -54,7 +54,8 @@
     }
     &:before {
         content: ' ';
-        @include square(rem-calc(30));
+        height: 30px;
+        width: 30px;
         display: inline-block;
         margin-right: 10px;
         background-position: center;
@@ -81,7 +82,7 @@
 }
 
 .tools__tool--schedulefinder {
-    @include transition($prop:background-color);;
+    @include transition($prop:background-color);
     @include respond-to($break-m) {
         &:hover, &:hover input {
             background-color: $blue-lighter;
@@ -98,7 +99,7 @@
         border-radius: $global-radius;
         @include text-regular;
         font-size: 1em;
-        @include transition($prop:background-color);;
+        @include transition($prop:background-color);
         @include respond-to($break-m) {
             background-color: rgba(0,0,0,0);
             color: $white;
