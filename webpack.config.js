@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 
 const config = {
   entry: {
@@ -26,10 +26,7 @@ const config = {
       },
       {
         test: /\.svg$/,
-        use: [
-          'svg-url-loader',
-          'img-loader'
-        ]
+        use: ['svg-url-loader', 'img-loader']
       }
     ]
   }
