@@ -4,7 +4,17 @@
   "description": "shared style assets for RTD",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:css": "stylelint \"scss/**/*.scss\"",
+    "format": "prettier --write \"**/*.{scss,json,yml,md,js}\"",
+    "build:dev": "webpack -d --mode development",
+    "build": "webpack -p --mode production",
+    "start": "webpack-dev-server --mode development"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:css"
+    }
   },
   "repository": {
     "type": "git",
@@ -15,5 +25,26 @@
   "bugs": {
     "url": "https://github.com/rideRTD/rtd-style/issues"
   },
-  "homepage": "https://github.com/rideRTD/rtd-style#readme"
+  "homepage": "https://github.com/rideRTD/rtd-style#readme",
+  "devDependencies": {
+    "css-loader": "1.0.1",
+    "html-webpack-plugin": "3.2.0",
+    "husky": "1.1.2",
+    "img-loader": "3.0.1",
+    "mini-css-extract-plugin": "0.4.4",
+    "node-sass": "4.9.4",
+    "prettier": "1.14.3",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.1",
+    "stylelint": "9.7.0",
+    "stylelint-config-prettier": "4.0.0",
+    "stylelint-config-recommended-scss": "3.2.0",
+    "stylelint-prettier": "1.0.3",
+    "stylelint-scss": "3.3.2",
+    "svg-url-loader": "2.3.2",
+    "webpack": "4.23.1",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-server": "3.1.10",
+    "webpack-fix-style-only-entries": "0.0.4"
+  }
 }

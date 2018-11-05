@@ -1,95 +1,97 @@
 html {
-    font-family: $fontstack-regular;
-    font-size: 1em;
-    line-height: 1.5;
-    box-sizing: border-box;
+  font-family: $fontstack-regular;
+  font-size: 1em;
+  line-height: 1.5;
+  box-sizing: border-box;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
- }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 html,
 button,
 input,
 select,
 textarea {
-    color: $gray-darkest;
+  color: $gray-darkest;
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-.page, .app {
-    flex: 1 0 auto; // 0 auto is only used to fix IE10+ bug
+.page,
+.app {
+  flex: 1 0 auto; // 0 auto is only used to fix IE10+ bug
 }
 
 // i element is used for icons, so we're removing the default italics and repeat background
-i, .i {
-    font-style: normal;
-    background-repeat: no-repeat;
+i,
+.i {
+  font-style: normal;
+  background-repeat: no-repeat;
 }
 // b element is used for non-semantic styling hooks, so remove default font weight
 b {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 strong,
 .strong {
-    @include text-bold;
+  @include text-bold;
 }
 
 a {
-    color: $blue;
-    text-decoration: none;
+  color: $blue;
+  text-decoration: none;
 
-    &:hover,
-    &:focus {
-        text-decoration: underline;
-    }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
- // Remove text-shadow in selection highlight: h5bp.com/i
- // These selection rule sets have to be separate.
+// Remove text-shadow in selection highlight: h5bp.com/i
+// These selection rule sets have to be separate.
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
-
- // A better looking default horizontal rule
+// A better looking default horizontal rule
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: $global-border-thin solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: $global-border-thin solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 hr.alt {
-    border-top: $global-border-thin solid $gray-medium;
+  border-top: $global-border-thin solid $gray-medium;
 }
 
 hr.dashed {
-    border-top: $global-border-thin dashed $gray-medium;
+  border-top: $global-border-thin dashed $gray-medium;
 }
 hr.spaced {
-    @include respond-to($break-m) {
-        margin: 2em 0;
-    }
+  @include respond-to($break-m) {
+    margin: 2em 0;
+  }
 }
-
 
 // Remove the gap between images, videos, audio and canvas and the bottom of their containers: h5bp.com/i/440
 
@@ -97,89 +99,98 @@ audio,
 canvas,
 img,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 // Allow only vertical resizing of textareas.
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
-address, .address {
-    font-style: italic;
+address,
+.address {
+  font-style: italic;
 }
 blockquote {
-    padding: 0 0 0 1em;
-    margin: 1em 0 1em 1em;
-    border-left: 8px solid $gray-medium;
-    @include text-match;
+  padding: 0 0 0 1em;
+  margin: 1em 0 1em 1em;
+  border-left: 8px solid $gray-medium;
+  @include text-match;
 }
-code, kbd, pre, samp, var {
-    font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
-    font-size: 0.75em;
+code,
+kbd,
+pre,
+samp,
+var {
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco,
+    Consolas, monospace;
+  font-size: 0.75em;
 }
-code, samp, kbd {
-    padding: 5px 8px 4px 8px;
-    display: inline-block;
-    line-height: 1em;
-    border-radius: $global-radius;
-    font-weight: normal;
+code,
+samp,
+kbd {
+  padding: 5px 8px 4px 8px;
+  display: inline-block;
+  line-height: 1em;
+  border-radius: $global-radius;
+  font-weight: normal;
 }
 code {
-    background: $gray-light;
-    color: $gray-darker;
-    border: $global-border-thin solid $gray-medium;
+  background: $gray-light;
+  color: $gray-darker;
+  border: $global-border-thin solid $gray-medium;
 }
 kbd {
-    background: $gray-black;
-    color: $gray-light;
-    white-space: nowrap;
+  background: $gray-black;
+  color: $gray-light;
+  white-space: nowrap;
 }
 samp {
-    border: $global-border-thin solid $gray-medium;
+  border: $global-border-thin solid $gray-medium;
 }
 .highlight {
-    background: $bus-yellow;
+  background: $bus-yellow;
 }
 .box--default {
-    background: $gray-lighter;
-    border: $global-border-thin solid $gray-medium;
-    border-radius: $global-radius;
-    padding: 1em;
-    @include respond-to ($break-m) {
-        padding: 1.5em;
+  background: $gray-lighter;
+  border: $global-border-thin solid $gray-medium;
+  border-radius: $global-radius;
+  padding: 1em;
+  @include respond-to($break-m) {
+    padding: 1.5em;
+  }
+  a {
+    color: $blue-darker; //Accessibility requirement
+    text-decoration: underline;
+  }
+  a.btn--primary,
+  a.btn--secondary {
+    color: $white;
+  }
+  a.btn--control {
+    color: $gray-darker;
+  }
+  &-compact {
+    padding: 0.75em;
+    font-size: 0.875rem;
+    @include respond-to($break-m) {
+      padding: 1em;
     }
-    a {
-        color: $blue-darker; //Accessibility requirement
-        text-decoration: underline;
-    }
-    a.btn--primary, a.btn--secondary {
-        color: $white;
-    }
-    a.btn--control {
-        color: $gray-darker;
-    }
-    &-compact {
-        padding: .75em;
-        font-size: 0.875rem;
-        @include respond-to ($break-m) {
-            padding: 1em;
-        }
-    }
+  }
 }
 .box--white {
-    background: $white;
-    border: $global-border-thin solid $gray-medium;
-    border-radius: $global-radius;
-    padding: 1em;
-    @include respond-to ($break-m) {
-        padding: 1.5em;
+  background: $white;
+  border: $global-border-thin solid $gray-medium;
+  border-radius: $global-radius;
+  padding: 1em;
+  @include respond-to($break-m) {
+    padding: 1.5em;
+  }
+  &-compact {
+    padding: 0.75em;
+    font-size: 0.875rem;
+    @include respond-to($break-m) {
+      padding: 1em;
     }
-    &-compact {
-        padding: .75em;
-        font-size: 0.875rem;
-        @include respond-to ($break-m) {
-            padding: 1em;
-        }
-    }
+  }
 }

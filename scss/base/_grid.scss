@@ -1,435 +1,460 @@
 $grid-space: 2em;
 $grid-space-compact: 1em;
-$grid-space-extra-compact: .5em;
+$grid-space-extra-compact: 0.5em;
 
 .content--grid {
+  > .content__block {
+    @include clearfix;
+    > .content__section {
+      @include respond-to($break-m) {
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+      .content--grid__margin,
+      .content--grid__margin-left {
+        @include respond-to($break-m) {
+          margin-left: $grid-space;
+        }
+      }
+      .content--grid__margin-right {
+        @include respond-to($break-m) {
+          margin-right: $grid-space;
+        }
+      }
+      .content--grid__margin-equal {
+        @include respond-to($break-m) {
+          margin-left: $grid-space/2;
+          margin-right: $grid-space/2;
+        }
+      }
+    }
+    > .content__section--full {
+      width: 100%;
+    }
+    > .content__section--ninety {
+      @include respond-to($break-m) {
+        width: 90%;
+      }
+    }
+    > .content__section--eighty {
+      @include respond-to($break-m) {
+        width: 80%;
+      }
+    }
+    > .content__section--seventy-five {
+      @include respond-to($break-m) {
+        width: 75%;
+      }
+    }
+    > .content__section--seventy {
+      @include respond-to($break-m) {
+        width: 70%;
+      }
+    }
+    > .content__section--sixty {
+      @include respond-to($break-m) {
+        width: 60%;
+      }
+    }
+    > .content__section--fifty,
+    > .content__section--pair {
+      @include respond-to($break-m) {
+        width: 50%;
+      }
+    }
+    > .content__section--forty {
+      @include respond-to($break-m) {
+        width: 40%;
+      }
+    }
+    > .content__section--third {
+      @include respond-to($break-m) {
+        width: 33.33%;
+      }
+    }
+    > .content__section--thirty {
+      @include respond-to($break-m) {
+        width: 30%;
+      }
+    }
+    > .content__section--twenty-five,
+    > .content__section--forth,
+    > .content__section--fourth {
+      @include respond-to($break-m) {
+        width: 25%;
+      }
+    }
+    > .content__section--twenty,
+    > .content__section--fifth {
+      @include respond-to($break-m) {
+        width: 20%;
+      }
+    }
+    > .content__section--sixteen,
+    > .content__section--sixth {
+      @include respond-to($break-m) {
+        width: 16.6%;
+      }
+    }
+    > .content__section--eighth {
+      @include respond-to($break-m) {
+        width: 12.5%;
+      }
+    }
+    > .content__section--ten {
+      @include respond-to($break-m) {
+        width: 10%;
+      }
+    }
+  }
+  &--margin {
     > .content__block {
-        @include clearfix;
-        > .content__section {
-            @include respond-to($break-m) {
-                float: left;
-                margin:0;
-                padding:0;
-            }
-            .content--grid__margin,
-            .content--grid__margin-left {
-                @include respond-to ($break-m) {
-                    margin-left: $grid-space;
-                }
-            }
-            .content--grid__margin-right {
-                @include respond-to ($break-m) {
-                    margin-right: $grid-space;
-                }
-            }
-            .content--grid__margin-equal {
-                @include respond-to ($break-m) {
-                    margin-left: $grid-space/2;
-                    margin-right: $grid-space/2;
-                }
-            }
+      @include clearfix;
+      @include respond-to($break-m) {
+        margin: 0 #{-$grid-space-compact/2};
+      }
+      > .content__section {
+        @include respond-to($break-m) {
+          float: left;
+          margin: 0 #{$grid-space-compact/2};
+          padding: 0;
         }
-        > .content__section--full {
-            width: 100%;
+        .content--grid__margin,
+        .content--grid__margin-left {
+          @include respond-to($break-m) {
+            margin-left: $grid-space;
+          }
         }
-        > .content__section--ninety {
-            @include respond-to($break-m) {
-                width: 90%;
-            }
+        .content--grid__margin-right {
+          @include respond-to($break-m) {
+            margin-right: $grid-space;
+          }
         }
-        > .content__section--eighty {
-            @include respond-to($break-m) {
-                width: 80%;
-            }
+        .content--grid__margin-equal {
+          @include respond-to($break-m) {
+            margin-left: $grid-space/2;
+            margin-right: $grid-space/2;
+          }
         }
-        > .content__section--seventy-five {
-            @include respond-to($break-m) {
-                width: 75%;
-            }
+      }
+      > .content__section--full {
+        @include respond-to($break-m) {
+          width: calc(100% - #{$grid-space-compact});
         }
-        > .content__section--seventy {
-            @include respond-to($break-m) {
-                width: 70%;
-            }
+      }
+      > .content__section--ninety {
+        @include respond-to($break-m) {
+          width: calc(90% - #{$grid-space-compact});
         }
-        > .content__section--sixty {
-            @include respond-to($break-m) {
-                width: 60%;
-            }
+      }
+      > .content__section--eighty {
+        @include respond-to($break-m) {
+          width: calc(80% - #{$grid-space-compact});
         }
-        > .content__section--fifty, > .content__section--pair {
-            @include respond-to($break-m) {
-                width: 50%;
-            }
+      }
+      > .content__section--seventy-five {
+        @include respond-to($break-m) {
+          width: calc(75% - #{$grid-space-compact});
         }
-        > .content__section--forty {
-            @include respond-to($break-m) {
-                width: 40%;
-            }
+      }
+      > .content__section--seventy {
+        @include respond-to($break-m) {
+          width: calc(70% - #{$grid-space-compact});
         }
-        > .content__section--third {
-            @include respond-to($break-m) {
-                width: 33.33%;
-            }
+      }
+      > .content__section--sixty {
+        @include respond-to($break-m) {
+          width: calc(60% - #{$grid-space-compact});
         }
-        > .content__section--thirty {
-            @include respond-to($break-m) {
-                width: 30%;
-            }
+      }
+      > .content__section--fifty,
+      > .content__section--pair {
+        @include respond-to($break-m) {
+          width: calc(50% - #{$grid-space-compact});
         }
-        > .content__section--twenty-five, > .content__section--forth, > .content__section--fourth {
-            @include respond-to($break-m) {
-                width: 25%;
-            }
+      }
+      > .content__section--forty {
+        @include respond-to($break-m) {
+          width: calc(40% - #{$grid-space-compact});
         }
-        > .content__section--twenty, > .content__section--fifth {
-            @include respond-to($break-m) {
-                width: 20%;
-            }
+      }
+      > .content__section--third {
+        @include respond-to($break-m) {
+          width: calc(33.33% - #{$grid-space-compact});
         }
-        > .content__section--sixteen, > .content__section--sixth {
-            @include respond-to($break-m) {
-                width: 16.6%;
-            }
+      }
+      > .content__section--thirty {
+        @include respond-to($break-m) {
+          width: calc(30% - #{$grid-space-compact});
         }
-        > .content__section--eighth {
-            @include respond-to($break-m) {
-                width: 12.5%;
-            }
+      }
+      > .content__section--twenty-five,
+      > .content__section--forth,
+      > .content__section--fourth {
+        @include respond-to($break-m) {
+          width: calc(25% - #{$grid-space-compact});
         }
-        > .content__section--ten {
-            @include respond-to($break-m) {
-                width: 10%;
-            }
+      }
+      > .content__section--twenty,
+      > .content__section--fifth {
+        @include respond-to($break-m) {
+          width: calc(20% - #{$grid-space-compact});
         }
+      }
+      > .content__section--sixteen,
+      > .content__section--sixth {
+        @include respond-to($break-m) {
+          width: calc(16% - #{$grid-space-compact});
+        }
+      }
+      > .content__section--eighth {
+        @include respond-to($break-m) {
+          width: calc(12.5% - #{$grid-space-compact});
+        }
+      }
+      > .content__section--ten {
+        @include respond-to($break-m) {
+          width: calc(10% - #{$grid-space-compact});
+        }
+      }
     }
-    &--margin {
-        > .content__block {
-            @include clearfix;
-            @include respond-to($break-m) {
-                margin:0 #{-$grid-space-compact/2};
-            }
-            > .content__section {
-                @include respond-to($break-m) {
-                    float: left;
-                    margin:0 #{$grid-space-compact/2};
-                    padding:0;
-                }
-                .content--grid__margin,
-                .content--grid__margin-left {
-                    @include respond-to ($break-m) {
-                        margin-left: $grid-space;
-                    }
-                }
-                .content--grid__margin-right {
-                    @include respond-to ($break-m) {
-                        margin-right: $grid-space;
-                    }
-                }
-                .content--grid__margin-equal {
-                    @include respond-to ($break-m) {
-                        margin-left: $grid-space/2;
-                        margin-right: $grid-space/2;
-                    }
-                }
-            }
-            > .content__section--full {
-                @include respond-to($break-m) {
-                    width: calc(100% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--ninety {
-                @include respond-to($break-m) {
-                    width: calc(90% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--eighty {
-                @include respond-to($break-m) {
-                    width: calc(80% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--seventy-five {
-                @include respond-to($break-m) {
-                    width: calc(75% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--seventy {
-                @include respond-to($break-m) {
-                    width: calc(70% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--sixty {
-                @include respond-to($break-m) {
-                    width: calc(60% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--fifty, > .content__section--pair {
-                @include respond-to($break-m) {
-                    width: calc(50% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--forty {
-                @include respond-to($break-m) {
-                    width: calc(40% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--third {
-                @include respond-to($break-m) {
-                    width: calc(33.33% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--thirty {
-                @include respond-to($break-m) {
-                    width: calc(30% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--twenty-five, > .content__section--forth, > .content__section--fourth {
-                @include respond-to($break-m) {
-                    width: calc(25% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--twenty, > .content__section--fifth {
-                @include respond-to($break-m) {
-                    width: calc(20% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--sixteen, > .content__section--sixth {
-                @include respond-to($break-m) {
-                    width: calc(16% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--eighth {
-                @include respond-to($break-m) {
-                    width: calc(12.5% - #{$grid-space-compact});
-                }
-            }
-            > .content__section--ten {
-                @include respond-to($break-m) {
-                    width: calc(10% - #{$grid-space-compact});
-                }
-            }
-        }
-    }
+  }
 }
 
 /* Mobile Layout overides */
 .mobile--grid.content--grid {
-    > .content__block {
-        > .content__section {
-            float: left;
-            margin:0;
-            padding:0;
-            .content--grid__margin,
-            .content--grid__margin-left {
-                margin-left: $grid-space/2;
-                @include respond-to($break-m) {
-                    margin-left: $grid-space;
-                }
-            }
-            .content--grid__margin-right {
-                margin-right: $grid-space/2;
-                @include respond-to($break-m) {
-                    margin-right: $grid-space;
-                }
-            }
-            .content--grid__margin-equal {
-                @include respond-to ($break-m) {
-                    margin-left: $grid-space/4;
-                    margin-right: $grid-space/4;
-                }
-            }
+  > .content__block {
+    > .content__section {
+      float: left;
+      margin: 0;
+      padding: 0;
+      .content--grid__margin,
+      .content--grid__margin-left {
+        margin-left: $grid-space/2;
+        @include respond-to($break-m) {
+          margin-left: $grid-space;
         }
-        > .content__section--ninety {
-            width: 90%;
+      }
+      .content--grid__margin-right {
+        margin-right: $grid-space/2;
+        @include respond-to($break-m) {
+          margin-right: $grid-space;
         }
-        > .content__section--eighty {
-            width: 80%;
+      }
+      .content--grid__margin-equal {
+        @include respond-to($break-m) {
+          margin-left: $grid-space/4;
+          margin-right: $grid-space/4;
         }
-        > .content__section--seventy-five {
-            width: 75%;
-        }
-        > .content__section--seventy {
-            width: 70%;
-        }
-        > .content__section--sixty {
-            width: 60%;
-        }
-        > .content__section--fifty, > .content__section--pair {
-            width: 50%;
-        }
-        > .content__section--forty {
-            width: 40%;
-        }
-        > .content__section--third {
-            width: 33.33%;
-        }
-        > .content__section--thirty {
-            width: 30%;
-        }
-        > .content__section--twenty-five, > .content__section--forth, > .content__section--fourth {
-            width: 25%;
-        }
-        > .content__section--twenty, > .content__section--fifth {
-            width: 20%;
-        }
-        > .content__section--sixteen, > .content__section--sixth {
-            width: 16.6%;
-        }
-        > .content__section--eighth {
-            width: 12.5%;
-        }
-        > .content__section--ten {
-            width: 10%;
-        }
+      }
     }
+    > .content__section--ninety {
+      width: 90%;
+    }
+    > .content__section--eighty {
+      width: 80%;
+    }
+    > .content__section--seventy-five {
+      width: 75%;
+    }
+    > .content__section--seventy {
+      width: 70%;
+    }
+    > .content__section--sixty {
+      width: 60%;
+    }
+    > .content__section--fifty,
+    > .content__section--pair {
+      width: 50%;
+    }
+    > .content__section--forty {
+      width: 40%;
+    }
+    > .content__section--third {
+      width: 33.33%;
+    }
+    > .content__section--thirty {
+      width: 30%;
+    }
+    > .content__section--twenty-five,
+    > .content__section--forth,
+    > .content__section--fourth {
+      width: 25%;
+    }
+    > .content__section--twenty,
+    > .content__section--fifth {
+      width: 20%;
+    }
+    > .content__section--sixteen,
+    > .content__section--sixth {
+      width: 16.6%;
+    }
+    > .content__section--eighth {
+      width: 12.5%;
+    }
+    > .content__section--ten {
+      width: 10%;
+    }
+  }
 }
 .mobile--grid.content--grid--margin {
+  > .content__block {
+    @include clearfix;
+    margin: 0 #{-$grid-space-compact/2};
+    > .content__section {
+      float: left;
+      margin: 0 #{$grid-space-compact/2};
+      padding: 0;
+      .content--grid__margin,
+      .content--grid__margin-left {
+        margin-left: $grid-space/2;
+        @include respond-to($break-m) {
+          margin-left: $grid-space;
+        }
+      }
+      .content--grid__margin-right {
+        margin-right: $grid-space/2;
+        @include respond-to($break-m) {
+          margin-right: $grid-space;
+        }
+      }
+      .content--grid__margin-equal {
+        @include respond-to($break-m) {
+          margin-left: $grid-space/4;
+          margin-right: $grid-space/4;
+        }
+      }
+    }
+    > .content__section--full {
+      width: calc(100% - #{$grid-space-compact});
+    }
+    > .content__section--ninety {
+      width: calc(90% - #{$grid-space-compact});
+    }
+    > .content__section--eighty {
+      width: calc(80% - #{$grid-space-compact});
+    }
+    > .content__section--seventy-five {
+      width: calc(75% - #{$grid-space-compact});
+    }
+    > .content__section--seventy {
+      width: calc(70% - #{$grid-space-compact});
+    }
+    > .content__section--sixty {
+      width: calc(60% - #{$grid-space-compact});
+    }
+    > .content__section--fifty,
+    > .content__section--pair {
+      width: calc(50% - #{$grid-space-compact});
+    }
+    > .content__section--forty {
+      width: calc(40% - #{$grid-space-compact});
+    }
+    > .content__section--third {
+      width: calc(33.33% - #{$grid-space-compact});
+    }
+    > .content__section--thirty {
+      width: calc(30% - #{$grid-space-compact});
+    }
+    > .content__section--twenty-five,
+    > .content__section--forth,
+    > .content__section--fourth {
+      width: calc(25% - #{$grid-space-compact});
+    }
+    > .content__section--twenty,
+    > .content__section--fifth {
+      width: calc(20% - #{$grid-space-compact});
+    }
+    > .content__section--sixteen,
+    > .content__section--sixth {
+      width: calc(16% - #{$grid-space-compact});
+    }
+    > .content__section--eighth {
+      width: calc(12.5% - #{$grid-space-compact});
+    }
+    > .content__section--ten {
+      width: calc(10% - #{$grid-space-compact});
+    }
+  }
+  &-compact {
     > .content__block {
-        @include clearfix;
-        margin:0 #{-$grid-space-compact/2};
-        > .content__section {
-            float: left;
-            margin:0 #{$grid-space-compact/2};
-            padding:0;
-            .content--grid__margin,
-            .content--grid__margin-left {
-                margin-left: $grid-space/2;
-                @include respond-to($break-m) {
-                    margin-left: $grid-space;
-                }
-            }
-            .content--grid__margin-right {
-                margin-right: $grid-space/2;
-                @include respond-to($break-m) {
-                    margin-right: $grid-space;
-                }
-            }
-            .content--grid__margin-equal {
-                @include respond-to ($break-m) {
-                    margin-left: $grid-space/4;
-                    margin-right: $grid-space/4;
-                }
-            }
+      @include clearfix;
+      margin: 0 #{-$grid-space-extra-compact/2};
+      > .content__section {
+        float: left;
+        margin: 0 #{$grid-space-extra-compact/2};
+        padding: 0;
+        .content--grid__margin,
+        .content--grid__margin-left {
+          margin-left: $grid-space-compact/2;
+          @include respond-to($break-m) {
+            margin-left: $grid-space-compact;
+          }
         }
-        > .content__section--full {
-            width: calc(100% - #{$grid-space-compact});
+        .content--grid__margin-right {
+          margin-right: $grid-space-compact/2;
+          @include respond-to($break-m) {
+            margin-right: $grid-space-compact;
+          }
         }
-        > .content__section--ninety {
-            width: calc(90% - #{$grid-space-compact});
+        .content--grid__margin-equal {
+          @include respond-to($break-m) {
+            margin-left: $grid-space-compact/4;
+            margin-right: $grid-space-compact/4;
+          }
         }
-        > .content__section--eighty {
-            width: calc(80% - #{$grid-space-compact});
-        }
-        > .content__section--seventy-five {
-            width: calc(75% - #{$grid-space-compact});
-        }
-        > .content__section--seventy {
-            width: calc(70% - #{$grid-space-compact});
-        }
-        > .content__section--sixty {
-            width: calc(60% - #{$grid-space-compact});
-        }
-        > .content__section--fifty, > .content__section--pair {
-            width: calc(50% - #{$grid-space-compact});
-        }
-        > .content__section--forty {
-            width: calc(40% - #{$grid-space-compact});
-        }
-        > .content__section--third {
-            width: calc(33.33% - #{$grid-space-compact});
-        }
-        > .content__section--thirty {
-            width: calc(30% - #{$grid-space-compact});
-        }
-        > .content__section--twenty-five, > .content__section--forth, > .content__section--fourth {
-            width: calc(25% - #{$grid-space-compact});
-        }
-        > .content__section--twenty, > .content__section--fifth {
-            width: calc(20% - #{$grid-space-compact});
-        }
-        > .content__section--sixteen, > .content__section--sixth {
-            width: calc(16% - #{$grid-space-compact});
-        }
-        > .content__section--eighth {
-            width: calc(12.5% - #{$grid-space-compact});
-        }
-        > .content__section--ten {
-            width: calc(10% - #{$grid-space-compact});
-        }
+      }
+      > .content__section--full {
+        width: calc(100% - #{$grid-space-extra-compact});
+      }
+      > .content__section--ninety {
+        width: calc(90% - #{$grid-space-extra-compact});
+      }
+      > .content__section--eighty {
+        width: calc(80% - #{$grid-space-extra-compact});
+      }
+      > .content__section--seventy-five {
+        width: calc(75% - #{$grid-space-extra-compact});
+      }
+      > .content__section--seventy {
+        width: calc(70% - #{$grid-space-extra-compact});
+      }
+      > .content__section--sixty {
+        width: calc(60% - #{$grid-space-extra-compact});
+      }
+      > .content__section--fifty,
+      > .content__section--pair {
+        width: calc(50% - #{$grid-space-extra-compact});
+      }
+      > .content__section--forty {
+        width: calc(40% - #{$grid-space-extra-compact});
+      }
+      > .content__section--third {
+        width: calc(33.33% - #{$grid-space-extra-compact});
+      }
+      > .content__section--thirty {
+        width: calc(30% - #{$grid-space-extra-compact});
+      }
+      > .content__section--twenty-five,
+      > .content__section--forth,
+      > .content__section--fourth {
+        width: calc(25% - #{$grid-space-extra-compact});
+      }
+      > .content__section--twenty,
+      > .content__section--fifth {
+        width: calc(20% - #{$grid-space-extra-compact});
+      }
+      > .content__section--sixteen,
+      > .content__section--sixth {
+        width: calc(16% - #{$grid-space-extra-compact});
+      }
+      > .content__section--eighth {
+        width: calc(12.5% - #{$grid-space-extra-compact});
+      }
+      > .content__section--ten {
+        width: calc(10% - #{$grid-space-extra-compact});
+      }
     }
-    &-compact {
-        > .content__block {
-            @include clearfix;
-            margin:0 #{-$grid-space-extra-compact/2};
-            > .content__section {
-                float: left;
-                margin:0 #{$grid-space-extra-compact/2};
-                padding:0;
-                .content--grid__margin,
-                .content--grid__margin-left {
-                    margin-left: $grid-space-compact/2;
-                    @include respond-to($break-m) {
-                        margin-left: $grid-space-compact;
-                    }
-                }
-                .content--grid__margin-right {
-                    margin-right: $grid-space-compact/2;
-                    @include respond-to($break-m) {
-                        margin-right: $grid-space-compact;
-                    }
-                }
-                .content--grid__margin-equal {
-                    @include respond-to ($break-m) {
-                        margin-left: $grid-space-compact/4;
-                        margin-right: $grid-space-compact/4;
-                    }
-                }
-            }
-            > .content__section--full {
-                width: calc(100% - #{$grid-space-extra-compact});
-            }
-            > .content__section--ninety {
-                width: calc(90% - #{$grid-space-extra-compact});
-            }
-            > .content__section--eighty {
-                width: calc(80% - #{$grid-space-extra-compact});
-            }
-            > .content__section--seventy-five {
-                width: calc(75% - #{$grid-space-extra-compact});
-            }
-            > .content__section--seventy {
-                width: calc(70% - #{$grid-space-extra-compact});
-            }
-            > .content__section--sixty {
-                width: calc(60% - #{$grid-space-extra-compact});
-            }
-            > .content__section--fifty, > .content__section--pair {
-                width: calc(50% - #{$grid-space-extra-compact});
-            }
-            > .content__section--forty {
-                width: calc(40% - #{$grid-space-extra-compact});
-            }
-            > .content__section--third {
-                width: calc(33.33% - #{$grid-space-extra-compact});
-            }
-            > .content__section--thirty {
-                width: calc(30% - #{$grid-space-extra-compact});
-            }
-            > .content__section--twenty-five, > .content__section--forth, > .content__section--fourth {
-                width: calc(25% - #{$grid-space-extra-compact});
-            }
-            > .content__section--twenty, > .content__section--fifth {
-                width: calc(20% - #{$grid-space-extra-compact});
-            }
-            > .content__section--sixteen, > .content__section--sixth {
-                width: calc(16% - #{$grid-space-extra-compact});
-            }
-            > .content__section--eighth {
-                width: calc(12.5% - #{$grid-space-extra-compact});
-            }
-            > .content__section--ten {
-                width: calc(10% - #{$grid-space-extra-compact});
-            }
-        }
-    }
+  }
 }

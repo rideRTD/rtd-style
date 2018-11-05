@@ -21,16 +21,15 @@ $blue-darker: #016f98;
 $blue-darkest: #00516f;
 
 $red: #f43e3e;
-$red-dark: #C62828;
+$red-dark: #c62828;
 
 $white: #fff;
-$silver: #BDC3C7; //realtime
+$silver: #bdc3c7; //realtime
 $golden: #e29c45; //realtime
 $orange: #f5a81c;
-$purple-gradient-dark: #2B3056;
-$purple-gradient-mid: #4C4679;
-$purple-gradient-light: #472F3C;
-
+$purple-gradient-dark: #2b3056;
+$purple-gradient-mid: #4c4679;
+$purple-gradient-light: #472f3c;
 
 // Alert Colors
 $success-dark: #008040; //#27ae60
@@ -50,27 +49,25 @@ $disabled-light: $gray-lighter;
 
 $alerts: (
   //background-color, border-color, color
-  success:($success-light, #c1e2b3, $success-dark),
-  info:($info-light, #b0daec, $info-dark),
-  warning:($warning-light, #f6c2b1, $warning-dark),
-  error:($error-light, #e5bbbb, $error-dark),
-  disabled:($disabled-light, #cecece, $disabled-dark)
+    success: ($success-light, #c1e2b3, $success-dark),
+  info: ($info-light, #b0daec, $info-dark),
+  warning: ($warning-light, #f6c2b1, $warning-dark),
+  error: ($error-light, #e5bbbb, $error-dark),
+  disabled: ($disabled-light, #cecece, $disabled-dark)
 );
-
 
 // Service Colors
 $bus-blue: #0076ce; //#008FBF; updated 12/30/15
-$bus-purple: #C129B9;
-$bus-violet: #675DC6; //#665ec7; updated 1/17/17
-$bus-teal: #004E5A;
-$bus-red: #F63440;
-$bus-green: #64A70B; //#00833F; updated 12/30/15
+$bus-purple: #c129b9;
+$bus-violet: #675dc6; //#665ec7; updated 1/17/17
+$bus-teal: #004e5a;
+$bus-red: #f63440;
+$bus-green: #64a70b; //#00833F; updated 12/30/15
 $bus-darkblue: #57c1e9; //#003DA7; updated 12/30/15
 $bus-chartreuse: #98cb4f;
 $bus-turquoise: #00a19b;
 $bus-yellow: #ffff00;
-$bus-lt-purple: #675DC6;
-
+$bus-lt-purple: #675dc6;
 
 $lr-orange: #f79239;
 $lr-yellow: #ffcd00;
@@ -97,7 +94,6 @@ $service: (
   bus-metro: $bus-turquoise,
   bus-flatiron: #1e4286,
   bus-flatiron-alt: #f5a81c,
-
   a-line: $lr-sky-blue,
   b-line: $lr-kelly-green,
   c-line: $lr-orange,
@@ -112,34 +108,33 @@ $service: (
   w-line: $lr-teal
 );
 
-
-$broncos: #FB4F14;
+$broncos: #fb4f14;
 $broncos-alt: #024;
 $rockies: #336;
-$rockies-alt: #C0C0C0;
-$cu: #CFb87C;
+$rockies-alt: #c0c0c0;
+$cu: #cfb87c;
 $cu-alt: #000;
-$csu: #00674E;
-$csu-alt: #B38808;
-$raceforcure: #F238A6;
-$raceforcure-alt: #AB035C;
+$csu: #00674e;
+$csu-alt: #b38808;
+$raceforcure: #f238a6;
+$raceforcure-alt: #ab035c;
 $bolderboulder: #000;
-$bolderboulder-alt: #FD0;
+$bolderboulder-alt: #fd0;
 $ski: $blue-darker;
-$ski-alt: #0B8FCF;
+$ski-alt: #0b8fcf;
 
 // Flatiron Flyer
-$ff1: #1B75BB;
-$ff2: #F36F28;
-$ff3: #8CC63E;
-$ff4: #91268F;
-$ff5: #ED1C24;
-$ff6: #1F4285;
-$ff7: #FFDE17;
-$ff1-lt: #C6DDEE;
-$ff2-lt: #FCDBCA;
-$ff3-lt: #E3F1CF;
-$ff4-lt: #E4C9E3;
-$ff5-lt: #FBC7C9;
-$ff6-lt: #C7D0E1;
-$ff7-lt: #FDF2B0;
+$ff1: #1b75bb;
+$ff2: #f36f28;
+$ff3: #8cc63e;
+$ff4: #91268f;
+$ff5: #ed1c24;
+$ff6: #1f4285;
+$ff7: #ffde17;
+$ff1-lt: #c6ddee;
+$ff2-lt: #fcdbca;
+$ff3-lt: #e3f1cf;
+$ff4-lt: #e4c9e3;
+$ff5-lt: #fbc7c9;
+$ff6-lt: #c7d0e1;
+$ff7-lt: #fdf2b0;

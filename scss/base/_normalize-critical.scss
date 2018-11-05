@@ -1,19 +1,38 @@
 // 1. Set default font family to sans-serif.
 // 2. Prevent iOS text size adjust after orientation change, without disabling user zoom.
 html {
-    font-family: sans-serif; /* 1 */
-    -ms-text-size-adjust: 100%; /* 2 */
-    -webkit-text-size-adjust: 100%; /* 2 */
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 //Remove default margin.
-body,div,section,article,header,footer,ul,ol,li,h1,h2,h3,h4,h5,h6,form,p {
-  margin:0; 
-  padding:0; 
+body,
+div,
+section,
+article,
+header,
+footer,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+p {
+  margin: 0;
+  padding: 0;
 }
 
-button, input, select, textarea {
-    font-family: inherit; /* 1 */
-    font-size: 100%; /* 2 */
-    margin: 0; /* 3 */
+button,
+input,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 2 */
+  margin: 0; /* 3 */
 }

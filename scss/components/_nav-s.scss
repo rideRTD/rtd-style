@@ -1,204 +1,208 @@
 @include respond-to(0, $break-to-m) {
-    .header__nav-main{
-        display: none;
-        width: 100%;
-        background-color: $blue;
-        a {
-            display:block;
-        }
+  .header__nav-main {
+    display: none;
+    width: 100%;
+    background-color: $blue;
+    a {
+      display: block;
     }
-    // The menu item buttons that expand/collapse the menu
-    .header__nav-btn {
-        color: $white;
-        @include text-bold;
-        border-bottom:$global-border-thin solid $blue-darker;
-        background-color: $blue;
-        text-transform: uppercase;
-        letter-spacing: $global-letter-spacing;
-        text-decoration:none;
-        &:hover, &:focus {
-            text-decoration: none;
-            outline: 0;
-            color: $white;
+  }
+  // The menu item buttons that expand/collapse the menu
+  .header__nav-btn {
+    color: $white;
+    @include text-bold;
+    border-bottom: $global-border-thin solid $blue-darker;
+    background-color: $blue;
+    text-transform: uppercase;
+    letter-spacing: $global-letter-spacing;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      outline: 0;
+      color: $white;
 
-            // the carrot's hover/focus states
-            &:after {
-                border-top-color: $white;
-            }
-            &.header__nav-btn--is-active:after {
-                border-bottom-color: $white;
-            }
-        }
-        // The Carrot
-        &:after, &.header__nav-btn--is-active:after {
-            content: '';
-            position:relative;
-            width: 0;
-            height: 0;
-            left: 0.5em;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-        }
+      // the carrot's hover/focus states
+      &:after {
+        border-top-color: $white;
+      }
+      &.header__nav-btn--is-active:after {
+        border-bottom-color: $white;
+      }
+    }
+    // The Carrot
+    &:after,
+    &.header__nav-btn--is-active:after {
+      content: '';
+      position: relative;
+      width: 0;
+      height: 0;
+      left: 0.5em;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+    }
+    &:after {
+      top: 0.8em;
+      border-top: 5px solid $blue-lighter;
+    }
+    &.header__nav-btn--is-active:after {
+      top: -0.7em;
+      border-top: 0;
+      border-bottom: 5px solid $white;
+    }
+  }
+  .header__nav-primary {
+    & > li {
+      width: 100%;
+    }
+    .header__nav-btn {
+      @include rem(height, 3);
+      @include rem(line-height, 3);
+      @include rem(padding-left, 3);
+
+      @include respond-to($break-s) {
+        @include rem(height, 4);
+        @include rem(line-height, 4);
+      }
+    }
+  }
+
+  // The secondary nav items at the bottom
+  .header__nav-secondary {
+    border-top: $global-border-thin solid $blue-darker;
+    a,
+    .header__nav-menu a {
+      @include text-regular;
+      text-transform: capitalize;
+    }
+    .header__nav-btn {
+      margin: 0;
+      @include rem(height, 2.5);
+      @include rem(line-height, 2.4);
+      @include rem(padding-left, 3);
+
+      @include respond-to($break-s) {
+        @include rem(height, 3);
+        @include rem(line-height, 3);
+      }
+    }
+  }
+  .header__nav-menu {
+    display: none;
+    a,
+    .header__sub-title {
+      @include rem(height, 3);
+      @include rem(line-height, 3);
+      @include rem(padding-left, 4);
+      background: $blue-lighter;
+      color: $white;
+      border-bottom: $global-border-thin solid $blue;
+    }
+    a {
+      &:hover,
+      &:focus {
+        color: $white;
+        text-decoration: underline;
+        outline: 0;
+      }
+    }
+    // The sub nav buttons
+    .header__sub-title {
+      font-weight: 400;
+      &:hover,
+      &:focus {
+        cursor: pointer;
         &:after {
-            top: 0.8em;
-            border-top: 5px solid $blue-lighter;
+          border-top-color: $white;
         }
         &.header__nav-btn--is-active:after {
-            top: -0.7em;
-            border-top: 0;
-            border-bottom: 5px solid $white;
+          border-bottom-color: $white;
         }
-    }
-    .header__nav-primary {
-        & > li {
-            width:100%;
-        }
-        .header__nav-btn {
-            @include rem(height, 3);
-            @include rem(line-height, 3);
-            @include rem(padding-left, 3);
+      }
 
-            @include respond-to($break-s) {
-                @include rem(height, 4);
-                @include rem(line-height, 4);
-            }
-        }
+      // The sub nav Carrot
+      &:after,
+      &.header__nav-btn--is-active:after {
+        content: '';
+        position: relative;
+        width: 0;
+        height: 0;
+        left: 0.5em;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+      }
+      &:after {
+        top: 0.8em;
+        border-top: 5px solid $blue;
+      }
+      &.header__nav-btn--is-active:after {
+        top: -0.7em;
+        border-top: 0;
+        border-bottom: 5px solid $white;
+      }
+      // End sub nav Carrot
     }
-
-    // The secondary nav items at the bottom
-    .header__nav-secondary {
-        border-top:$global-border-thin solid $blue-darker;
-        a, .header__nav-menu a {
-            @include text-regular;
-            text-transform: capitalize;
-        }
-        .header__nav-btn {
-            margin: 0;
-            @include rem(height, 2.5);
-            @include rem(line-height, 2.4);
-            @include rem(padding-left, 3);
-
-            @include respond-to($break-s) {
-                @include rem(height, 3);
-                @include rem(line-height, 3);
-            }
-        }
-    }
-    .header__nav-menu {
-        display:none;
-        a, .header__sub-title {
-            @include rem(height, 3);
-            @include rem(line-height, 3);
-            @include rem(padding-left, 4);
-            background: $blue-lighter;
-            color: $white;
-            border-bottom:$global-border-thin solid $blue;
-        }
+    .header__sub-section {
+      ul {
+        display: none;
+        border-bottom: $global-border-thin solid $blue;
         a {
-           &:hover, &:focus {
-                color: $white;
-                text-decoration: underline;
-                outline: 0;
-            }
+          @include rem(height, 2.5);
+          @include rem(line-height, 2.4);
+          @include rem(padding-left, 5);
+          @include text-regular;
+          border-bottom: 0;
         }
-        // The sub nav buttons
-        .header__sub-title {
-            font-weight: 400;
-            &:hover, &:focus {
-                cursor: pointer;
-                &:after {
-                    border-top-color: $white;
-                }
-                &.header__nav-btn--is-active:after {
-                    border-bottom-color: $white;
-                }
-            }
-
-            // The sub nav Carrot
-            &:after, &.header__nav-btn--is-active:after {
-                content: '';
-                position:relative;
-                width: 0;
-                height: 0;
-                left: 0.5em;
-                border-left: 5px solid transparent;
-                border-right: 5px solid transparent;
-            }
-            &:after {
-                top: 0.8em;
-                border-top: 5px solid $blue;
-            }
-            &.header__nav-btn--is-active:after {
-                top: -0.7em;
-                border-top: 0;
-                border-bottom: 5px solid $white;
-            }
-            // End sub nav Carrot
-        }
-        .header__sub-section {
-            ul {
-                display:none;
-                border-bottom:$global-border-thin solid $blue;
-                a {
-                    @include rem(height, 2.5);
-                    @include rem(line-height, 2.4);
-                    @include rem(padding-left, 5);
-                    @include text-regular;
-                    border-bottom: 0;
-                }
-            }
-        }
-        .header__sub-feature {
-            a {
-                height: auto;
-                line-height: 1.75em;
-                padding: .6em .5em .6em 4rem;
-            }
-        }
+      }
     }
-    .header__nav-menu--projects> ul > li {
-        &:first-child {
-            display: none;
-        }
-        ul {
-            background: $blue-lighter;
-            padding: .5em 0;
-        }
-        .rtd-service-icon-menu {
-            position: relative;
-            display: inline-block;
-            left: -10px;
-            color: $white;
-            border-radius: 3px;
-            font-family: arial;
-            font-weight: 900;
-            text-align: center;
-            text-transform: uppercase;
-            line-height: 24px;
-            width: 26px;
-            height: 26px;
-            font-size: 14px;
-            padding: 0;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-            margin:0;
-            border: 2px solid $white;
-        }
-        .rtd-service-icon-menu-multi {
-            margin-right: 5px;
-        }
+    .header__sub-feature {
+      a {
+        height: auto;
+        line-height: 1.75em;
+        padding: 0.6em 0.5em 0.6em 4rem;
+      }
     }
-    .header__nav-menu--projects> ul > li:first-child {
-        display: block;
+  }
+  .header__nav-menu--projects > ul > li {
+    &:first-child {
+      display: block;
     }
+    ul {
+      background: $blue-lighter;
+      padding: 0.5em 0;
+    }
+    .rtd-service-icon-menu {
+      position: relative;
+      display: inline-block;
+      left: -10px;
+      color: $white;
+      border-radius: 3px;
+      font-family: arial;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 24px;
+      width: 26px;
+      height: 26px;
+      font-size: 14px;
+      padding: 0;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+      margin: 0;
+      border: 2px solid $white;
+    }
+    .rtd-service-icon-menu-multi {
+      margin-right: 5px;
+    }
+  }
 }
 @include respond-to(0, $tweak-d-2) {
-    .header__nav-menu--projects ul li.header__sub-section ul {
-        font-size: 0.875em;
-        li a {
-            padding-left: 4.3rem;
-            span.ext {
-                display: none;
-            }
-        }
+  .header__nav-menu--projects ul li.header__sub-section ul {
+    font-size: 0.875em;
+    li a {
+      padding-left: 4.3rem;
+      span.ext {
+        display: none;
+      }
     }
+  }
 }

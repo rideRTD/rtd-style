@@ -1,83 +1,86 @@
 @include respond-to(0, $break-to-m) {
-    .header__nav-main{
-        display: none;
-        width: 100%;
-        background-color: $blue;
-        a {
-            display:block;
-        }
+  .header__nav-main {
+    display: none;
+    width: 100%;
+    background-color: $blue;
+    a {
+      display: block;
     }
+  }
 }
 
 @include respond-to($break-m) {
-    .header__nav-main {
-        display:block;
-        @include clearfix;
-        float:left;
-        width: 100%;
-        padding-left: 115px;
+  .header__nav-main {
+    display: block;
+    @include clearfix;
+    float: left;
+    width: 100%;
+    padding-left: 115px;
 
-        h2, h3, h4, .header__nav-secondary {
-            display:none
-        }
-        .header__sub-title {
-            display:block;
-        }
+    h2,
+    h3,
+    h4,
+    .header__nav-secondary {
+      display: none;
     }
-    .header__nav,
-    .header__nav-menu > ul {
-        @include container;
+    .header__sub-title {
+      display: block;
     }
-    .header__nav,
-    .header__nav-primary > li {
-        border-right: $global-border-thin solid transparent;
+  }
+  .header__nav,
+  .header__nav-menu > ul {
+    @include container;
+  }
+  .header__nav,
+  .header__nav-primary > li {
+    border-right: $global-border-thin solid transparent;
+  }
+  .header__nav-primary {
+    display: block;
+    float: left;
+    @include respond-to($tweak-m-2) {
+      margin-left: 10px;
     }
-    .header__nav-primary {
+    @include rem(height, 6);
+    > li {
+      width: auto;
+      float: left;
+      > a {
         display: block;
-        float: left;
-        @include respond-to ($tweak-m-2) {
-            margin-left: 10px;
-        }
+        padding: 2.5em 0.75em 1.875em 0.625em;
         @include rem(height, 6);
-        > li {
-            width: auto;
-            float: left;
-            > a {
-                display: block;
-                padding: 2.5em 0.75em 1.875em 0.625em;
-                @include rem(height, 6);
-                font-family: $fontstack-alt;
-                color: $gray-darkest;
-                font-size: 1em;
-                text-align: center;
-                text-decoration: none;
-                text-transform: uppercase;
-                @include transition(0.2s);
-                
-                &:hover,
-                &:focus {
-                    background: $white;
-                    color: $gray-darkest;
-                }
-                
-                &.active {
-                    color: $red-dark;
-                    background: $white;
-                    outline: 0;
-                }
-            }
-        }
-    }
-    
-    .header__search-field {
-        border: $global-border-thin solid $gray-medium;
-        border-radius: $global-radius;
-        @include text-regular;
-        color: $gray-darker;
-        @include rem(font-size, 0.875);
-    }
+        font-family: $fontstack-alt;
+        color: $gray-darkest;
+        font-size: 1em;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include transition(0.2s);
 
-    .header__nav-menu {
-        display:none;
+        &:hover,
+        &:focus {
+          background: $white;
+          color: $gray-darkest;
+        }
+
+        &.active {
+          color: $red-dark;
+          background: $white;
+          outline: 0;
+        }
+      }
     }
+  }
+
+  .header__search-field {
+    border: $global-border-thin solid $gray-medium;
+    border-radius: $global-radius;
+    @include text-regular;
+    color: $gray-darker;
+    @include rem(font-size, 0.875);
+  }
+
+  .header__nav-menu {
+    display: none;
+  }
 }
