@@ -262,30 +262,21 @@
     </div>
     <nav class="tools__nav ifjs-hide-m" id="tools" role="navigation" aria-labelledby="tools-label" >
       <h2 class="hide" id="tools-label">Tools</h2>
-      <ul>
-        <li class="tools__item">
-          <a class="tools__tool" href="/app/plan" onclick="ga('send', 'event', 'Toolbar', 'Click', 'Trip Planner')">
-            <i class="i i--tools-tripplanner">Trip&nbsp;Planner</i>
-          </a>
+      <ul class="menu">
+        <li class="menu-item tools__item">
+          <a href="/app/plan" target="_self" class="tools__tool  i--tools-tripplanner" aria-label="link Trip Planner">Trip
+            Planner</a>
         </li>
-        <li class="tools__item">
-          <a class="tools__tool" href="/app/nextride" onclick="ga('send', 'event', 'Toolbar', 'Click', 'Next Ride')">
-            <i class="i i--tools-next-ride">Next Ride</i>
-          </a>
+        <li class="menu-item tools__item">
+          <a href="/app/nextride" target="_self" class="tools__tool  i--tools-nextride" aria-label="link Next Ride">Next Ride</a>
         </li>
-        <li class="tools__item">
-          <a class="tools__tool" href="<!--#echo var='appServer' -->elbert/RiderAlerts/index.cfm" onclick="ga('send', 'event', 'Toolbar', 'Click', 'Rider Alerts')">
-            <i class="i i--tools-rideralerts">Rider&nbsp;Alerts</i>
-          </a>
+        <li class="menu-item tools__item">
+          <a href="/app/alerts" target="_self" class="tools__tool  i--tools-rideralerts" aria-label="link Rider Alerts">Rider
+            Alerts</a>
         </li>
-        <li class="tools__item">
-          <form class="tools__tool tools__tool--schedulefinder" autocomplete="off">
-            <i class="i i--tools-schedulefinder">
-              <label for="scheduleFinderTools" class="hide">Schedule Finder, enter a route number</label>
-              <input id="scheduleFinderTools" type="text" value="Schedule Finder" onFocus="this.value = this.value=='Schedule Finder'?'':this.value;ga('send', 'event', 'Toolbar', 'Click', 'Schedule Finder')" onBlur="this.value = this.value==''?'Schedule Finder':this.value;" placeholder="Enter a route" name="routeId" autocomplete="off" />
-              <button type="submit">Go</button>
-            </i>
-          </form>
+        <li class="menu-item tools__item">
+          <a href="/app/schedules" target="_self" class="tools__tool  i--tools-schedulefinder" aria-label="link Schedule Finder">Schedule
+            Finder</a>
         </li>
       </ul>
     </nav>

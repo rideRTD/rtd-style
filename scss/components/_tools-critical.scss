@@ -1,10 +1,14 @@
 .tools {
+  position: relative;
+}
+
+.tools__nav {
   display: none;
   height: auto;
-  position: relative;
   background: $blue;
   text-transform: uppercase;
   letter-spacing: $global-letter-spacing;
+  overflow: hidden;
   @include text-bold;
   @include rem(font-size, 1);
   @include respond-to($break-m) {
@@ -12,6 +16,7 @@
     @include rem(height, 4);
     @include text-regular;
     @include rem(font-size, 0.9);
+    margin-bottom: -10px;
   }
   ul {
     @include container;
@@ -29,7 +34,9 @@
   display: none; // doesn't exist until break-m
   width: 100%;
   background-color: $blue;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
   padding-top: 10px;
   .no-js & {
     display: none;
