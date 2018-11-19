@@ -124,30 +124,12 @@
             _this.$toolsToggle.addClass(
               _this.options.toolsToggleClass + '--is-closed'
             );
-            // _this.$toolsToggle.animate(
-            //   { top: '0rem' },
-            //   { duration: 300, queue: false }
-            // );
-            // setTimeout(function() {
-            //   _this.$toolsToggle.animate(
-            //     { paddingTop: '10px' },
-            //     { duration: 50, queue: false }
-            //   );
-            // }, 250);
           } else {
             _this.$toolsToggleBtn.attr('aria-expanded', 'true');
             _this.$tools.attr('aria-hidden', 'false');
             _this.$toolsToggle.removeClass(
               _this.options.toolsToggleClass + '--is-closed'
             );
-            // _this.$toolsToggle.animate(
-            //   { paddingTop: '0px' },
-            //   { duration: 80, queue: false }
-            // );
-            // _this.$toolsToggle.animate(
-            //   { top: '4rem' },
-            //   { duration: 300, queue: false }
-            // );
             if (typeof ga !== 'undefined') {
               ga('send', 'event', 'Toolbar', 'Open', 'desktop');
             }
@@ -239,7 +221,6 @@
         .off(_this.events);
       _this.$tools.stop(true, true).removeAttr('style');
       _this.$toolsToggleBtn.off(_this.events);
-      // _this.$toolsToggle.css({ paddingTop: '10px', top: '0rem' });
       _this.$navMenu
         .stop(true, true)
         .removeAttr('style')
