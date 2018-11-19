@@ -1,18 +1,13 @@
 @mixin container($padded: none) {
   margin-left: auto;
   margin-right: auto;
-
-  @if $media-queries {
-    @if $padded == 'none' {
-      width: 100%;
-    }
-    @if $padded == 'padded' {
-      width: 90%;
-    }
-    @include rem(max-width, 64em);
-  } @else {
-    @include rem(width, 64em);
+  @if $padded == 'none' {
+    width: 100%;
   }
+  @if $padded == 'padded' {
+    width: 90%;
+  }
+  @include rem(max-width, 64em);
 }
 
 @mixin vertical-align {
