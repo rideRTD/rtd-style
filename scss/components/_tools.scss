@@ -1,5 +1,6 @@
 .tools {
   position: relative;
+  z-index: 1;
 
   @include respond-to($break-m) {
     min-height: 10px;
