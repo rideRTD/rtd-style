@@ -107,7 +107,7 @@
         }
       }
     }
-    li:not(.header__sub-section) > a:before {
+    & > ul > li:not(.header__sub-section) > a:before {
       content: ' ';
       display: block;
       margin: 0 auto 5px;
