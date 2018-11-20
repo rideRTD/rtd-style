@@ -8,7 +8,6 @@
     options: {
       slideDur: 500,
       fadeDur: 300,
-      menuHeight: '224px',
       navID: 'navMain',
       toolsID: 'tools',
       toolsToggleClass: 'tools__toggle',
@@ -169,31 +168,38 @@
       var _this = this;
       nav.addClass('active').attr('aria-expanded', 'true');
       menu
-        .stop(true, true)
-        .slideDown(_this.options.slideDur)
+        .stop()
+        .slideDown({
+          duration: _this.options.slideDur,
+          step: function(now, tween) {
+            _this.$page.height($(tween.elem).outerHeight());
+          }
+        })
         .attr('aria-hidden', 'false');
-      _this.$page
-        .stop(true, true)
-        .animate(
-          { paddingTop: _this.options.menuHeight },
-          _this.options.slideDur
-        );
     },
 
     _switch: function(nav, menu) {
       var _this = this;
       _this.$navMenu
         .filter(':visible')
-        .stop(true, true)
+        .stop()
         .fadeOut(_this.options.fadeDur)
         .attr('aria-hidden', 'true');
       _this.$navBtn.removeClass('active').attr('aria-expanded', 'false');
       nav.addClass('active').attr('aria-expanded', 'true');
       menu
-        .stop(true, true)
-        .fadeIn(_this.options.fadeDur)
+        .stop()
+        .fadeIn({
+          duration: _this.options.fadeDur,
+          start: function() {
+            console.log(menu.outerHeight());
+            _this.$page.stop().animate({
+              height: menu.outerHeight(),
+              duration: _this.options.fadeDur
+            });
+          }
+        })
         .attr('aria-hidden', 'false');
-      _this.$page.stop(true, true).css('padding-top', _this.options.menuHeight);
     },
 
     _close: function(nav, menu) {
@@ -202,14 +208,14 @@
         nav.removeClass('active').attr('aria-expanded', 'false');
       }, _this.options.slideDur);
       menu
-        .stop(true, true)
-        .css('height', _this.options.menuHeight)
-        .slideUp(_this.options.slideDur)
+        .stop()
+        .slideUp({
+          duration: _this.options.slideDur,
+          step: function(now, tween) {
+            _this.$page.height($(tween.elem).outerHeight());
+          }
+        })
         .attr('aria-hidden', 'true');
-      _this.$page
-        .stop(true, true)
-        .css('padding-top', _this.options.menuHeight)
-        .animate({ paddingTop: '0' }, _this.options.slideDur);
     },
 
     _destroy: function() {
@@ -225,7 +231,7 @@
         .stop(true, true)
         .removeAttr('style')
         .attr('aria-hidden', 'true');
-      _this.$page.stop(true, true).removeAttr('style');
+      _this.$page.stop(true, true).height(0);
       _this.$doc.off(_this.offevents);
     }
   };
