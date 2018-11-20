@@ -46,208 +46,571 @@
       </div>
 
       <div class="header__nav-main" id="navMain">
-        <ul class="header__nav-primary">
-          <li>
-            <a class="header__nav-btn js-menu-btn" href="/app/schedules">Schedules</a>
-            <div class="header__nav-menu header__nav-menu--schedules js-menu-level" id="subnav-schedules">
-              <ul>
-                <li><a href="/app/schedules"><i class="i i--nav-schedule"></i>All Schedules</a></li>
-                <li><a href="/app/schedules#bus"><i class="i i--nav-schedule-bus"></i>Bus Schedules</a></li>
-                <li><a href="/app/schedules#lightrail"><i class="i i--nav-schedule-rail"></i>Rail Schedules</a></li>
-                <li><a href="/app/schedules#skyride"><i class="i i--nav-schedule-skyride"></i>SkyRide Schedules</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a class="header__nav-btn js-menu-btn" href="/services" >Services</a>
-            <div class="header__nav-menu header__nav-menu--services js-menu-level" id="subnav-services">
-              <ul>
-                <li class="header__alt-links"><a href="/services">All Services</a></li>
-                <li><a href="/services/bus"><i class="i i--nav-bus"></i>Bus</a></li>
-                <li><a href="/services/rail"><i class="i i--nav-rail"></i>Rail</a></li>
-                <li><a href="/services/airport"><i class="i i--nav-skyride"></i>Airport</a></li>
-                <li><a href="/app/facilities"><i class="i i--nav-parknride"></i>Park-n-Ride</a></li>
-                <li><a href="/services/accessibility"><i class="i i--nav-accessibility"></i>Accessibility</a></li>
-                <li class="header__sub-section">
-                  <a class="header__sub-title js-menu-btn" href="/services">More Services</a>
-                  <ul class="js-menu-level" id="subnav-services-moreservices">
-                    <li><a href="/services/access-a-ride">Access-a-Ride</a></li>
-                    <li><a href="/services/call-n-ride">Call-n-Ride</a></li>
-                    <li><a href="/services/flatiron-flyer">Flatiron Flyer</a></li>
-                    <li><a href="/services/free-mallride">Free MallRide</a></li>
-                    <li><a href="/services/free-metroride">Free MetroRide</a></li>
-                    <li><a href="/services/senior-ride">SeniorRide</a></li>
-                    <li><a href="/services/airport">SkyRide</a></li>
-                  </ul>
+        <ul class="menu header__nav-primary menu-level-0">
+          <li class="menu-item menu-item--expanded header__sub-section">
+            <a href="/app/schedules" target="_self" class="header__nav-btn js-menu-btn js-desktop-menu-btn " aria-label="Main menu link Schedules">Schedules</a>
+            <div class="header__nav-menu js-desktop-menu-level js-menu-level header__nav-menu--schedules" id="subnav-schedules">
+              <ul class="menu menu-level-1">
+                <li class="menu-item">
+
+                  <a href="/app/schedules" target="_self" class="i--nav-schedule" aria-label="Main menu link All Schedules">All
+                    Schedules</a>
                 </li>
-                <li class="header__sub-section">
-                  <a class="header__sub-title js-menu-btn" href="/services/sportsrides">SportsRides</a>
-                  <ul class="js-menu-level"  id="subnav-services-sportsrides">
-                    <li><a href="/services/broncos-ride">BroncosRide</a></li>
-                    <li><a href="/services/buff-ride">BuffRide</a></li>
-                    <li><a href="/services/cu-vs-csu">CU vs CSU</a></li>
-                    <li><a href="/services/race-for-the-cure">Race for the Cure</a></li>
-                    <li><a href="/services/rockies-ride">RockiesRide</a></li>
-                    <li><a href="/services/boulder-boulder">BolderBOULDER</a></li>
-                    <li><a href="/services/ski-n-ride">Ski-n-Ride</a></li>
-                  </ul>
+                <li class="menu-item">
+
+                  <a href="/app/schedules#bus" target="_self" class="i--nav-schedule-bus" aria-label="Main menu link Bus Schedules">Bus
+                    Schedules</a>
+                </li>
+                <li class="menu-item">
+
+                  <a href="/app/schedules#rail" target="_self" class="i--nav-schedule-rail" aria-label="Main menu link Rail Schedules">Rail
+                    Schedules</a>
+                </li>
+                <li class="menu-item">
+
+                  <a href="/app/schedules#skyride" target="_self" class="i--nav-schedule-skyride" aria-label="Main menu link Skyride Schedules">Skyride
+                    Schedules</a>
                 </li>
               </ul>
             </div>
           </li>
-          <li>
-            <a class="header__nav-btn js-menu-btn" href="/info">Rider Info</a>
-            <div class="header__nav-menu header__nav-menu--ridertools js-menu-level" id="subnav-riderinfo">
-              <ul>
-                <li class="header__alt-links"><a href="/info">All Rider Info</a></li>
-                <li><a href="/app/map"><i class="i i--nav-systemmap"></i>System Map</a></li>
-                <li><a href="/info/how-to-ride"><i class="i i--nav-howtoride"></i>How to Ride</a></li>
-                <li><a href="/info/how-to-park"><i class="i i--nav-parking"></i>Parking</a></li>
-                <li><a href="/info/bike"><i class="i i--nav-bikenride"></i>Bike-n-Ride</a></li>
-                <li><a href="/info/apps"><i class="i i--nav-mobile"></i>Mobile Apps</a></li>
-                <li class="header__sub-section">
-                  <a class="header__sub-title js-menu-btn" href="/info">More Rider Info</a>
-                  <ul class="js-menu-level" id="subnav-riderinfo-moreinfo">
-                    <li><a href="/app/alerts">Rider Alerts</a></li>
-                    <li><a href="/info/service-changes">Service Changes</a></li>
-                    <li><a href="/info/new-riders">New Riders</a></li>
-                    <li><a href="/info/lost-and-found">Lost and Found</a></li>
-                    <li><a href="/info/safety-and-security">Safety and Security</a></li>
-                    <li><a href="/info/commuter-rail">Riding Commuter Rail</a></li>
-                    <li><a href="/info/basic/en">Basic Information</a></li>
+          <li class="menu-item menu-item--expanded header__sub-section">
+            <a href="/services" target="_self" rel="" class="header__nav-btn js-menu-btn js-desktop-menu-btn " aria-label="Main menu link Services"
+               data-drupal-link-system-path="node/3761">Services</a>
+            <div class="header__nav-menu js-desktop-menu-level js-menu-level header__nav-menu--services" id="subnav-services">
+              <ul class="menu menu-level-1">
+                <li class="menu-item">
+                  <a href="/services/bus" target="_self" class="i--nav-bus" aria-label="Main menu link Bus"
+                     data-drupal-link-system-path="node/3601">Bus</a>
+                </li>
+                <li class="menu-item menu-item--collapsed">
+                  <a href="/services/rail" target="_self" class="i--nav-rail" aria-label="Main menu link Rail"
+                     data-drupal-link-system-path="node/3386">Rail</a>
+                </li>
+                <li class="menu-item">
+                  <a href="/services/airport" target="_self" class="i--nav-skyride" aria-label="Main menu link Airport"
+                     data-drupal-link-system-path="node/21">Airport</a>
+                </li>
+                <li class="menu-item">
+                  <a href="/services/pnr-map" target="_self" class="i--nav-parknride" aria-label="Main menu link Park-N-Ride"
+                     data-drupal-link-system-path="node/4541">Park-N-Ride</a>
+                </li>
+                <li class="menu-item menu-item--collapsed">
+                  <a href="/services/accessibility" target="_self" class="i--nav-accessibility" aria-label="Main menu link Accessibility"
+                     data-drupal-link-system-path="node/3576">Accessibility</a>
+                </li>
+                <li class="menu-item menu-item--expanded header__sub-section">
+                  <a href="/services" target="_self" rel="" class="header__sub-title js-menu-btn " aria-label="Main menu link More Services"
+                     data-drupal-link-system-path="node/3761">More Services</a>
+                  <ul class="menu menu-level-2">
+                    <li class="menu-item menu-item--collapsed">
+
+                      <a href="/services/access-a-ride" aria-label="Main menu link Access-a-Ride"
+                         data-drupal-link-system-path="node/3916">Access-a-Ride</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/services/call-n-ride" target="_self" rel="" aria-label="Main menu link Call-n-Ride"
+                         data-drupal-link-system-path="node/3596">Call-n-Ride</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/services/flatiron-flyer" target="_self" rel="" aria-label="Main menu link Flatiron Flyer"
+                         data-drupal-link-system-path="node/3321">Flatiron Flyer</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/services/free-mallride" target="" rel="" aria-label="Main menu link Free MallRide"
+                         data-drupal-link-system-path="node/3361">Free MallRide</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/services/free-metroride" target="" rel="" aria-label="Main menu link Free MetroRide"
+                         data-drupal-link-system-path="node/3371">Free MetroRide</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/services/seniorride" target="" rel="" aria-label="Main menu link SeniorRide"
+                         data-drupal-link-system-path="node/3336">SeniorRide</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/services/airport" target="_self" rel="" aria-label="Main menu link SkyRide"
+                         data-drupal-link-system-path="node/21">SkyRide</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item menu-item--expanded header__sub-section">
+                  <a href="/services/sportsrides" target="" rel="" class="header__sub-title js-menu-btn " aria-label="Main menu link Sportsrides"
+                     data-drupal-link-system-path="node/171">Sportsrides</a>
+                  <ul class="menu menu-level-2">
+                    <li class="menu-item">
+
+                      <a href="/services/sportsrides/broncosride" target="" rel="" aria-label="Main menu link BroncosRide"
+                         data-drupal-link-system-path="node/161">BroncosRide</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/services/sportsrides/buffride" target="" rel="" aria-label="Main menu link BuffRide"
+                         data-drupal-link-system-path="node/4271">BuffRide</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/services/sportsrides/cu-vs-csu" target="" rel="" aria-label="Main menu link CU vs CSU"
+                         data-drupal-link-system-path="node/4351">CU vs CSU</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/services/sportsrides/race-the-cure" target="" rel="" aria-label="Main menu link Race for the Cure"
+                         data-drupal-link-system-path="node/4601">Race for the Cure</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/services/sportsrides/rockies-service" target="_self" aria-label="Main menu link Rockies service"
+                         data-drupal-link-system-path="node/4376">Rockies service</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/services/sportsrides/bolderboulder" target="_self" rel="" aria-label="Main menu link BolderBOULDER"
+                         data-drupal-link-system-path="node/4381">BolderBOULDER</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/services/sportsrides/ski-n-ride" target="" rel="" aria-label="Main menu link Ski-n-Ride"
+                         data-drupal-link-system-path="node/4386">Ski-n-Ride</a>
+                    </li>
                   </ul>
                 </li>
               </ul>
             </div>
           </li>
-          <li>
-            <a class="header__nav-btn js-menu-btn" href="/fares">Fares &amp; Passes</a>
-            <div class="header__nav-menu header__nav-menu--fares js-menu-level" id="subnav-fares">
-              <ul>
-                <li class="header__alt-links"><a href="/fares">See All Fares &amp; Passes</a></li>
-                <li><a href="/fares"><i class="i i--nav-fares"></i>Fares</a></li>
-                <li><a href="/fares/discount"><i class="i i--nav-discounts"></i>Discounts</a></li>
-                <li><a href="/fares/myride"><i class="i i--nav-discounts"></i>MyRide</a></li>
-                <li><a href="http://store.rtdpasses.com/"><i class="i i--nav-purchase"></i>Purchase</a></li>
-                <li class="header__sub-section">
-                  <a class="header__sub-title js-menu-btn" href="/fares">Passes &amp; Ticket Books</a>
-                  <ul class="js-menu-level" id="subnav-fares-passes">
-                    <li><a href="/fares/day-pass">Day Pass</a></li>
-                    <li><a href="/fares/monthly-pass">Monthly Pass</a></li>
-                    <li><a href="/fares/ticket-book">Ticket Books</a></li>
-                    <li><a href="/fares/sales-outlets">Sales Outlets</a></li>
-                  </ul>
+          <li class="menu-item menu-item--expanded header__sub-section">
+            <a href="/rider-info" target="" rel="" class="header__nav-btn js-menu-btn js-desktop-menu-btn " aria-label="Main menu link Rider Info"
+               data-drupal-link-system-path="node/3656">Rider Info</a>
+            <div class="header__nav-menu js-desktop-menu-level js-menu-level header__nav-menu--rider info" id="subnav-rider-info">
+              <ul class="menu menu-level-1">
+                <li class="menu-item">
+
+                  <a href="/rider-info/system-map" target="_self" class="i--nav-system-map" aria-label="Main menu link System Map"
+                     data-drupal-link-system-path="node/4536">System Map</a>
                 </li>
-                <li class="header__sub-section">
-                  <a class="header__sub-title js-menu-btn" href="/fares">Pass Programs</a>
-                  <ul class="js-menu-level" id="subnav-fares-grouppasses">
-                    <li><a href="/fares/ecopass">EcoPass</a></li>
-                    <li><a href="/fares/flexpass">FlexPass</a></li>
-                    <li><a href="/fares/collegepass">CollegePass</a></li>
-                    <li><a href="/fares/neighborhood-ecopass">Neighborhood EcoPass</a></li>
+                <li class="menu-item menu-item--collapsed">
+
+                  <a href="/rider-info/how-to-ride" target="_self" class="i--nav-howtoride" aria-label="Main menu link How To Ride"
+                     data-drupal-link-system-path="node/61">How To Ride</a>
+                </li>
+                <li class="menu-item menu-item--collapsed">
+
+                  <a href="/rider-info/how-to-park" target="_self" class="i--nav-parking" aria-label="Main menu link Parking"
+                     data-drupal-link-system-path="node/3481">Parking</a>
+                </li>
+                <li class="menu-item">
+
+                  <a href="/rider-info/bike-n-ride" target="_self" class="i--nav-bikenride" aria-label="Main menu link Bike-N-Ride"
+                     data-drupal-link-system-path="node/3681">Bike-N-Ride</a>
+                </li>
+                <li class="menu-item menu-item--collapsed">
+
+                  <a href="/rider-info/mobile-apps" target="_self" class="i--nav-mobile" aria-label="Main menu link Mobile Apps"
+                     data-drupal-link-system-path="node/4421">Mobile Apps</a>
+                </li>
+                <li class="menu-item menu-item--expanded header__sub-section">
+
+                  <a href="/rider-info" target="_self" rel="" class="header__sub-title js-menu-btn " aria-label="Main menu link More Rider Info"
+                     data-drupal-link-system-path="node/3656">More Rider Info</a>
+                  <ul class="menu menu-level-2">
+                    <li class="menu-item">
+
+                      <a href="/app/alerts" target="_self" aria-label="Main menu link Rider Alerts">Rider Alerts</a>
+                    </li>
+                    <li class="menu-item menu-item--collapsed">
+
+                      <a href="/service-changes" aria-label="Main menu link Service Changes" data-drupal-link-system-path="node/1471">Service
+                        Changes</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/rider-info/new-riders" target="_self" rel="" aria-label="Main menu link New Riders"
+                         data-drupal-link-system-path="node/4426">New Riders</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/rider-info/lost-and-found" target="" rel="" aria-label="Main menu link Lost and Found"
+                         data-drupal-link-system-path="node/3466">Lost and Found</a>
+                    </li>
+                    <li class="menu-item menu-item--collapsed">
+
+                      <a href="/rider-info/safety-and-security" target="" rel="" aria-label="Main menu link Safety and Security"
+                         data-drupal-link-system-path="node/3661">Safety and Security</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/rider-info/more-rider-info/commuter-rail" target="_self" rel="" aria-label="Main menu link Riding Commuter Rail"
+                         data-drupal-link-system-path="node/3921">Riding Commuter Rail</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/" target="" rel="" aria-label="Main menu link Basic Information" data-drupal-link-system-path="<front>"
+                         class="is-active">Basic Information</a>
+                    </li>
                   </ul>
                 </li>
               </ul>
             </div>
           </li>
-          <li>
-            <a class="header__nav-btn js-menu-btn" href="/projects">Projects</a>
-            <div class="header__nav-menu header__nav-menu--projects js-menu-level" id="subnav-projects">
-              <ul>
-                <li><a href="/projects"><i class="i i--nav-projects"></i>All Projects</a></li>
-                <li class="header__sub-section">
-                  <a class="header__sub-title js-menu-btn" href="/projects">Featured Projects</a>
-                  <ul class="js-menu-level" id="subnav-featured-projects">
-                    <li><a href="/projects/civic-center">Civic Center Revitalization</a></li>
-                    <li><a href="/projects/east-colfax">East Colfax Transit Improvements</a></li>
-                    <li><a href="/projects/16th">16th Street Mall Transit-way Analysis</a></li>
-                    <li><a href="/projects/crmf">Commuter Rail Maintenance Facility</a></li>
+          <li class="menu-item menu-item--expanded header__sub-section">
+            <a href="/fares-passes" target="" rel="" class="header__nav-btn js-menu-btn js-desktop-menu-btn " aria-label="Main menu link Fares &amp; Passes"
+               data-drupal-link-system-path="node/3706">Fares &amp; Passes</a>
+            <div class="header__nav-menu js-desktop-menu-level js-menu-level header__nav-menu--fares &amp; passes" id="subnav-fares-&amp;-passes">
+              <ul class="menu menu-level-1">
+                <li class="menu-item menu-item--collapsed">
+
+                  <a href="/fares-passes/fares" target="_self" class="i--nav-fares" aria-label="Main menu link Fares"
+                     data-drupal-link-system-path="node/1481">Fares</a>
+                </li>
+                <li class="menu-item">
+
+                  <a href="/fares-passes/discount-fares" target="_self" class="i--nav-discounts" aria-label="Main menu link Discounts"
+                     data-drupal-link-system-path="node/3881">Discounts</a>
+                </li>
+                <li class="menu-item menu-item--collapsed">
+
+                  <a href="/fares-passes/myride" target="_self" class="i--nav-smartcard" aria-label="Main menu link MyRide"
+                     data-drupal-link-system-path="node/3711">MyRide</a>
+                </li>
+                <li class="menu-item menu-item--collapsed">
+
+                  <a href="/fares-passes/mobile-ticketing" target="_self" class="i--nav-mobileticketing" aria-label="Main menu link Mobile Ticketing"
+                     data-drupal-link-system-path="node/4711">Mobile Ticketing</a>
+                </li>
+                <li class="menu-item menu-item--expanded header__sub-section">
+
+                  <a href="/fares-passes/fares" target="_self" rel="" class="header__sub-title js-menu-btn " aria-label="Main menu link Passes &amp; Ticket Books"
+                     data-drupal-link-system-path="node/1481">Passes &amp; Ticket Books</a>
+                  <ul class="menu menu-level-2">
+                    <li class="menu-item">
+
+                      <a href="/fares-passes/day-pass" aria-label="Main menu link Day Pass" data-drupal-link-system-path="node/3716">Day
+                        Pass</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/fares-passes/monthly-pass" target="" rel="" aria-label="Main menu link Monthly Pass"
+                         data-drupal-link-system-path="node/3886">Monthly Pass</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/" target="" rel="" aria-label="Main menu link Ticket Books" data-drupal-link-system-path="<front>"
+                         class="is-active">Ticket Books</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/" target="" rel="" aria-label="Main menu link Sales Outlets" data-drupal-link-system-path="<front>"
+                         class="is-active">Sales Outlets</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="http://store.rtdpasses.com/" target="_self" rel="" aria-label="Main menu link Purchase Online">Purchase
+                        Online</a>
+                    </li>
                   </ul>
                 </li>
-                <li><a href="/projects/fastracks"><i class="i i--nav-fastracks"></i>Fastracks</a></li>
-                <li class="header__sub-section">
-                  <a class="header__sub-title js-menu-btn" href="/projects/fastracks#future-projects">Future service</a>
-                  <ul class="js-menu-level" id="subnav-future-services">
-                    <li><a href="/projects/g-line"><i class="rtd-service-icon-menu service-g-line">G</i>  Line to Wheat Ridge</a></li>
-                    <li><a href="/projects/n-line"><i class="rtd-service-icon-menu service-n-line">N</i>  Line to Thornton</a></li>
-                    <li><a href="/projects/e-f-line-extension"><i class="rtd-service-icon-menu rtd-service-icon-menu-multi service-e-line">E</i><i class="rtd-service-icon rtd-service-icon-menu rtd-service-icon-menu-multi service-f-line">F</i><i class="rtd-service-icon rtd-service-icon-menu service-r-line">R</i> Southeast Rail Line Ext<span>ension</span></a></li>
-                    <li><a href="/projects/c-d-line-extension"><i class="rtd-service-icon-menu rtd-service-icon-menu-multi service-c-line">C</i><i class="rtd-service-icon rtd-service-icon-menu service-d-line">D</i> Southwest Rail Line Ext<span>ension</span></a></li>
-                    <li><a href="/projects/l-line"><i class="rtd-service-icon-menu service-l-line">L</i> Central Rail Ext<span>ension</span></a></li>
+                <li class="menu-item menu-item--expanded header__sub-section">
+                  <a href="/fares-passes/fares" target="_self" rel="" class="header__sub-title js-menu-btn " aria-label="Main menu link Pass Programs"
+                     data-drupal-link-system-path="node/1481">Pass Programs</a>
+                  <ul class="menu menu-level-2">
+                    <li class="menu-item menu-item--collapsed">
+                      <a href="/fares-passes/ecopass" target="" rel="" aria-label="Main menu link EcoPass"
+                         data-drupal-link-system-path="node/3701">EcoPass</a>
+                    </li>
+                    <li class="menu-item menu-item--collapsed">
+                      <a href="/fares-passes/flexpass" target="" rel="" aria-label="Main menu link FlexPass"
+                         data-drupal-link-system-path="node/3986">FlexPass</a>
+                    </li>
+                    <li class="menu-item menu-item--collapsed">
+                      <a href="/fares-passes/collegepass" target="" rel="" aria-label="Main menu link CollegePass"
+                         data-drupal-link-system-path="node/3691">CollegePass</a>
+                    </li>
+                    <li class="menu-item menu-item--collapsed">
+                      <a href="/fares-passes/neighborhood-ecopass" target="_self" rel="" aria-label="Main menu link Neighborhood EcoPass"
+                         data-drupal-link-system-path="node/3291">Neighborhood EcoPass</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/fares-passes/pass-program-study" target="_self" rel="" aria-label="Main menu link Pass Program Study"
+                         data-drupal-link-system-path="node/4661">Pass Program Study</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu-item menu-item--expanded header__sub-section">
+
+            <a href="/projects" target="_self" rel="" class="header__nav-btn js-menu-btn js-desktop-menu-btn " aria-label="Main menu link Projects"
+               data-drupal-link-system-path="node/156">Projects</a>
+            <div class="header__nav-menu js-desktop-menu-level js-menu-level header__nav-menu--projects" id="subnav-projects">
+              <ul class="menu menu-level-1">
+                <li class="menu-item">
+
+                  <a href="/projects" target="_self" class="i--nav-projects" aria-label="Main menu link All Projects"
+                     data-drupal-link-system-path="node/156">All Projects</a>
+                </li>
+                <li class="menu-item menu-item--expanded header__sub-section">
+
+                  <a href="/projects" target="_self" rel="" class="header__sub-title js-menu-btn " aria-label="Main menu link Featured Projects"
+                     data-drupal-link-system-path="node/156">Featured Projects</a>
+                  <ul class="menu menu-level-2">
+                    <li class="menu-item">
+
+                      <a href="/projects/first-mile-last-mile-strategic-plan" target="_self" rel="" aria-label="Main menu link First and Last Mile Strategic Plan"
+                         data-drupal-link-system-path="node/4651">First and Last Mile Strategic Plan</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/projects/civic-center-station-revitalization" target="_self" rel="" aria-label="Main menu link Civic Center Station Revitalization"
+                         data-drupal-link-system-path="node/3581">Civic Center Station Revitalization</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/projects/east-colfax-transit-enhancements" target="_self" rel="" aria-label="Main menu link East Colfax Transit Enhancements"
+                         data-drupal-link-system-path="node/146">East Colfax Transit Enhancements</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/projects/16th-street-mall-transit-way" target="_self" rel="" aria-label="Main menu link 16th Street Mall Transit-way Analysis"
+                         data-drupal-link-system-path="node/151">16th Street Mall Transit-way Analysis</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/projects/state-highway-119-brt-study" target="_self" rel="" aria-label="Main menu link State Highway 119 BRT Study"
+                         data-drupal-link-system-path="node/4666">State Highway 119 BRT Study</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="/fastracks" target="_self" class="i--nav-fastracks" aria-label="Main menu link FasTracks"
+                     data-drupal-link-system-path="node/4151">FasTracks</a>
+                </li>
+                <li class="menu-item menu-item--expanded header__sub-section">
+
+                  <a href="/fastracks" target="_self" rel="" class="header__sub-title js-menu-btn " aria-label="Main menu link Future Service"
+                     data-drupal-link-system-path="node/4151">Future Service</a>
+                  <ul class="menu menu-level-2">
+                    <li class="menu-item">
+
+                      <a href="/fastracks/g-line" target="_self" class="nav-lettering nav-g-line" aria-label="Main menu link G Line to Wheat Ridge"
+                         data-drupal-link-system-path="node/3791">G Line to Wheat Ridge</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/fastracks/n-line" target="_self" class="nav-lettering nav-n-line" aria-label="Main menu link N Line to Thornton"
+                         data-drupal-link-system-path="node/3786">N Line to Thornton</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/fastracks/e-f-line-extension" target="_self" class="nav-lettering nav-efr-line" aria-label="Main menu link EFR Southeast Rail Line Extension"
+                         data-drupal-link-system-path="node/3771">EFR Southeast Rail Line Extension</a>
+                    </li>
+                    <li class="menu-item">
+
+                      <a href="/fastracks/c-d-line-extension" target="_self" class="nav-lettering nav-cd-line" aria-label="Main menu link CD Southwest Rail Line Extension"
+                         data-drupal-link-system-path="node/3766">CD Southwest Rail Line Extension</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="/fastracks/l-line" target="_self" class="nav-lettering nav-l-line" aria-label="Main menu link L Central Rail Extension"
+                         data-drupal-link-system-path="node/3796">L Central Rail Extension</a>
+                    </li>
                   </ul>
                 </li>
               </ul>
             </div>
           </li>
         </ul>
-
-        <form action="/search" class="header__search" role="search">
-          <label for="header-search" class="hide">Search</label>
-          <input type="text" class="header__search-field" name="q" id="header-search" placeholder="search" />
-          <button type="submit" class="header__search-btn nav-search-button i i--header-search">Submit Search</button>
-        </form>
-
-        <ul class="header__icons">
-          <li><a href="/service/bus" class="header__icons--bus i i--header-bus"><b class="hide">Bus</b></a></li>
-          <li><a href="/service/rail" class="header__icons--lightrail i i--header-rail"><b class="hide">Rail</b></a></li>
-          <li><a href="/service/airport" class="header__icons--skyride i i--header-skyride"><b class="hide">Airport</b></a></li>
-        </ul>
-
-        <ul class="header__nav-secondary">
-          <li>
-            <a class="header__nav-btn js-menu-btn" href="/contact">Customer Care</a>
-            <div class="header__nav-menu js-menu-level" id="subnav-customercare">
-              <ul>
-                <li><a href="tel:3032996000">303.299.6000</a></li>
-                <li><a href="tel:3032996089">(tdd) 303.299.6089</a></li>
-                <li><a href="/app/comments">Customer Comment Form</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-              </ul>
+        <div class="header__search block block-rtd-header-search block-rtd-header-search-block" data-drupal-selector="header-search"
+             id="block-searchblock">
+          <form action="/" method="post" id="header-search" accept-charset="UTF-8">
+            <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-search form-item-search">
+              <label for="edit-search">Search</label>
+              <input placeholder="search" data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value=""
+                     size="60" maxlength="128" class="form-text">
             </div>
+            <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Search" class="button js-form-submit form-submit">
+            <input autocomplete="off" data-drupal-selector="form-6itdl1hpobbiquyidrcaihqm4edacrnha0goym-jhke" type="hidden"
+                   name="form_build_id" value="form-6iTDL1hPObBiqUYiDrcaIHQM4edacrnhA0gOYM-jHKE">
+            <input data-drupal-selector="edit-header-search" type="hidden" name="form_id" value="header__search">
+          </form>
+        </div>
+        <ul class="menu header__icons menu-level-0">
+          <li class="menu-item">
+            <a href="/services/bus" target="_self" class="bus header__icons--bus i--inline-header-bus" aria-label="link Bus"
+               data-drupal-link-system-path="node/3601">Bus</a>
           </li>
-          <li>
-            <a class="header__nav-btn js-menu-btn" href="/connect">Connect</a>
-            <div class="header__nav-menu js-menu-level" id="subnav-connect">
-              <ul>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/news">News</a></li>
-                <li><a href="http://www.facebook.com/ridertd" target="_blank" rel="noopener">Facebook</a></li>
-                <li><a href="http://www.twitter.com/rideRTD" target="_blank" rel="noopener">Twitter</a></li>
-                <li><a href="https://www.youtube.com/user/rideRTDco" target="_blank" rel="noopener">Youtube</a></li>
-                <li><a href="https://public.govdelivery.com/accounts/COTRANRTD/subscriber/new" target="_blank" rel="noopener">Email Updates</a></li>
-              </ul>
-            </div>
+          <li class="menu-item">
+
+            <a href="/services/rail" target="_self" class="rail header__icons--lightrail i--inline-header-rail" aria-label="link Rail"
+               data-drupal-link-system-path="node/3386">Rail</a>
           </li>
-          <li>
-            <a class="header__nav-btn js-menu-btn" href="BizCenter">Business Center</a>
-            <div class="header__nav-menu js-menu-level" id="subnav-business">
-              <ul>
-                <li><a href="/business">Doing Business with RTD</a></li>
-                <li><a href="/business/solicitations">Current Solicitations</a></li>
-                <li><a href="/business/dbe-sbe">DBE/SBE Information</a></li>
-                <li><a href="/business/win">WIN</a></li>
-                <li><a href="/business/advertising">Advertising Opportunities</a></li>
-                <li><a href="/business/corporate-partnerships">Corporate Partnerships</a></li>
-                <li><a href="/data">Open Data</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a class="header__nav-btn js-menu-btn" href="/business">Inside RTD</a>
-            <div class="header__nav-menu js-menu-level" id="subnav-insidertd">
-              <ul>
-                <li><a href="/careers">Careers</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/about/board">Board of Directors</a></li>
-                <li><a href="/about/general-manager">General Manager</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/about/media">Media Center</a></li>
-                <li><a href="/about/sustainability">Sustainability</a></li>
-                <li><a href="/about/reports">Reports and Policies</a></li>
-                <li><a href="/about/operator-of-the-month">Operator of the Month</a></li>
-              </ul>
-            </div>
+          <li class="menu-item">
+
+            <a href="/services/airport" target="_self" class="skyride header__icons--skyride i--inline-header-skyride"
+               aria-label="link Airport" data-drupal-link-system-path="node/21">Airport</a>
           </li>
         </ul>
+        <nav role="navigation" aria-labelledby="block-footer-header-nav-menu" id="block-footer-header-nav" class="block-menu navigation footer-header-nav menu--footer">
+          <h2 class="visually-hidden" id="block-footer-header-nav-menu">Footer</h2>
+          <ul class="header__nav-secondary menu menu-level-0">
+            <li class="menu-item menu-item--expanded">
+              <a href="/contact-us" target="_self" rel="" class="header__nav-btn js-menu-btn " aria-label="link Customer Care"
+                 data-drupal-link-system-path="node/3591">Customer Care</a>
+              <div class="header__nav-menu js-menu-level">
+                <ul class="menu menu-level-1">
+                  <li class="menu-item">
+
+                    <a href="tel:3032996000" target="" rel="" class="rtd-phone-number main" aria-label="link 303.299.6000">303.299.6000</a>
+                  </li>
+                  <li class="menu-item">
+
+                    <a href="tel:+711" target="_self" rel="" class="customer-link" aria-label="link (TTY) Dial: 711">(TTY)
+                      Dial: 711</a>
+                  </li>
+                  <li class="menu-item">
+
+                    <a href="/customer-comments" target="_self" rel="" class="customer-link" aria-label="link Customer Comment Form"
+                       data-drupal-link-system-path="node/3311">Customer Comment Form</a>
+                  </li>
+                  <li class="menu-item">
+
+                    <a href="/contact-us" target="_self" rel="" aria-label="link Contact Us" data-drupal-link-system-path="node/3591">Contact
+                      Us</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item menu-item--expanded">
+              <a href="/" target="" rel="" class="header__nav-btn js-menu-btn  is-active" aria-label="link Connect With Us"
+                 data-drupal-link-system-path="<front>">Connect With Us</a>
+              <div class="header__nav-menu js-menu-level">
+                <ul class="menu menu-level-1">
+                  <li class="menu-item">
+
+                    <a href="/" target="" rel="" aria-label="link Facebook" data-drupal-link-system-path="<front>" class="is-active">Facebook</a>
+                  </li>
+                  <li class="menu-item">
+
+                    <a href="/" target="" rel="" aria-label="link Twitter" data-drupal-link-system-path="<front>" class="is-active">Twitter</a>
+                  </li>
+                  <li class="menu-item">
+
+                    <a href="/" target="" rel="" aria-label="link YouTube" data-drupal-link-system-path="<front>" class="is-active">YouTube</a>
+                  </li>
+                  <li class="menu-item">
+
+                    <a href="/connect-us/news-archive" target="" rel="" aria-label="link News" data-drupal-link-system-path="node/91">News</a>
+                  </li>
+                  <li class="menu-item">
+
+                    <a href="/blog" target="" rel="" aria-label="link Blog" data-drupal-link-system-path="node/4566">Blog</a>
+                  </li>
+                  <li class="menu-item">
+
+                    <a href="/" target="" rel="" aria-label="link Email Updates" data-drupal-link-system-path="<front>" class="is-active">Email
+                      Updates</a>
+                  </li>
+                  <li class="menu-item">
+
+                    <a href="/connect-us/community-involvement" target="_self" aria-label="link Community Involvement"
+                       data-drupal-link-system-path="node/5306">Community Involvement</a>
+                  </li>
+                </ul>
+
+              </div>
+            </li>
+            <li class="menu-item menu-item--expanded">
+              <a href="/business-center" target="_self" class="header__nav-btn js-menu-btn footer__nav--business-center"
+                 aria-label="link Business Center" data-drupal-link-system-path="node/3546">Business Center</a>
+              <div class="header__nav-menu js-menu-level">
+                <ul class="menu menu-level-1">
+                  <li class="menu-item menu-item--collapsed">
+
+                    <a href="/business-center" target="" rel="" aria-label="link Doing Business with RTD"
+                       data-drupal-link-system-path="node/3546">Doing Business with RTD</a>
+                  </li>
+                  <li class="menu-item">
+
+                    <a href="/business-center/current-solicitations" target="" rel="" aria-label="link Current Solicitations"
+                       data-drupal-link-system-path="node/1466">Current Solicitations</a>
+                  </li>
+                  <li class="menu-item menu-item--collapsed">
+
+                    <a href="/business-center/dbesbe" target="_self" rel="" aria-label="link DBE/SBE Information"
+                       data-drupal-link-system-path="node/3556">DBE/SBE Information</a>
+                  </li>
+                  <li class="menu-item">
+
+                    <a href="/business-center/bus-and-rail-advertising" target="" rel="" aria-label="link Advertising Opportunities"
+                       data-drupal-link-system-path="node/3571">Advertising Opportunities</a>
+                  </li>
+                  <li class="menu-item">
+
+                    <a href="/business-center/corporate-partnerships" target="_self" rel="" aria-label="link Corporate Partnerships"
+                       data-drupal-link-system-path="node/3751">Corporate Partnerships</a>
+                  </li>
+                  <li class="menu-item menu-item--collapsed">
+                    <a href="/business-center/construction-engineering" target="_self" aria-label="link Construction Engineering"
+                       data-drupal-link-system-path="node/4961">Construction Engineering</a>
+                  </li>
+                  <li class="menu-item menu-item--collapsed">
+                    <a href="/business-center/open-data" target="" rel="" aria-label="link Open Data"
+                       data-drupal-link-system-path="node/3736">Open Data</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/services/financials-investors" target="_self" rel="" aria-label="link Investor Information"
+                       data-drupal-link-system-path="node/3526">Investor Information</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item menu-item--expanded">
+              <a href="/" target="_self" class="header__nav-btn js-menu-btn footer__nav--inside-rtd is-active" aria-label="link Inside RTD"
+                 data-drupal-link-system-path="<front>">Inside RTD</a>
+              <div class="header__nav-menu js-menu-level">
+                <ul class="menu menu-level-1">
+                  <li class="menu-item menu-item--collapsed">
+                    <a href="/careers" target="" rel="" aria-label="link Careers" data-drupal-link-system-path="node/3391">Careers</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/inside-rtd/who-we-are" target="_self" aria-label="link About Us" data-drupal-link-system-path="node/4676">About
+                      Us</a>
+                  </li>
+                  <li class="menu-item menu-item--collapsed">
+                    <a href="/board-directors" target="" rel="" aria-label="link Board of Directors"
+                       data-drupal-link-system-path="node/81">Board of Directors</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/general-manager" target="_self" rel="" aria-label="link General Manager"
+                       data-drupal-link-system-path="node/3636">General Manager</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/projects" target="_self" rel="" aria-label="link Projects" data-drupal-link-system-path="node/156">Projects</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/media-center" target="" rel="" aria-label="link Media Center" data-drupal-link-system-path="node/4096">Media
+                      Center</a>
+                  </li>
+                  <li class="menu-item menu-item--collapsed">
+                    <a href="/sustainability" target="" rel="" aria-label="link Sustainability" data-drupal-link-system-path="node/3351">Sustainability</a>
+                  </li>
+                  <li class="menu-item menu-item--collapsed">
+                    <a href="/reports-and-policies" target="" rel="" aria-label="link Reports and Policies"
+                       data-drupal-link-system-path="node/3366">Reports and Policies</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/operator-of-the-month" target="" rel="" aria-label="link Operator of the Month"
+                       data-drupal-link-system-path="node/86">Operator of the Month</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
       </div>
     </nav>
   </header>
@@ -281,6 +644,9 @@
       </ul>
     </nav>
   </div>
+
+  <!-- Image for demonstration purposes only -->
+  <img src="union-station-night.jpg" style="width: 100%;" />
 
 </body>
 
