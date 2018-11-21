@@ -76,21 +76,18 @@
   .header__nav-menu {
     display: none;
     position: absolute;
-    @include rem(height, 14);
     @include rem(top, 6);
     left: 0;
     width: 100%;
+    padding: 1.75rem 0;
+
     & > ul {
       display: flex;
-      position: relative;
-      @include rem(height, 14);
+      align-items: center;
     }
     & > ul > li {
       flex: 1;
-      position: relative;
-      top: 25px;
       border-right: none;
-      float: left;
       & > a {
         display: block;
         width: 100%;
@@ -110,7 +107,7 @@
         }
       }
     }
-    li:not(.header__sub-section) > a:before {
+    & > ul > li:not(.header__sub-section) > a:before {
       content: ' ';
       display: block;
       margin: 0 auto 5px;
@@ -135,11 +132,8 @@
       height: 1.6em;
     }
     .header__sub-section {
-      float: left;
-      position: relative;
       padding: 0;
-      top: 10px;
-      margin: 20px 0 0 5px;
+      margin-left: 0.3rem;
       text-align: left;
       @include rem(min-height, 7);
       li {

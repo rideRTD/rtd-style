@@ -1,26 +1,13 @@
 $media-query-free-breakpoint: $tweak-m-1;
 
 @mixin respond-to($min-width, $max-width: false) {
-  @if $media-queries {
-    @media all and (min-width: $min-width) {
-      @if $max-width {
-        @media (max-width: $max-width) {
-          @content;
-        }
-      } @else {
+  @media all and (min-width: $min-width) {
+    @if $max-width {
+      @media (max-width: $max-width) {
         @content;
       }
+    } @else {
+      @content;
     }
-  } @else if
-    $min-width <=
-    $media-query-free-breakpoint and
-    (
-      ($max-width == false) or
-        $max-width and
-        $max-width >=
-        $media-query-free-breakpoint
-    )
-  {
-    @content;
   }
 }

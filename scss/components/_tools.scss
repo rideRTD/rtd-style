@@ -1,16 +1,24 @@
-.tools,
+.tools {
+  position: relative;
+  z-index: 1;
+
+  @include respond-to($break-m) {
+    min-height: 10px;
+    background: $blue;
+  }
+}
+
+.tools__nav,
 .menu--rtd-tools {
   display: none;
-  height: auto;
-  position: relative;
   background: $blue;
   text-transform: uppercase;
   letter-spacing: $global-letter-spacing;
+  overflow: hidden;
   @include text-bold;
   @include rem(font-size, 1);
   @include respond-to($break-m) {
     width: 100%;
-    @include rem(height, 4);
     @include text-regular;
     @include rem(font-size, 0.9);
   }
@@ -198,9 +206,9 @@
 .tools__toggle {
   display: none; // doesn't exist until break-m
   width: 100%;
-  background-color: $blue;
-  position: relative;
-  padding-top: 10px;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
   .no-js & {
     display: none;
   }

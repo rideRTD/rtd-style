@@ -21,7 +21,7 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       title: 'RTD Shared Styles Demonstration Template',
-      template: path.resolve(__dirname, 'html/index.html')
+      template: path.resolve(__dirname, 'demo/index.html')
     })
   ],
   module: {
@@ -35,6 +35,9 @@ const config = {
         use: ['svg-url-loader', 'img-loader']
       }
     ]
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'demo/assets')
   }
 };
 

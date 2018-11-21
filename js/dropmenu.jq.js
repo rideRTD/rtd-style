@@ -8,7 +8,6 @@
     options: {
       slideDur: 500,
       fadeDur: 300,
-      menuHeight: '224px',
       navID: 'navMain',
       toolsID: 'tools',
       toolsToggleClass: 'tools__toggle',
@@ -124,29 +123,11 @@
             _this.$toolsToggle.addClass(
               _this.options.toolsToggleClass + '--is-closed'
             );
-            _this.$toolsToggle.animate(
-              { top: '0rem' },
-              { duration: 300, queue: false }
-            );
-            setTimeout(function() {
-              _this.$toolsToggle.animate(
-                { paddingTop: '10px' },
-                { duration: 50, queue: false }
-              );
-            }, 250);
           } else {
             _this.$toolsToggleBtn.attr('aria-expanded', 'true');
             _this.$tools.attr('aria-hidden', 'false');
             _this.$toolsToggle.removeClass(
               _this.options.toolsToggleClass + '--is-closed'
-            );
-            _this.$toolsToggle.animate(
-              { paddingTop: '0px' },
-              { duration: 80, queue: false }
-            );
-            _this.$toolsToggle.animate(
-              { top: '4rem' },
-              { duration: 300, queue: false }
             );
             if (typeof ga !== 'undefined') {
               ga('send', 'event', 'Toolbar', 'Open', 'desktop');
@@ -187,31 +168,38 @@
       var _this = this;
       nav.addClass('active').attr('aria-expanded', 'true');
       menu
-        .stop(true, true)
-        .slideDown(_this.options.slideDur)
+        .stop()
+        .slideDown({
+          duration: _this.options.slideDur,
+          step: function(now, tween) {
+            _this.$page.height($(tween.elem).outerHeight());
+          }
+        })
         .attr('aria-hidden', 'false');
-      _this.$page
-        .stop(true, true)
-        .animate(
-          { paddingTop: _this.options.menuHeight },
-          _this.options.slideDur
-        );
     },
 
     _switch: function(nav, menu) {
       var _this = this;
       _this.$navMenu
         .filter(':visible')
-        .stop(true, true)
+        .stop()
         .fadeOut(_this.options.fadeDur)
         .attr('aria-hidden', 'true');
       _this.$navBtn.removeClass('active').attr('aria-expanded', 'false');
       nav.addClass('active').attr('aria-expanded', 'true');
       menu
-        .stop(true, true)
-        .fadeIn(_this.options.fadeDur)
+        .stop()
+        .fadeIn({
+          duration: _this.options.fadeDur,
+          start: function() {
+            console.log(menu.outerHeight());
+            _this.$page.stop().animate({
+              height: menu.outerHeight(),
+              duration: _this.options.fadeDur
+            });
+          }
+        })
         .attr('aria-hidden', 'false');
-      _this.$page.stop(true, true).css('padding-top', _this.options.menuHeight);
     },
 
     _close: function(nav, menu) {
@@ -220,14 +208,14 @@
         nav.removeClass('active').attr('aria-expanded', 'false');
       }, _this.options.slideDur);
       menu
-        .stop(true, true)
-        .css('height', _this.options.menuHeight)
-        .slideUp(_this.options.slideDur)
+        .stop()
+        .slideUp({
+          duration: _this.options.slideDur,
+          step: function(now, tween) {
+            _this.$page.height($(tween.elem).outerHeight());
+          }
+        })
         .attr('aria-hidden', 'true');
-      _this.$page
-        .stop(true, true)
-        .css('padding-top', _this.options.menuHeight)
-        .animate({ paddingTop: '0' }, _this.options.slideDur);
     },
 
     _destroy: function() {
@@ -239,12 +227,11 @@
         .off(_this.events);
       _this.$tools.stop(true, true).removeAttr('style');
       _this.$toolsToggleBtn.off(_this.events);
-      _this.$toolsToggle.css({ paddingTop: '10px', top: '0rem' });
       _this.$navMenu
         .stop(true, true)
         .removeAttr('style')
         .attr('aria-hidden', 'true');
-      _this.$page.stop(true, true).removeAttr('style');
+      _this.$page.stop(true, true).height(0);
       _this.$doc.off(_this.offevents);
     }
   };
