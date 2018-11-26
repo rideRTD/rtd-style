@@ -8,7 +8,8 @@ const config = {
   entry: {
     app: path.resolve(__dirname, 'js/app.js'),
     main: path.resolve(__dirname, 'scss/style.scss'),
-    critical: path.resolve(__dirname, 'scss/critical.scss')
+    critical: path.resolve(__dirname, 'scss/critical.scss'),
+    icons: path.resolve(__dirname, 'scss/icons.scss')
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

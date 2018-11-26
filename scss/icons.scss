@@ -1,0 +1,15 @@
+$icons: footer-accessibility footer-logo header-bus header-rail header-search
+  header-skyride nav-accessibility nav-bikenride nav-bus nav-discounts nav-fares
+  nav-fastracks nav-howtoride nav-mobile nav-mobileticketing nav-parking
+  nav-parknride nav-projects nav-purchase nav-rail nav-rideralerts nav-schedule
+  nav-schedule-bus nav-schedule-rail nav-schedule-skyride nav-skyride
+  nav-smartcard nav-system-map social-facebook social-twitter social-youtube
+  tools-locatestop tools-nextride tools-rideralerts tools-schedulefinder
+  tools-toolsmenu tools-transit-tracker tools-tripplanner;
+
+@each $icon in $icons {
+  .i--#{$icon}::before,
+  .i--inline-#{$icon} {
+    background-image: url('../images/svg/#{$icon}.svg');
+  }
+}
