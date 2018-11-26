@@ -29,7 +29,12 @@ const config = {
     rules: [
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'resolve-url-loader',
+          'sass-loader?sourceMap'
+        ]
       },
       {
         test: /\.svg$/,
