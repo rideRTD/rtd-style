@@ -48,6 +48,10 @@ const config = {
       }
     ]
   },
+  externals: {
+    jquery: 'jQuery',
+    'enquire.js': 'enquire'
+  },
   devServer: {
     contentBase: path.join(__dirname, 'demo/assets')
   }

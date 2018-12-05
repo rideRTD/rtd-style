@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 (function(window) {
   function DrawerMenu() {
     this._init();

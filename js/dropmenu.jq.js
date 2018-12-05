@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 (function(window) {
   function DropMenu() {
     // Initialize a new DropMenu

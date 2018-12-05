@@ -1,9 +1,11 @@
+import $ from 'jquery';
+
 // This plugin requires jQuery
 // The plugin provides an accessible expand collapse functionality
 // The script depends on a button.js-expander located next to el.js-expandable (immediate siblings)
 // When the button.js-expander is clicked, all sibling el.js-expandable either expand or collapse
 
-(function($) {
+$(function() {
   $.fn.rtdExpandable = function() {
     //store the this.$expanders and this.$expandables in the element
 
@@ -78,4 +80,4 @@
   $(document).ready(function() {
     $('main').rtdExpandable();
   });
-})(jQuery);
+});

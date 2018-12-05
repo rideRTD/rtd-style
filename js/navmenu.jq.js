@@ -1,3 +1,4 @@
+import enquire from 'enquire.js';
 /* global enquire, rtd */
 (function(fn) {
   if (document.readyState != 'loading') {

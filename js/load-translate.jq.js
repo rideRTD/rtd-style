@@ -3,6 +3,7 @@
  * Load the google translate widget
  * When a user clicks on el#load-translate
  */
+import $ from 'jquery';
 
 $(document).ready(function() {
   function loadTranslate() {
