@@ -35,7 +35,9 @@
     input {
       height: 40px;
       margin: 0;
+      width: 100%;
     }
+
     @include rem(padding-left, 1);
     @include respond-to($break-m) {
       width: 100%;
