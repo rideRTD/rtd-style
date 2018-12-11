@@ -398,6 +398,9 @@ ul.spacertop {
 .clearfix {
   @include clearfix;
 }
+a.link-bold {
+  @include text-bold;
+}
 .universal-text {
   @include text-default;
   * {
