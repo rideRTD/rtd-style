@@ -83,6 +83,7 @@
       background-repeat: no-repeat;
       opacity: 1;
       color: transparent;
+      cursor: pointer;
       @include transition();
       &:hover,
       &:focus {
