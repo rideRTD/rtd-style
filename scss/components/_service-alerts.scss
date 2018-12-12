@@ -1,0 +1,140 @@
+////
+/// Service Alert
+////
+
+.callout {
+  .callout__inner {
+    @include clearfix;
+  }
+
+  .callout__content {
+    @include clearfix;
+  }
+
+  &.callout--expandable .js-expander {
+    padding: 0.75rem 0;
+  }
+
+  .callout__item {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .field--name-name {
+    @include text-bold;
+  }
+  .field--name-field-body {
+    p {
+      font-size: 0.88rem;
+    }
+  }
+
+  .callout__heading button {
+    @include text-bold;
+  }
+
+  .field--name-field-link a {
+    font-size: 0.88rem;
+    font-weight: bold;
+  }
+
+  &.single {
+    .callout__item {
+      text-align: center;
+    }
+
+    &.callout--standard {
+      .callout__heading {
+        display: none;
+      }
+      .callout__inner--list {
+        padding-top: 0.75em;
+      }
+    }
+
+    &:not(.callout--standard) {
+      .field--name-field-link {
+        a {
+          display: block;
+          margin-top: 0.5em;
+          font-weight: bold;
+          font-style: normal;
+          font-size: 1rem;
+          color: #016f98;
+          color: $white;
+        }
+      }
+
+      .field--name-name {
+        display: none;
+        margin: 0;
+      }
+    }
+  }
+
+  &.multiple {
+    .callout__heading {
+      display: block;
+      text-align: center;
+    }
+    .field--name-field-link a {
+      text-decoration: underline;
+    }
+  }
+
+  &.callout--standard {
+    .callout__content {
+      display: inline-block;
+    }
+    .field--name-name,
+    .field--name-field-body,
+    .field--name-field-link {
+      display: inline-block;
+      margin: 0;
+    }
+
+    .field--name-field-body p {
+      color: $gray-darkest;
+      font-size: 0.75rem;
+      margin-left: 1em;
+    }
+
+    .field--name-field-link {
+      a {
+        font-size: 0.75rem;
+        margin-top: 0;
+        text-decoration: underline;
+        margin-left: 1em;
+      }
+    }
+  }
+
+  &.callout--emergency {
+    .callout__heading button {
+      &:before {
+        content: ' ';
+        width: 1.88rem;
+        height: 1.88rem;
+        display: inline-block;
+        margin-right: 5px;
+        background-position: center;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+        margin-top: -5px;
+        background-size: 25px;
+      }
+    }
+
+    .callout__close {
+      color: $white;
+      opacity: 1;
+    }
+
+    .field--name-field-link a {
+      color: $white;
+    }
+  }
+}

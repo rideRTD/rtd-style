@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
   entry: {
-    app: path.resolve(__dirname, 'js/app.js'),
+    // app: path.resolve(__dirname, 'js/app.js'),
     main: path.resolve(__dirname, 'scss/style.scss'),
     critical: path.resolve(__dirname, 'scss/critical.scss'),
     icons: path.resolve(__dirname, 'scss/icons.scss')
@@ -48,10 +48,10 @@ const config = {
       }
     ]
   },
-  externals: {
-    jquery: 'jQuery',
-    'enquire.js': 'enquire'
-  },
+  // externals: {
+  //   jquery: 'jQuery',
+  //   'enquire.js': 'enquire'
+  // },
   devServer: {
     contentBase: path.join(__dirname, 'demo/assets')
   }
