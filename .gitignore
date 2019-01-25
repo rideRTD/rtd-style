@@ -4,3 +4,4 @@ node_modules
 .idea/
 .vscode
 dist/index.html
+.DS_Store
