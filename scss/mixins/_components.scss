@@ -4,7 +4,7 @@
   border-color: darken($background, 15%);
   color: $text-color;
   .alert__heading {
-    color: inherit;
+    color: $text-color;
   }
   .alert__link {
     color: $text-color;
@@ -27,6 +27,11 @@
           border-color: darken($background, 15%);
         }
       }
+    }
+  }
+  ul {
+    label {
+      color: $text-color;
     }
   }
 }
