@@ -1,14 +1,26 @@
 $icons: footer-accessibility footer-logo header-bus header-rail header-search
-  header-skyride nav-accessibility nav-bikenride nav-bus nav-discounts nav-fares
-  nav-fastracks nav-howtoride nav-mobile nav-mobileticketing nav-parking
-  nav-parknride nav-projects nav-purchase nav-rail nav-rideralerts nav-schedule
-  nav-schedule-bus nav-schedule-rail nav-schedule-skyride nav-skyride
-  nav-smartcard nav-system-map social-facebook social-twitter social-youtube
-  tools-locatestop tools-nextride tools-rideralerts tools-schedulefinder
-  tools-toolsmenu tools-transit-tracker tools-tripplanner schedule-x
-  schedule-download schedule-end schedule-eye-closed schedule-eye
-  schedule-highlight schedule-info schedule-map schedule-next-ride
-  schedule-print schedule-question schedule-reset schedule-start schedule-check;
+  header-skyride home-tools-locatestop home-tools-next-ride
+  home-tools-rideralerts home-tools-schedulefinder home-tools-tripplanner
+  nav-accessibility nav-bikenride nav-bus nav-discounts nav-fares nav-fastracks
+  nav-howtoride nav-mobile nav-mobileticketing nav-parking nav-parknride
+  nav-projects nav-purchase nav-rail nav-rideralerts nav-schedule-bus
+  nav-schedule-rail nav-schedule-skyride nav-schedule nav-skyride nav-smartcard
+  nav-system-map schedule-check schedule-download schedule-end
+  schedule-eye-closed schedule-eye schedule-highlight schedule-info schedule-map
+  schedule-next-ride schedule-print schedule-question schedule-reset
+  schedule-settings schedule-start schedule-x service-3hour service-bus-alt-sm
+  service-bus-alt service-bus-sm service-bus service-daypass
+  service-lightrail-sm service-lightrail service-mallride-sm service-mallride
+  service-metroride-sm service-metroride service-mobile service-pass
+  service-rail-alt-sm service-rail-alt service-rail-sm service-rail
+  service-skyride-sm service-skyride service-sports service-stations-sm
+  service-stations service-tickets service-train-sm service-train side-alert
+  side-android side-apple side-avatar side-calendar side-check side-computer
+  side-doc side-download side-file-download side-info side-link side-mail
+  side-mailbox side-map side-mobile side-news side-pdf side-phone side-print
+  side-question side-send side-settings social-facebook social-twitter
+  social-youtube tools-locatestop tools-nextride tools-rideralerts
+  tools-schedulefinder tools-toolsmenu tools-transit-tracker tools-tripplanner;
 
 @each $icon in $icons {
   .i--#{$icon}::before,
