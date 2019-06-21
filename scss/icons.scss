@@ -1,28 +1,36 @@
 $icons: footer-accessibility footer-logo header-bus header-rail header-search
   header-skyride home-tools-locatestop home-tools-next-ride
   home-tools-facilities home-tools-rideralerts home-tools-schedulefinder
-  home-tools-tripplanner legend-pnr-blue legend-pnr-full-blue legend-pnr-red
-  legend-pnr-full-red nav-accessibility nav-bikenride nav-bus nav-discounts
-  nav-fares nav-fastracks nav-howtoride nav-mobile nav-mobileticketing
-  nav-parking nav-parknride nav-projects nav-purchase nav-rail nav-rideralerts
-  nav-schedule-bus nav-schedule-rail nav-schedule-skyride nav-schedule
-  nav-skyride nav-smartcard nav-system-map schedule-check schedule-download
-  schedule-end schedule-eye-closed schedule-eye schedule-highlight schedule-info
-  schedule-map schedule-next-ride schedule-print schedule-question
-  schedule-reset schedule-settings schedule-start schedule-x service-3hour
-  service-bus-alt-sm service-bus-alt service-bus-sm service-bus service-daypass
-  service-lightrail-sm service-lightrail service-mallride-sm service-mallride
-  service-metroride-sm service-metroride service-mobile service-pass
-  service-rail-alt-sm service-rail-alt service-rail-sm service-rail
-  service-skyride-sm service-skyride service-sports service-stations-sm
-  service-stations service-tickets service-train-sm service-train side-alert
-  side-android side-apple side-avatar side-calendar side-check side-computer
-  side-doc side-download side-file-download side-info side-link side-mail
-  side-mailbox side-map side-mobile side-news side-pdf side-phone side-print
-  side-question side-send side-settings social-facebook social-twitter
-  social-youtube tools-facilities tools-locatestop tools-nextride
-  tools-rideralerts tools-schedulefinder tools-toolsmenu tools-transit-tracker
-  tools-tripplanner;
+  home-tools-tripplanner legend-aline legend-bline legend-boulder
+  legend-bus-station legend-bus-stop-blue legend-bus-stop-red legend-callnride
+  legend-cline legend-dline legend-eline legend-express legend-flatiron-alt
+  legend-flatiron legend-flex-stop legend-flex legend-fline legend-gline
+  legend-hline legend-landmark legend-limited legend-lline legend-local
+  legend-lr-station-blue legend-lr-station-red legend-mall legend-metro
+  legend-nline legend-no-rushour legend-non-rtd legend-pnr-blue
+  legend-pnr-full-blue legend-pnr-full-red legend-pnr-red legend-regional
+  legend-rline legend-rtd-boundry legend-skyride legend-station-blue
+  legend-station-red legend-transfer legend-wline nav-accessibility
+  nav-bikenride nav-bus nav-discounts nav-fares nav-fastracks nav-howtoride
+  nav-mobile nav-mobileticketing nav-parking nav-parknride nav-projects
+  nav-purchase nav-rail nav-rideralerts nav-schedule-bus nav-schedule-rail
+  nav-schedule-skyride nav-schedule nav-skyride nav-smartcard nav-system-map
+  schedule-check schedule-download schedule-end schedule-eye-closed schedule-eye
+  schedule-highlight schedule-info schedule-map schedule-next-ride
+  schedule-print schedule-question schedule-reset schedule-settings
+  schedule-start schedule-x service-3hour service-bus-alt-sm service-bus-alt
+  service-bus-sm service-bus service-daypass service-lightrail-sm
+  service-lightrail service-mallride-sm service-mallride service-metroride-sm
+  service-metroride service-mobile service-pass service-rail-alt-sm
+  service-rail-alt service-rail-sm service-rail service-skyride-sm
+  service-skyride service-sports service-stations-sm service-stations
+  service-tickets service-train-sm service-train side-alert side-android
+  side-apple side-avatar side-calendar side-check side-computer side-doc
+  side-download side-file-download side-info side-link side-mail side-mailbox
+  side-map side-mobile side-news side-pdf side-phone side-print side-question
+  side-send side-settings social-facebook social-twitter social-youtube
+  tools-facilities tools-locatestop tools-nextride tools-rideralerts
+  tools-schedulefinder tools-toolsmenu tools-transit-tracker tools-tripplanner;
 
 @each $icon in $icons {
   .i--#{$icon}::before,
