@@ -91,7 +91,7 @@
     &.customer-link {
       color: $white;
     }
-    &.rtd-phone-number.main {
+    &.rtd-phone-number {
       @include text-bold;
       @include rem(font-size, 1.375);
       @include rem(line-height, 2);
