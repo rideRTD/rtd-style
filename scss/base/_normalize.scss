@@ -139,7 +139,7 @@ pre {
 
 // Set consistent quote types.
 q {
-  quotes: '\201C' '\201D' '\2018' '\2019';
+  quotes: "'\201C' '\201D' '\2018' '\2019'";
 }
 
 //Address inconsistent and variable font size in all browsers.
@@ -229,7 +229,7 @@ select {
 //  3. Improve usability and consistency of cursor style between image-type `input` and others.
 
 button,
-html input[type="button"], // 1 
+html input[type="button"], // 1
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button; // 2
