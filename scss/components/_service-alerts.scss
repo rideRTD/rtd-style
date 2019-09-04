@@ -23,11 +23,10 @@
     }
   }
 
-  .field--name-title {
+  .field--name-name {
     @include text-bold;
   }
-
-  .field--name-body {
+  .field--name-field-body {
     p {
       font-size: 0.88rem;
     }
@@ -50,18 +49,9 @@
     &.callout--standard {
       .callout__heading {
         display: none;
-
-        button {
-          cursor: default;
-        }
-
-        button:hover {
-          text-decoration: none;
-        }
       }
-
       .callout__inner--list {
-        padding-top: 0.75rem;
+        padding-top: 0.75em;
       }
     }
 
@@ -69,11 +59,16 @@
       .field--name-field-link {
         a {
           display: block;
+          margin-top: 0.5em;
+          font-weight: bold;
+          font-style: normal;
+          font-size: 1rem;
+          color: $blue-darker;
           color: $white;
         }
       }
 
-      .field--name-title {
+      .field--name-name {
         display: none;
         margin: 0;
       }
@@ -85,7 +80,6 @@
       display: block;
       text-align: center;
     }
-
     .field--name-field-link a {
       text-decoration: underline;
     }
@@ -93,17 +87,27 @@
 
   &.callout--standard {
     .callout__content {
-      display: block;
+      display: inline-block;
+    }
+    .field--name-name,
+    .field--name-field-body,
+    .field--name-field-link {
+      display: inline-block;
+      margin: 0;
     }
 
-    .field--name-body p {
-      color: $gray-black;
+    .field--name-field-body p {
+      color: $gray-darkest;
+      font-size: 0.75rem;
+      margin-left: 1em;
     }
 
     .field--name-field-link {
       a {
+        font-size: 0.75rem;
         margin-top: 0;
         text-decoration: underline;
+        margin-left: 1em;
       }
     }
   }
