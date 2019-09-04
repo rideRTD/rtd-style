@@ -40,7 +40,7 @@
   border-bottom: 1px solid $blue-darker;
   @include respond-to($break-m) {
     width: 20%;
-    @include rem(min-width, 12);
+    @include rem(min-width, 9);
     float: left;
     border-bottom: 0;
   }
@@ -65,7 +65,7 @@
     height: 30px;
     width: 30px;
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 7px;
     background-position: center;
     background-repeat: no-repeat;
     vertical-align: middle;

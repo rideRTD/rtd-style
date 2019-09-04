@@ -203,7 +203,6 @@
 
 .footer__sitelinks,
 .menu--footer-site-links {
-  text-transform: lowercase;
   padding-top: 1em;
   @include respond-to($break-m) {
     padding-top: 0;
