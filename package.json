@@ -1,6 +1,6 @@
 {
   "name": "rtd-style",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "shared style assets for RTD",
   "main": "index.js",
   "scripts": {
