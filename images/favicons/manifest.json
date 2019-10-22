@@ -1,10 +1,10 @@
 {
   "name": "rtd-denver.com",
   "short_name": "RTD",
-  "background_color": "#f43e3e",
-  "theme_color": "#007fae",
+  "background_color": "#e31837",
+  "theme_color": "#077cc0",
   "display": "minimal-ui",
-  "start_url": "./?utm_source=homescreen",
+  "start_url": "https://www.rtd-denver.com/",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
