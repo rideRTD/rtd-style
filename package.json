@@ -1,6 +1,6 @@
 {
   "name": "rtd-style",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "shared style assets for RTD",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,7 @@
   "devDependencies": {
     "css-loader": "4.2.1",
     "html-webpack-plugin": "4.3.0",
-    "husky": "3.0.7",
+    "husky": "4.2.5",
     "img-loader": "3.0.1",
     "mini-css-extract-plugin": "0.10.0",
     "node-sass": "4.12.0",
@@ -37,12 +37,12 @@
     "resolve-url-loader": "3.1.1",
     "sass-loader": "7.3.1",
     "style-loader": "1.2.1",
-    "stylelint": "10.1.0",
-    "stylelint-config-prettier": "5.3.0",
+    "stylelint": "13.6.1",
+    "stylelint-config-prettier": "8.0.2",
     "stylelint-config-recommended-scss": "4.2.0",
     "stylelint-prettier": "1.1.2",
-    "stylelint-scss": "3.10.0",
-    "svg-url-loader": "3.0.0",
+    "stylelint-scss": "3.18.0",
+    "svg-url-loader": "6.0.0",
     "tar": ">=4.4.10",
     "webpack": "4.44.1",
     "webpack-cli": "3.3.12",
