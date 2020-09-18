@@ -52,7 +52,7 @@ $disabled-light: $gray-lighter;
 
 $alerts: (
   // background-color, border-color, color
-    success: ($success-light, #c1e2b3, $success-dark),
+  success: ($success-light, #c1e2b3, $success-dark),
   info: ($info-light, #9edaff, $info-dark),
   warning: ($warning-light, #f6c2b1, $warning-dark),
   error: ($error-light, #ffa8b7, $error-dark),
