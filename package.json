@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/rideRTD/rtd-style#readme",
   "devDependencies": {
-    "css-loader": "4.2.1",
-    "html-webpack-plugin": "4.4.1",
+    "css-loader": "4.3.0",
+    "html-webpack-plugin": "4.5.0",
     "husky": "4.3.0",
     "img-loader": "3.0.1",
     "mini-css-extract-plugin": "0.11.1",
