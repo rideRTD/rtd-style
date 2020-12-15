@@ -1,7 +1,7 @@
 .callout {
   position: relative;
   background-color: $gray-medium;
-  color: $blue-darker;
+  color: $blue-darkest;
   &--compact {
     .callout__text {
       position: relative;
@@ -115,7 +115,7 @@ h2.callout__heading {
   }
   a {
     @include text-bold;
-    color: $blue-darker;
+    color: $blue-darkest;
     text-decoration: underline;
   }
 }
@@ -134,7 +134,7 @@ h2.callout__heading {
 .callout__link {
   display: inline;
   background-color: inherit;
-  color: $blue-darker;
+  color: $blue-darkest;
   text-decoration: underline;
   font-size: 0.75em;
   @include respond-to($break-s) {
@@ -152,7 +152,7 @@ h2.callout__heading {
   white-space: nowrap;
   padding: 0.375em 1em;
   border-radius: $global-radius;
-  border: $global-border-thin solid $blue-darker;
+  border: $global-border-thin solid $blue-darkest;
   @include text-bold;
   text-decoration: none;
   &:hover,
