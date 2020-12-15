@@ -115,7 +115,7 @@ h2.callout__heading {
   }
   a {
     @include text-bold;
-    color: $blue-darkest !important;
+    color: $blue-darkest;
     text-decoration: underline;
   }
 }
@@ -134,7 +134,7 @@ h2.callout__heading {
 .callout__link {
   display: inline;
   background-color: inherit;
-  color: $blue-darkest !important;
+  color: $blue-darkest;
   text-decoration: underline;
   font-size: 0.75em;
   @include respond-to($break-s) {
@@ -152,7 +152,7 @@ h2.callout__heading {
   white-space: nowrap;
   padding: 0.375em 1em;
   border-radius: $global-radius;
-  border: $global-border-thin solid $blue-darkest !important;
+  border: $global-border-thin solid $blue-darkest;
   @include text-bold;
   text-decoration: none;
   &:hover,
@@ -185,4 +185,8 @@ h2.callout__heading {
   font-weight: 700;
   opacity: 0.6;
   -webkit-appearance: none;
+}
+
+.callout.callout--standard .field--name-field-link a {
+  color: $blue-darkest;
 }
