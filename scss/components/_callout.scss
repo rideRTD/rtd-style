@@ -20,6 +20,11 @@
       }
     }
   }
+
+  &.callout--emergency {
+    background-color: $red-dark;
+    color: $white;
+  }
 }
 .callout__inner {
   @include container(padded);
@@ -51,10 +56,7 @@
     margin-top: 0.5em;
   }
 }
-.callout--emergency {
-  background-color: $red-dark;
-  color: $white;
-}
+
 .callout__heading span {
   @include text-default;
   font-size: 0.875em;
@@ -185,8 +187,4 @@ h2.callout__heading {
   font-weight: 700;
   opacity: 0.6;
   -webkit-appearance: none;
-}
-
-.callout.callout--standard .field--name-field-link a {
-  color: $blue-darkest;
 }
