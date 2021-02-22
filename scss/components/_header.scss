@@ -59,18 +59,22 @@
 }
 
 .header__icons {
-  @include respond-to(0, $tweak-to-m-1) {
-    display: none;
+  @include respond-to(0, $break-to-m) {
+    display: block;
+    height: 4rem;
+    padding-left: 3rem;
   }
-  position: relative;
-  width: 161px;
-  margin: 28px 5px 0 0;
-  float: right;
-  list-style-type: none;
+  @include respond-to($break-to-m, $tweak-to-m-1) {
+    position: absolute;
+    top: 3px;
+    right: 34px;
+    width: unset;
+    margin: 0;
+  }
 
   @include respond-to($tweak-m-1) {
-    margin-right: 40px;
-    width: auto;
+    margin: 28px 5px 0;
+    float: right;
   }
 
   li {
@@ -83,26 +87,23 @@
       background-repeat: no-repeat;
       opacity: 1;
       color: transparent;
+      white-space: nowrap;
       cursor: pointer;
       @include transition();
       &:hover,
       &:focus {
         opacity: 0.7;
       }
+      width: 45px;
+      height: 45px;
+      @include respond-to($break-to-m, $tweak-to-m-1) {
+        width: 25px;
+        height: 25px;
+      }
+      @include respond-to($tweak-to-m-1, $tweak-m-2) {
+        width: 40px;
+        height: 40px;
+      }
     }
-  }
-  .header__icons--bus {
-    width: 45px;
-    height: 45px;
-  }
-
-  .header__icons--lightrail {
-    width: 45px;
-    height: 45px;
-  }
-
-  .header__icons--skyride {
-    width: 45px;
-    height: 45px;
   }
 }
