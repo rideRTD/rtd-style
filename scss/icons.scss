@@ -28,9 +28,10 @@ $icons: footer-accessibility footer-logo header-bus header-rail header-search
   side-apple side-avatar side-calendar side-check side-computer side-doc
   side-download side-file-download side-info side-link side-mail side-mailbox
   side-map side-mobile side-news side-pdf side-phone side-print side-question
-  side-send side-settings social-facebook social-twitter social-youtube
-  tools-facilities tools-locatestop tools-nextride tools-rideralerts
-  tools-schedulefinder tools-toolsmenu tools-transit-tracker tools-tripplanner;
+  side-send side-settings social-facebook social-instagram social-linkedin
+  social-twitter social-youtube tools-facilities tools-locatestop tools-nextride
+  tools-rideralerts tools-schedulefinder tools-toolsmenu tools-transit-tracker
+  tools-tripplanner;
 
 @each $icon in $icons {
   .i--#{$icon}::before,
