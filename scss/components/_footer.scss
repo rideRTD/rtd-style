@@ -264,6 +264,7 @@
 
 #block-footerbuttons, // Drupal specific
 .footer__buttons {
+  font-size: 1.2em;
   @include clearfix;
   .footer__accessibility,
   .footer__translate {
