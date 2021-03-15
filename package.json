@@ -1,6 +1,6 @@
 {
   "name": "rtd-style",
-  "version": "0.6.15",
+  "version": "0.6.16",
   "description": "shared style assets for RTD",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,7 @@
   "devDependencies": {
     "css-loader": "4.3.0",
     "html-webpack-plugin": "4.5.0",
-    "husky": "4.3.6",
+    "husky": "4.3.8",
     "img-loader": "3.0.2",
     "mini-css-extract-plugin": "0.11.1",
     "node-sass": "4.14.1",
