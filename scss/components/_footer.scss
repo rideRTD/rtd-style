@@ -271,24 +271,35 @@
     display: inline-block;
   }
   .footer__accessibility {
-    margin-right: 0.5em;
+    @include respond-to($tweak-m-2) {
+      margin-right: 0.5em;
+    }
   }
-  .btn--accessibility {
-    display: inline-block;
-    border-radius: $global-radius;
+  .btn--accessibility,
+  .btn--translate {
     border: 1px solid $gray-darkest;
+    border-radius: $global-radius;
+    color: $gray-colorblock;
+    display: inline-block;
+    font-family: $fontstack-regular;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 180px;
+
     span {
       @include text-regular;
-      padding: 0.3em 0.8em;
-      line-height: 22px;
+      display: inline-block;
+      line-height: 2.5rem;
+      padding: 0 0.8em;
     }
     &:before {
       content: ' ';
       background-color: $gray-darkest;
       display: block;
       border-radius: $global-radius 0 0 $global-radius;
-      width: 24px;
-      height: 22px;
+      width: 2rem;
+      height: 100%;
       float: left;
       background-position: center;
       background-repeat: no-repeat;
@@ -298,9 +309,24 @@
       color: inherit;
       text-decoration: underline;
     }
+
+    @include respond-to($tweak-m-2) {
+      margin-bottom: 0;
+      width: unset;
+    }
   }
   .field--name-body p {
     margin: 0;
+  }
+}
+
+// Translate & Accessibility button wrapper parent
+#block-footerbuttons > div,
+.footer__buttons {
+  display: flex;
+  flex-direction: column;
+  @include respond-to($tweak-m-2) {
+    flex-direction: row;
   }
 }
 
@@ -344,7 +370,7 @@ iframe.goog-te-menu-frame {
   box-shadow: none;
 }
 
-#load-translate {
+#load-translate:not(.btn--translate) {
   @include text-regular;
   margin: 0;
   padding: 0.4em 0.8em;
