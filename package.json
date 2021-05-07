@@ -1,6 +1,6 @@
 {
   "name": "rtd-style",
-  "version": "0.6.18",
+  "version": "0.6.19",
   "description": "shared style assets for RTD",
   "main": "index.js",
   "scripts": {
@@ -46,7 +46,7 @@
     "stylelint-scss": "3.18.0",
     "svg-url-loader": "6.0.0",
     "tar": ">=6.0.5",
-    "webpack": "4.44.2",
+    "webpack": "4.45.0",
     "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.0",
     "webpack-fix-style-only-entries": "0.6.0"
