@@ -106,4 +106,34 @@
       }
     }
   }
+
+  .header__icons--users {
+    margin-left: 1.5rem;
+    &::before {
+      border-radius: 100px;
+      content: '';
+      height: 100%;
+      background-color: #fff;
+      display: inline-flex;
+      position: absolute;
+      left: 0.5rem;
+      width: 2px;
+      @include respond-to($break-m) {
+        background-color: #077cc0;
+      }
+      @include respond-to($tweak-m-2) {
+        height: 45px;
+        width: 3px;
+      }
+    }
+  }
+}
+
+// Special case for the header users icon
+.i--header-users::before,
+.i--inline-header-users {
+  background-image: url('../../images/svg/header-users-mobile.svg');
+  @include respond-to($break-m) {
+    background-image: url('../../images/svg/header-users.svg');
+  }
 }
